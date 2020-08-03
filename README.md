@@ -8,7 +8,14 @@ There are a ton of different html-to-text libraries floating around, but there a
 
 # Contributing
 
-To contribute, please download the html file to `benchmarkdata/<iso language code>/html/<any unique file name>.html` and put your resulting text in `benchmarkdata/<iso language code>/text/<any unique file name>.txt`. You can use any naming scheme you want (sequential ids, uuids, sha1sums, etc) as long as the html and txt have the **same** name. 
+To contribute, please download the html file to `benchmarkdata/<iso language code>/html/<unique file name>.html` and put your resulting text in `benchmarkdata/<iso language code>/text/<unique file name>.txt`. 
+
+For the file name, please begin with the type of website (this doesn't have to be one of the ones listed here), followed by the name of the source. After that you can use any naming scheme you want (sequential ids, uuids, sha1sums, slug of the url etc) as long as the html and txt have the **same** name. 
+
+Examples of acceptable naming:
+ - `news-tagesschau-coronavirus-grossbritannien-1`
+ - `blog-leogao-55ca6286e3e4f4fba5d0448333fa99fc5a404a73`
+ - `forum-aialignmentforum-FoiiRDC3EhjHx7ayY`
 
 There is no canonical workflow for downloading/labelling right now, but if you figure one out please make a pull request with the relevant scripts/tools! 
 
