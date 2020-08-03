@@ -1,0 +1,246 @@
+Epistemic Status: Confident this is the perspective I find most useful. This is intended to both be a stand-alone post and to be the second post in the Simulacra sequence, with the first being Simulacra Levels and their Interactions. It should be readable on its own, but easier having read the previous post.
+
+Simulacra levels are difficult to understand.
+
+This is not without cause. This is complex and bizarre stuff.
+
+Simulacra levels are a map of the metaphors we use to create metaphoric maps of both territory and the map itself.
+
+The text that coined the term Simulacra levels does not help matters. The term was first referenced locally by Ben Hoffman in this post, but this was not the original source.
+
+The original source of the term is a super-dense work of French philosophy. It requires the reader to pause after every sentence. It’s not clear that a proper review would be shorter than the book itself.
+
+
+Thus, I’m still working through the book. The more I read Jean Baudrillard‘s further assertions, the less they seem deserving of engagement. He is opposed for nonsensical reasons not only to the concept of capitalism, but the concepts of money, value and trade, and even urbanization and mass production. He blames these for the rise of simulacra, whereas they are the primary forces opposed to simulacra.
+
+Upon parsing many of his super-dense sentences, I find many of them to be outright false. I find many others to be based on models and frameworks very different from my own, and that are assumed rather than specified in the text. The idea that capitalism isn’t the cause of all the world’s problems (never mind whether it’s the solution) does not seem to parse in his mind. I find many others to be downright absurd, or to be carrying water for the agendas of History’s Greatest Villains.
+
+This is a case where I strongly endorse taking the concepts that are useful and leaving the remaining giant mess behind.
+
+Baudrillard’s definition will be kept. Beyond that, I’m tossing essentially everything else away.
+
+The goal of this post is to reconcile Baudillard’s definition with the Lion definition used in my previous posts, integrating the relation of a simulacra to reality with the motivational explanatory framework. This deals with the dueling definition problem so it doesn’t get in the way down the line, and I hope it helps explain why higher level activity systematically has such strange and hostile relationships to physical reality (and what Baudillard calls ‘profound’ reality.)
+
+Different Definitions of Simulacra Levels
+An additional confusion is that there are now multiple competing definitions, which seem superficially to point at different things, although I claim that both definitions are fully compatible once properly understood.
+
+First, there are simulacra levels as defined in Baudrillard. The closest thing he gives to a compact full definition is this:
+
+Such would be the successive phases of the image (as we pass from levels 1 to 4):
+It is the reflection of a profound reality.
+It masks and denatures a profound reality.
+It masks the absence of a profound reality.
+It has no relation to any reality whatsoever: It is its own pure simulacrum.
+Profound reality is a weird term that is doing several distinct things. On a basic level, it means concrete physical reality unmediated by any symbols of any kind. It is what is, full stop. Lying masks and denatures that reality by representing it as something other than what it is, but this is less of an offense than there not being an underlying reality of importance in the third stage, or being cut free from that underlying reality entirely, as we are in the fourth stage.
+
+On a continental philosophical level, there is this idea that anything mass produced, or anything that interacts with money, trade or other systematic motivations, rather than being fully intrinsic and local and spontaneous, or something like that, loses this something vital that Baudrillard calls ‘profound reality.’
+
+I don’t think that this second angle is entirely nonsense. There is something important that can be distorted or lost when commodification sets in. Polanyi’s The Great Transformation is the best source I know about to make the general case for why this is inherently concerning. It also means that the person interacting with underlying/profound reality then exchanges the fruits of that interaction with someone else in exchange for something symbolic. Rather than gain the physical rewards, those are exchanged for rewards that are based on the symbolic associations of what has been created. This throws away any value for much of the underlying physical reality. The less connected production is with consumption, the bigger this concern.
+
+The difference I have with Baudrillard here is that I do not think this phenomenon is central to what is happening. And I am not eager to dismiss the many-leveled benefits of such systems. The discipline of the market, the need to match demand with satisfactory supply and the reward for doing so, not only are the main ways we have, in historical terms, an insanely great abundance of lots of nice things. They also keep us connected to the underlying reality, and keep our simulacrum (and maze) levels lower.
+
+It is precisely when this market discipline is lost or distorted that things get out of hand. Such systems force upon us symbols at all, bringing us firmly into the first level, as opposed to having no symbols and avoiding the scale entirely. And once on the scale, the slope upwards is slippery. But these forces also form one of our strongest defenses against rising to levels beyond that.
+
+If I was going to write the symbolic description of Simulacra levels in my own words, I would say this:
+
+Level 1: A symbol corresponds to the key elements of underlying physical reality.
+
+Level 2: A symbol pretends to correspond to underlying physical reality, but instead distorts key elements.
+
+Level 3: A symbol pretends to be a distorted version of underlying physical reality (that is in turn pretending to be the underlying physical reality), but instead only corresponds as necessary to maintain the plausibility claim that this is the case.
+
+Level 4: A symbol no longer pretends to be a version of anything other than other symbols. It has no relationship to the underlying physical reality.
+
+Or more compactly:
+
+Level 1: Symbols describe reality.
+
+Level 2: Symbols pretend to describe reality.
+
+Level 3: Symbols pretend to pretend to describe reality.
+
+Level 4: Symbols need not pretend to describe reality.
+
+Or a variation/alternative:
+
+Level 1: Symbols accurately describe reality.
+
+Level 2: Symbols inaccurately describe reality.
+
+Level 3: Symbols claim to describe reality.
+
+Level 4: Symbols no longer claim to describe reality.
+
+A concrete example suggested by Michael Vassar:
+
+Level 1: A court reflects justice.
+
+Level 2: A corrupt judge distorts justice.
+
+Level 3: A Soviet show trial conceals the absence of real Soviet courts.
+
+Level 4: A trial by ordeal or trial by combat lacks and denies the concept of justice entirely.
+
+Contrast that with the newer definition that’s based on what it means to say “There’s a lion across the river”, as described in Simulacra Levels and their Interactions:
+
+Level 1: There’s a lion across the river.
+
+Level 2: I don’t want to go (or have other people go) across the river.
+
+Level 3: I’m with the popular kids who are too cool to go across the river.
+
+Level 4: A firm stance against trans-river expansionism focus grouped well with undecided voters in my constituency.
+
+Or alternatively, and isomorphic to the Lion definition, from my previous simulacra post:
+
+“There’s a pandemic headed our way from China” means…
+
+Level 1: “There’s a pandemic headed our way from China.”
+
+Level 2: “I want you to act as if you think there might be a pandemic on our way from China” while hoping to still be interpreted by the listener as meaning “There’s a pandemic headed our way from China.”
+
+Level 3: “I wish to associate with the group that claims there is a pandemic headed our way from China.”
+
+Level 4: “It is advantageous for me to say there is a pandemic headed our way from China.”
+
+See the previous post for more details and variations of meaning via this definition.
+
+Careful reading of Baudrillard confirms my suspicion that both definitions point at the same thing while highlighting different aspects.
+
+They grasp different parts of the elephant.
+
+From here on, we will call the levels from the Lion definition L-1, L-2, L-3 and L-4, merged with the Pandemic definition. I will call the levels from the original Baudrillard definition B-1, B-2, B-3 and B-4. The claim is that L-1 = B-1, L-2 = B-2, L-3 = B-3, L-4 = C-4.
+
+This is relatively easy to see, and relatively uncontroversial, for levels 1 and 2. It is less so for level 3 and even less so for level 4.
+
+The key differences are that they deal with lower-level actions versus higher-level systems, and that they deal with cashed-out motivations versus processes.
+
+Actions versus Systems
+The Lion and Pandemic definitions deal centrally with the motivations for, and the meanings of, individual statements, actions and systems.
+
+The Baudrillard definition deals centrally with the default or central interpretation of statements, actions and systems. It is the expectation of general interpretation and thus of purpose.
+
+One can usefully think of the relative importance of each simulacra level at any scale – of an individual statement or action, of an interaction, of a person or group, of a system or concept, or of a civilization or the world.
+
+Higher levels of grouping and abstraction exist at the simulacra level that is the default motivation and interpretation of their lower-abstraction more discrete actions, statements and systems.
+
+Motivations versus Processes
+The Lion definition:
+
+Level 1: There’s a lion across the river.
+
+Level 2: I don’t want to go (or have other people go) across the river.
+
+Level 3: I’m with the popular kids who are too cool to go across the river.
+
+Level 4: A firm stance against trans-river expansionism focus grouped well with undecided voters in my constituency.
+
+The Baudrillard definition:
+
+Level 1: It is the reflection of a profound reality.
+
+Level 2: It masks and denatures a profound reality.
+
+Level 3: It masks the absence of a profound reality.
+
+Level 4: It has no relation to any reality whatsoever: It is its own pure simulacrum
+
+The Lion and Pandemic definitions deal with the motivation behind an action or communication. Was it about communicating true information, updating someone else’s a model, sending a symbolic signal or creating useful associations?
+
+The Baudrillard definition deals with the process by which the statement relates to what he calls the ‘profound reality.’ Does it deal with it directly, distort it, hide its absence or ignore it entirely?
+
+These two patterns go hand in hand.
+
+At level 1, one directly deals with reality in order to communicate true information. One does not have to pretend.
+
+At level 2, one distorts reality – in Baudrillard’s words, masks and denatures it – in order to convince others that what one is representing as reality is actual reality. One pretends.
+
+At level 3, one hides the absence of reality in order to invoke a symbolic meaning, usually for the purposes of signaling. There needs to be a sufficiently strong sense of association to the underlying reality that the signal is understood and holds meaning, but not so strong an association that the signal can be confused for an underlying map. Reality must be absent, but in a way that is deniable. One pretends to pretend.
+
+At level 4, one engages in pure simulacra, with no relation to the underlying reality at all. There is no object-level cashing out at all. The underlying reality is something to be sculpted by changing associations and symbolic meanings. Consequences of a statement or action are in terms of the consequence to a simulacra, as measured on the third and fourth levels. At most, one pretends to be offering pure level-3 simulacra. One does not pretend to pretend to pretend to be on the object level, rather one stops pretending, period.
+
+More than that. One does not merely stop pretending. One forgets that there was an underlying reality to begin with, and loses the ability to think about the underlying reality and guide it to better outcomes, except by doing so through agents operating at the levels in between.
+
+Simulacra Level of a System
+All of these are phrased above in terms of an individual, but apply equally to a group, system or civilization.
+
+Even more than people, groups, systems and civilizations have a mix of all levels. Moving up the level chain has instrumental rewards, and happens continuously unless there is sufficient push back. This is similar to the rise of maze levels. Existing systems must maintain some amount of low-level grounding, as well. Without sufficient grounding, doom quickly follows. Things collapse well before the amount of level 1 activity can reach zero.
+
+A person can exist mostly or solely on one level. A larger group almost never does. When I speak below about being at a level, that means the most dominant one. It does not mean that the others are not present.
+
+When a group, system or civilization is still sufficient in level 1, or has regained that footing, its symbols map directly to reality. Words have meaning.
+
+When a group, system or civilization proceeds sufficiently into level 2, that means it is standard and/or wise to assume that level 2 motives and actions are dominant. Claims cease to be taken at face value by default. Trust is destroyed. The assumption is that someone is likely to be out to sell you a bill of goods.
+
+It would not parse that someone would say something because it is true. It would only make sense to say something because it would be beneficial for others to believe it is true. And thus, even straightforward claims are interpreted this way. Still, because all claims must pretend, a relatively strong link to the underlying reality is maintained.
+
+When a group, system or civilization proceeds sufficiently into level 3, that means it is standard slash wise to assume that level 3 motives and actions are dominant. Claims cease to be taken not only at face value, but also cease to be taken as being claims about the world at all. It is assumed that claims are made because it is beneficial to be seen making a claim, or for one’s side to be seen making such a claim, due to its symbolic benefits.
+
+But this is not a complete transformation. Not yet. Those symbolic benefits still have to be seen as tracing back to underlying ‘profound’ reality.
+
+Everybody knows, when things reach level three, that statements are made based primarily on their utility in the game. It’s no longer a big deal to say that which is not. That’s fine. The cool kids don’t want to cross the river and this is their slogan, so you repeat the slogan.
+
+The link to the underlying reality is tenuous, but still exists – if one can expose others as not being able to pretend, thus showing they have failed to pretend to pretend, they lose face. The symbols mask the lack of an underlying reality, but need plausible deniability while doing so. You need not believe, when claiming there is a lion across the river, that there is a lion across the river. But it would be bad to be seen knowing that there wasn’t a lion across the river, or being known to have no reason to think there was a lion across the river, and saying it anyway.
+
+This maintains a weak link to underlying reality, so Level 3 never fully succeeds at existing purely on its own terms. Doing so transforms it into Level 4.
+
+When a group, system or civilization proceeds sufficiently into level 4, that means it is standard slash wise to assume that level 4 motives and actions are dominant. Claims cease to be taken as anything other than symbolic moves. Any impact on the underlying physical reality via their accuracy or lack thereof is purely coincidental.
+
+The institutional memory of the object level is lost in all practical senses. The Level 4 parts of the system can’t see the Level 1 parts of the system. A sufficiently strongly Level 4 person, for whom level 4 has become truly part of them, almost always has the same issue. Level 4 doesn’t use logic or physical causation, so they’ve discarded those parts of their system of thought and no longer believe in them.
+
+As I noted in the previous post, Level 4 is especially difficult for myself and many like myself to grok. It seems profoundly alien, perhaps evil.
+
+Level 0 Exists
+It is worth noting here that B-0 and L-0 also exist, are important, and are congruent.
+
+That’s where you don’t say there is a lion across the river in Lion-0, you simply don’t cross the river because you don’t want to get eaten by a lion. You are also in Symbolic-0, because you don’t have a symbol at all. Others can see that, and consider that maybe crossing the river is not a great idea, even if they can’t figure out why.
+
+The key is that, on Level 0, that has nothing to do with your decision to not cross. The moment you don’t cross because of how others might interpret that decision, you’re a symbol, and thus in Symbolic-1, and communicating a map of the world, and thus in Lion-1. L-0 is what you are in the dark. We can call this The Hermit.
+
+It is in this sense that Baudrillard is right to put the ‘blame’ for simulacra on capitalism or urbanization or mass production. These are the methods by which we have nice things and get to interact with fellow human beings. If one is alone in the forest, there is no need for symbols at all and the equilibrium is stable. The only way to entirely avoid manipulation of symbols is to not have any symbols. The price seems rather high.
+
+Level 3 and The War Against Knowledge
+It is important to note that Level 3 is at war with knowledge.
+
+This is more than the “Level 3 sees knowledge as composed of things it can use for something else.” Level 3 is actively destructive of knowledge.
+
+At level 3, the following two things are blameworthy, creating two ways in which knowledge is a liability.
+
+(These two are not everything that is blameworthy, of course. One can be blamed for other things as well – one can be part of the outgroup, be the designated scapegoat, etc etc.)
+
+One blameworthy thing is not invoking the right symbols.
+
+This is the “composed of things that can be used for something else” aspect. Caring about what is true creates an alternative incentive that prevents one from invoking the proper symbols, and casts doubt on whether those symbols mean what they seem to mean.
+
+Invoking symbols that are technically false rather than those that are technically true is, if anything, a stronger move in the game. This is why. It signals more strongly one’s costly sending of the appropriate signals, without room for misinterpretation as a lower level action. By repeating the lie, we show ourselves loyal. By getting others to repeat it, we drive them towards being and identifying as loyal, and get them to show others they are loyal, and demonstrate our power over both people and symbols.
+
+The other blameworthy thing is knowing that what you say is false. What is blameworthy is knowledge itself.
+
+(Or, perhaps more precisely, other people knowing that you know what you say is false, and thus anyone else’s knowledge of our having knowledge, as opposed to knowledge itself, but that’s also true of any other blame system.)
+
+What did the President know, and when did he know it?
+
+Thus, the shift in communication from explicit to implicit. The focus on having only deniable, tacit knowledge.
+
+The follower who needs explicit instruction is a poor follower indeed. Specifying everything to be done is impractical, and makes it clear you have not only knowledge but responsibility. Much better to work towards the goals of the group, to pile on symbols that help win the game.
+
+Thus does this structure drive everyone away from knowledge. The easiest way, by far, to pretend not to know things is to not know them.
+
+Thus, Level 3 is not merely unconcerned with the profound reality. Level 3 actively symbolizes the absence of a profound reality. They are not merely orthogonal to an accurate map. They oppose it.
+
+This situation is not stable. It relies on a lack of common knowledge. It also relies on a lack of individual knowledge. It also doesn’t present stable incentives and thus is not an equilibrium.
+
+To be sustained, it requires sufficiently powerful residues stuck in the first two levels, who misunderstand what is going on. This is the force that requires people to pretend to pretend, when their actions are exposed to the public.
+
+When there are insufficient naive forces to appeal to or worry about, the mask of pretending is dropped. People stop pretending to pretend.
+
+“Facts don’t matter” is true at both levels three and four. But acknowledging that “facts don’t matter” and creating common knowledge of this will make short work of level three. It moves all actors up to levels three and four. This shatters the link between symbol and reality entirely. This moves us collectively to Level 4.
+
+Level 4 is then not at war with knowledge the way level 3 is at war with knowledge. Level 4 doesn’t acknowledge that knowledge is a thing. Thus, there is no need to symbolize its absence.
+
+Conclusion and the Unity of Level 4
+This hopefully provided additional perspective on simulacra levels. Ideally it provided at least some justification for the additional associations and implications I’ve placed upon levels three and four, and made clear how I think the Lion definition integrates with the original definition.
+
+I hope the whole system is also looking less like an elegant 2×2 with extra weird stuff piled on top of it that seems like it has an axe to grind, and more like a coherent system. In particular, I hope that it is now clearer why level 3 actively opposes knowledge, and level 4 loses access to logic and the ability to observe and analyze and optimize the physical world.
+
+I hope that this will all become clearer as these posts continue. I’m especially excited by the next one, but felt I needed to get this one out of the way first, as the confusions it tries to clear up would otherwise have gotten in the way. It was necessary to tackle it first.
