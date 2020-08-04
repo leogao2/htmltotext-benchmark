@@ -1,0 +1,53 @@
+Why everyone is talking about the A.I. text generator released by an Elon Musk-backed lab
+
+Key Points:
+
+A new computer system that can generate entire songs, stories, and essays on its own has taken many people by surprise. 
+
+The software, known as GPT-3, was developed by a team of researchers and engineers who work at OpenAI in San Francisco. 
+
+However, it's proving controversial as it sometimes produces offensive content.
+
+Social media is awash with people talking about a new piece of software called GPT-3, which has been developed by OpenAI, an Elon Musk-backed artificial intelligence lab in San Francisco.
+
+GPT-3 (Generative Pre-training) is a language-generation tool capable of producing human-like text on demand.
+
+The software learned how to produce text by analyzing vast quantities on the internet and observing which letters and words tend to follow one another.
+
+OpenAI started releasing it to a select few people last week who had requested access to a private early version, and many of them have been blown away.
+
+"It's far more coherent than any AI language system I've ever tried," wrote entrepreneur Arram Sabeti in a blog post after testing. 
+
+"All you have to do is write a prompt and it'll add text it thinks would plausibly follow. I've gotten it to write songs, stories, press releases, guitar tabs, interviews, essays, technical manuals. It's hilarious and frightening. I feel like I've seen the future."
+
+The company wants developers to play with GPT-3 and see what they can achieve with it, before rolling out a commercial version later this year. It's unclear how much it will cost or how the system might be able to benefit businesses, but it could potentially be used to improve chatbots, design websites, and prescribe medicine.
+
+OpenAI first described GPT-3 in a research paper published in May. It follows GPT-2, which OpenAI chose not to release widely last year because it thought it was too dangerous. It was concerned that people would use it in malicious ways, including generating fake news and spam in vast quantities.
+GPT-3 is 100x larger than GPT-2. It is said to be far more competent than its predecessor due to the number of parameters it is trained on: 175 billion for GPT-3 versus 1.5 billion for GPT-2.
+While it may be brilliant in many ways in its current form, it's certainly got its flaws: developers have noticed that GPT-3 is prone to spouting out racist and sexist language, even when the prompt is something harmless. It also churns out complete nonsense from time to time that's hard to imagine any person saying.
+
+Other Concerns
+
+"If you assume we get NLP (natural language processing) to a point where most people can't tell the difference, the real question is what happens next?" said Trevor Callaghan, a former employee at rival lab DeepMind. 
+
+"And at that point the big issue is whether we can map out those effects and debate them and figure out what to do about it, and relatedly who should be doing that."
+
+Some are also concerned that it could end up replacing certain jobs. The chief technology officer of Oculus VR said: "The recent, almost accidental, discovery that GPT-3 can sort of write code does generate a slight shiver." 
+
+Facebook's head of AI, Jerome Pesenti, wrote on Twitter on Wednesday that he didn't "understand how we went from GPT-2 being too big a threat to humanity to be released openly to GPT-3 being ready to tweet, support customers or execute shell commands."
+
+Sam Altman, the former Y-Combinator president who is now chief executive of OpenAI, attempted to downplay the hype around GPT-3 earlier this week.
+
+"The GPT-3 hype is way too much," he said on Twitter. "It's impressive (thanks for the nice compliments!) but it still has serious weaknesses and sometimes makes very silly mistakes. AI is going to change the world, but GPT-3 is just a very early glimpse. We have a lot still to figure out."
+
+OpenAI isn't the only company to develop language-generating software.
+
+In 2016, Microsoft developed a Twitter bot called Tay which was quickly disabled after it started publishing racist tweets.
+
+OpenAI did not immediately respond to CNBC's request for comment. However, Jack Clark, OpenAI's policy director, told The Guardian last year: "We need to perform experimentation to find out what they can and can't do."
+
+"If you can't anticipate all the abilities of a model, you have to prod it to see what it can do. There are many more people than us who are better at thinking what it can do maliciously."
+
+OpenAI was set up as a non-profit with a $1 billion pledge from a group of founders that included Musk. In February 2018, Musk left the OpenAI board but he continues to donate and advise the organization.
+
+OpenAI made itself for-profit in 2019 and raised another $1 billion from Microsoft to fund its research. GPT-3 is set to be OpenAI's first commercial product and Reddit has signed up as one of the first customers.
