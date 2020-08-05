@@ -1,0 +1,37 @@
+As the stunning visual effects in movies and television advance, so do audience expectations for ever more spectacular and realistic imagery.
+
+The National Center for High-performance Computing, home to Taiwan’s most powerful AI supercomputer, is helping video artists keep up with increasing industry demands.
+
+NCHC delivers computing and networking platforms for filmmakers, content creators and artists. To provide them with high-quality, accelerated rendering and simulation services, the company needed some serious GPU power.
+
+So it chose the NVIDIA RTX Server, including Quadro RTX 8000 and RTX 6000 GPUs and NVIDIA Quadro Virtual Data Center Workstation (Quadro vDWS) software, to bring accelerated rendering performance and real-time ray tracing to its customers.
+
+NVIDIA GPUs and VDI: Driving Force Behind the Scenes
+One of NCHC’s products, Render Farm, is built on NVIDIA Quadro RTX GPUs with Quadro vDWS software. It provides users with real-time rendering for high-resolution image processing.
+
+A cloud computing platform, Render Farm enables users to rapidly render large 3D models. Its efficiency is stunning: it can reduce the time needed for opening files from nearly three hours to only three minutes.
+
+“Last year, a team from Hollywood that reached out to us for visual effects production anticipated spending three days working on scenes,” said Chia-Chen Kuo, director of the Arts Technology Computing Division at NCHC. “But with the Render Farm computing platform, it only took one night to finish the work. That was far beyond their expectations.”
+
+NCHC also aims to create a powerful cloud computing environment that can be accessed by anyone around the world. Quadro vDWS technology plays an important role in allowing teams to collaborate in this environment and makes its HPC resources widely available to the public.
+
+With the rapid growth of data, physical hardware systems can’t keep up with data size and complexity. But Quadro vDWS technology makes it easy and convenient for anyone to securely access data and applications from anywhere, on any device.
+
+Using virtual desktop infrastructure, NCHC’s Render Farm can provide up to 100 virtual workstations so users can do image processing at the same time. They only need a Wi-Fi or 4G connection to access the platform.
+
+VMware vSphere and Horizon technology is integrated into Render Farm to provide on-demand virtual remote computing platform services. This virtualizes the HPC environment through NVIDIA virtual GPU technology and reduces by 10x the time required for redeploying the rendering environment. It also allows flexible switching between Windows and Linux operating systems.
+
+High-Caliber Performance for High-Caliber Performers
+Over 200 video works have already been produced with NCHC’s technology services.
+
+NCHC recently collaborated with acclaimed Taiwanese theater artist Huang Yi for one of his most popular productions, Huang Yi and KUKA. The project, which combined modern dance with visual arts and technology, was performed in over 70 locations worldwide such as the Cloud Gate Theater in northwest Taipei, the Ars Electronica Festival in Austria, and TED Conference in Vancouver.
+
+During the program, Huang coordinated a dance with his robot companion KUKA, whose arm possessed a camera to capture the dance movements. Those images were sent to the NCHC Render Farm in Taichung, 170 km away, to be processed in real time before projecting back to the robot on stage — with less than one second of end-to-end latency.
+
+“I wanted to thoroughly immerse audiences in the performance so they can sense the flow of emotions. This requires strong and stable computing power,” said Huang. “NCHC’s Render Farm, powered by NVIDIA GPUs and NVIDIA virtualization technology, provides everything we need to animate the robot: exceptional computing power, extremely low latency and the remote access that you can use whenever and wherever you are.”
+
+LeaderTek, a 3D scanning and measurement company, also uses NCHC services for image processing. With 3D and cloud rendering technology, LeaderTek is helping the Taiwan government archive historic monuments through creating advanced digital spatial models.
+
+“Adopting Render Farm’s cloud computing platform helps us take a huge leap forward in improving our workflows,” said Hank Huang, general manager at LeaderTek. “The robust computing capabilities with NVIDIA vGPU for Quadro Virtual Workstations is also crucial for us to deliver high-quality images in a timely manner and get things done efficiently.”
+
+Watch Huang Yi’s performance with KUKA below. And learn more about NVIDIA Quadro RTX and NVIDIA vGPU.
