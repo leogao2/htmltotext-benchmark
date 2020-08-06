@@ -31,7 +31,16 @@ class JusText(ABC):
         return '\n\n'.join([x.text for x in justext(html, get_stoplist('English')) if not x.is_boilerplate])
 
 
+class DoNothing(ABC):
+    def name(self):
+        return "DoNothing"
+
+    def extract(self, html):
+        return html
+
+
 algorithms = [
     Newspaper(),
     JusText(),
+    DoNothing(),
 ]
