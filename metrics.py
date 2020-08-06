@@ -28,6 +28,21 @@ class WordIOU(Metric):
         return False
 
 
+import difflib
+class DiffWords(Metric):
+    def name(self):
+        return "DiffWords"
+
+    def distance(self, true, predicted):
+        # % of word-level diff entries that are either + or -
+        diff = list(difflib.ndiff(true.split(' '), predicted.split(' ')))
+        return len([x for x in diff if x[0] != ' ']) / len(diff)
+
+    def lower_is_better(self):
+        return True
+
+
 metrics = [
-    WordIOU()
+    WordIOU(),
+    DiffWords()
 ]
