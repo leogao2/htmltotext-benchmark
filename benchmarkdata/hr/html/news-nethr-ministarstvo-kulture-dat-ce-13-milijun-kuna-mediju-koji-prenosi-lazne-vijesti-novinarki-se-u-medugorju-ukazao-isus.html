@@ -1,0 +1,2113 @@
+
+<!DOCTYPE html>
+<html lang="hr" id="top">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-b7f7d55cf616160d615",applicationID:"423456151"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=1024, initial-scale=0.8, maximum-scale=1">
+
+	<link rel="icon" type="image/png" href="https://net.hr/wp-content/themes/adriaticmedia-nethr/favicon.png">
+		<title>OBJAVLJUJU I LAŽNE VIJESTI, A OD DRŽAVE ĆE DOBITI VIŠE OD MILIJUN KUNA: &#8216;Poslali ju da raskrinka laži, a onda joj se tamo ukazao Isus&#8230;&#8217; &#8211; Net.hr</title>
+<link rel='dns-prefetch' href='//scripts.net.hr' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Net.hr &raquo; Kanal" href="https://net.hr/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Net.hr &raquo; Kanal komentara" href="https://net.hr/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Net.hr &raquo; OBJAVLJUJU I LAŽNE VIJESTI, A OD DRŽAVE ĆE DOBITI VIŠE OD MILIJUN KUNA: &#8216;Poslali ju da raskrinka laži, a onda joj se tamo ukazao Isus&#8230;&#8217; Kanal komentara" href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/net.hr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0' href='https://net.hr/wp-includes/css/dist/block-library/style.min.css?m=1592229722g' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='nethr-slick-style-css'  href='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css?ver=5.4.2' media='all' />
+<link rel='stylesheet' id='nethr-slick-theme-style-css'  href='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css?ver=5.4.2' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='nethr-font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=5.4.2' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='nethr-font-oswald-css'  href='//fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=5.4.2' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='nethr-font-source-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C900%2C400italic&#038;subset=latin%2Clatin-ext&#038;ver=5.4.2' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='nethr-font-pt-sans-css'  href='https://fonts.googleapis.com/css?family=PT+Sans%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=5.4.2' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='nethr-font-pt-serif-css'  href='https://fonts.googleapis.com/css?family=PT+Serif%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=5.4.2' media='all' />
+<link rel='stylesheet' id='nethr-videojs-css'  href='https://vjs.zencdn.net/7.1.0/video-js.css?ver=5.4.2' media='all' />
+<link rel='stylesheet' id='all-css-16' href='https://net.hr/_static/??-eJyNjEEKwkAMRS/kNDrqogvxKBImoY3OZMokRXp7qyDorrv34b0Pzymkqs7q4CMXNkBqgi6pMAkGZR8bmC+Zu2S2g5+gzGHK8yBqcGefMD2gVJrzemIjNiYkWj4oOmypb6IJrCbBHHIdqv2NrohueVmVL7/1a7kczv3puO9jjC8EjFlR' type='text/css' media='all' />
+<script type='text/javascript' src='https://net.hr/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZdVrKOPT4FubmZ6UWJJql5uZh5QsX2uraGppZGRkaW5kXEWACWXILA='></script>
+<script src='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js?ver=5.4.2'></script>
+<script src='https://vjs.zencdn.net/7.1.0/video.js?ver=5.4.2'></script>
+<script src='//player.h-cdn.com/loader.js?customer=rtl_hr&#038;ver=5.4.2'></script>
+<script src='https://cdn.connectad.io/connectmyusers.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://net.hr/wp-content/themes/adriaticmedia-nethr/js/sticky-kit.js?m=1593149839g'></script>
+<script src='https://scripts.net.hr/dfp/expand.js?ver=20200218'></script>
+<link rel='https://api.w.org/' href='https://net.hr/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://net.hr/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://net.hr/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.2" />
+<link rel="canonical" href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/" />
+<link rel='shortlink' href='https://wp.me/pbMqYh-9EwB' />
+<link rel="alternate" type="application/json+oembed" href="https://net.hr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://net.hr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F&#038;format=xml" />
+			<meta property="fb:pages" content="86874647886" />
+							<meta property="ia:markup_url_dev" content="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/?ia_markup=1" />
+				
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<style type='text/css'>img#wpstats{display:none}</style><!-- (C)2000-2015 Gemius SA - gemiusAudience / iskon.hr  -->
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                var pp_gemius_identifier = 'nXqV7XtpEXOQIx38wEzRsXXpnF8NTsv7Fip7GkGdQvv.z7';
+                // lines below shouldn't be edited
+                function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
+                gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+                (function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
+                    gt.setAttribute('defer','defer'); gt.src=l+'://hr.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+                //--><!]]>
+            </script>
+        
+        <!--    danas   -->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            (function() {
+                window.dm=window.dm||{AjaxData:[]};
+                window.dm.AjaxEvent=function(et,d,ssid,ad){
+                    dm.AjaxData.push({et:et,d:d,ssid:ssid,ad:ad});
+                    window.DotMetricsObj&&DotMetricsObj.onAjaxDataUpdate();
+                };
+                var d=document,
+                    h=d.getElementsByTagName('head')[0],
+                    s=d.createElement('script');
+                s.type='text/javascript';
+                s.async=true;
+                s.src=document.location.protocol + '//script.dotmetrics.net/door.js?id=318';
+                h.appendChild(s);
+            }());
+            /* ]]> */
+        </script>
+	        <script>
+            (function(u,p,s,c,r){u[r]=u[r]||function(p){(u[r].q=u[r].q||[]).push(p)},u[r].ls=1*new Date();
+                var a=p.createElement(s),m=p.getElementsByTagName(s)[0];a.async=1;a.src=c;m.parentNode.insertBefore(a,m) })(window,document,'script','//files.upscore.com/async/upScore.js','upScore');
+            var upscore_data = {"config":{"domain":"net.hr","article":".article-content","track_positions":false},"data":{"section":"Hrvatska,Vijesti","object_id":2300733,"pubdate":"2020-08-06T17:37:33+0200","author":"Ivana Petri\u0107","object_type":"article","custom_source":"","custom_sponsored":"","custom_app":0}};
+            upScore(upscore_data);
+        </script>
+        <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZ5ZQHC');</script>
+<!-- End Google Tag Manager -->      <script>
+      var googletag = googletag || {
+        cmd: []
+      };
+
+      var currentDate = new Date(), trafficSplit;
+      function isOdd(num) { return num % 2;}
+      if (isOdd(currentDate.getDate())) {
+          trafficSplit = 'wtg';
+        } else {
+            trafficSplit = '234doo';
+        }
+
+      if (trafficSplit == '234doo') {
+        var prebidScript = document.createElement('script'),
+          gptScript = document.createElement('script'),
+          configScript = document.createElement('script');
+        prebidScript.src = 'https://scripts.net.hr/dfp/prebid2.44.7.js?ver=5.4.2', gptScript.src =
+          'https://www.googletagservices.com/tag/js/gpt.js?ver=5.4.2';
+        document.head.appendChild(prebidScript), document.head.appendChild(gptScript);
+        googletag.cmd.push(function () {
+          var configScriptContents = document.createTextNode(`            var PREBID_TIMEOUT = 1000;
+            var adUnits = [{"code":"\/21783803\/net.hr\/nethr_desktop_billboard_v1","mediaTypes":{"banner":{"sizes":[[1200,500],[970,500],[1200,250],[970,250],[1024,250],[1024,500],[1000,500]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678958"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_300x250_v1","mediaTypes":{"banner":{"sizes":[[300,600],[300,250]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678955"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_intext_v1","mediaTypes":{"banner":{"sizes":[[660,350],[300,250],[670,350],[670,300],[660,1000]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678955"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_intext_v2","mediaTypes":{"banner":{"sizes":[[660,350],[300,250]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678955"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_intext_v3","mediaTypes":{"banner":{"sizes":[[660,350],[300,250]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678955"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_intext_v4","mediaTypes":{"banner":{"sizes":[[660,350],[300,250]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678955"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_wallpaper_left","mediaTypes":{"banner":{"sizes":[[200,900],[300,1050],[340,1050],[300,900],[300,600]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678957"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_wallpaper_right","mediaTypes":{"banner":{"sizes":[[201,901],[301,1051],[341,1051],[301,901],[300,600]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678957"}}]},{"code":"\/21783803\/net.hr\/nethr_desktop_300x600_v_2","mediaTypes":{"banner":{"sizes":[[300,600]]}},"bids":[{"bidder":"connectad","params":{"networkId":"10047","siteId":"1030657"}},{"bidder":"sovrn","params":{"tagid":"678957"}}]}];
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+            var nethr_publisher_id = 21783803;
+            var nethr_network_code = 0;
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            var googleSlots = {};
+            var tg_sizes = {"contentbelow":[[[0,0],[300,250]],[[360,0],[340,280]],[[375,0],[354,280]],[[403,0],[382,280]],[[412,0],[392,280]],[[480,0],[460,280]],[[600,0],[580,280]],[[620,0],[660,350]],[[1024,0],[660,350]]]}; //size mappings
+            var tg_mappings_object = ["contentbelow"];
+            var tg_mappings = {};
+            for (var i in tg_mappings_object) {
+            var size = tg_mappings_object[i];
+            var mapping = googletag.sizeMapping();
+            for (var j in tg_sizes[size]) {
+            mapping.addSize(tg_sizes[size][j][0], tg_sizes[size][j][1]);
+            }
+            tg_mappings[size] = mapping.build();
+            }
+            var up_settings = {"h":954,"sr":1,"up_b":5,"ver":"289"};
+
+            var up_array = [{"a":1,"b":7,"up_b":2,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_billboard_v1","size":[[1200,500],[970,500],[1200,250],[970,250],[1024,250],[1024,500],[1000,500]],"opt_div":"nethr_desktop_billboard_v1","sizeMapping":"","j":0,"k":0},{"a":1,"b":6,"up_b":3,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_300x250_v1","size":[[300,600],[300,250]],"opt_div":"nethr_desktop_300x250_v1","sizeMapping":"","j":0,"k":0},{"a":0,"b":7,"up_b":3,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_intext_v1","size":[[660,350],[300,250],[670,350],[670,300],[660,1000]],"opt_div":"nethr_desktop_intext_v1","sizeMapping":"","j":0,"k":0},{"a":2,"b":8,"up_b":5,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_intext_v2","size":[[660,350],[300,250]],"opt_div":"nethr_desktop_intext_v2","sizeMapping":"contentbelow","j":0,"k":0},{"a":1,"b":7,"up_b":5,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_intext_v3","size":[[660,350],[300,250]],"opt_div":"nethr_desktop_intext_v3","sizeMapping":"contentbelow","j":0,"k":0},{"a":2,"b":8,"up_b":5,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_intext_v4","size":[[660,350],[300,250]],"opt_div":"nethr_desktop_intext_v4","sizeMapping":"contentbelow","j":0,"k":0},{"a":2,"b":8,"up_b":3,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_wallpaper_left","size":[[200,900],[300,1050],[340,1050],[300,900],[300,600]],"opt_div":"nethr_desktop_wallpaper_left","sizeMapping":"","j":0,"k":0},{"a":1,"b":7,"up_b":4,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_wallpaper_right","size":[[201,901],[301,1051],[341,1051],[301,901],[300,600]],"opt_div":"nethr_desktop_wallpaper_right","sizeMapping":"","j":0,"k":1},{"a":0,"b":0,"up_b":3,"adUnitPath":"\/21783803\/net.hr\/nethr_desktop_300x600_v_2","size":[[300,600]],"opt_div":"nethr_desktop_300x600_v_2","sizeMapping":"","j":0,"k":0}];
+
+            var up_verzija="v_1.4_b";
+            var up_lazy_load_array=[];
+            var up_full_width_array=[];
+            googletag.cmd.push(function() {
+              googletag.pubads().disableInitialLoad();
+            });
+            pbjs.que.push(function() {
+              pbjs.addAdUnits(adUnits);
+              pbjs.requestBids({
+                bidsBackHandler: sendAdserverRequest
+              });
+            });
+            function sendAdserverRequest() {
+              if (pbjs.adserverRequestSent) return;
+              pbjs.adserverRequestSent = true;
+              googletag.cmd.push(function() {
+                pbjs.que.push(function() {
+                  pbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh();
+                });
+              });
+            }
+            setTimeout(function() {
+              sendAdserverRequest();
+            }, PREBID_TIMEOUT);
+
+      googletag.loadUnit = function (unit) {
+          var ds;
+          if (typeof unit.size === 'undefined') {
+          unit.size = [[300, 250]];
+          }
+          ds = googletag.defineSlot(unit.adUnitPath, unit.size, unit.opt_div);
+
+          //SIZEMAPPINGS
+          if (typeof unit.sizeMapping !== 'undefined' && typeof tg_mappings[unit.sizeMapping] !== 'undefined') {
+          ds.defineSizeMapping(tg_mappings[unit.sizeMapping])
+          }
+
+          ds.addService(googletag.pubads());
+          // RULE ZA FLOOR PRICE
+          if (unit.up_b) {
+          ds.setTargeting("upc", unit.up_b);
+          } else if (up_settings.up_b) {
+          ds.setTargeting("upc", up_settings.up_b);
+          }
+      };
+      googletag.cmd.push(function() {
+        for (var index in up_array) {
+          var unit;
+          if (up_array.hasOwnProperty(index)) {
+            unit = up_array[index];
+            googletag.loadUnit(unit);
+          }
+        }
+
+        googletag.pubads().setTargeting( "wp_post_type", ["single","post"] );googletag.pubads().setTargeting( "post_slug", ["ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus"] );googletag.pubads().setTargeting( "post_tag", ["mediji","ministarstvo-kulture","priznajem-hr"] );googletag.pubads().setTargeting( "nethr_category", ["danas"] );
+        if (up_settings.sr === 1) {
+          googletag.pubads().enableSingleRequest();
+        }
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+        `);
+          configScript.appendChild(configScriptContents), document.head.appendChild(configScript);
+        });
+      } else if (trafficSplit == 'wtg') {
+        var wtgScript = document.createElement('script');
+        wtgScript.src = '//lib.wtg-ads.com/lib.min.js';
+        wtgScript.async = true;
+        document.head.appendChild(wtgScript);
+      }
+      </script>
+        <meta name="description" content="Među medijima koji su dobili novac Ministarstva kulture je i portal Priznajem.hr koji prenosi lažne vijesti i često ne promiče toleranciju
+Ministarstvo kulture i medija je 31. srpnja 2020. donijelo Od...">      <meta name="onesignal" content="wordpress-plugin"/>
+            <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://net.hr");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '0f929f89-66ab-44c7-bccc-3751597d7b94';
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "Hvala na pretplati.";
+oneSignal_options['path'] = "https://net.hr/wp-content/plugins/OneSignal-WordPress-Plugin-master/sdk_files/";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['actionMessage'] = 'Net.hr vam želi slati obavijesti. Odjavite se u bilo kojem trenutku.';
+oneSignal_options['promptOptions']['acceptButtonText'] = 'Dozvoli';
+oneSignal_options['promptOptions']['cancelButtonText'] = 'Ne hvala';
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'inverse';
+oneSignal_options['notifyButton']['size'] = 'small';
+oneSignal_options['notifyButton']['showCredit'] = false;
+oneSignal_options['notifyButton']['text'] = {};
+oneSignal_options['notifyButton']['text']['tip.state.unsubscribed'] = 'Prijava na obavijesti';
+oneSignal_options['notifyButton']['text']['tip.state.subscribed'] = 'Prijavljeni ste na obavijesti';
+oneSignal_options['notifyButton']['text']['tip.state.blocked'] = 'Blokirali ste obavijesti';
+oneSignal_options['notifyButton']['text']['message.action.subscribed'] = 'Hvala na prijavi!';
+oneSignal_options['notifyButton']['text']['message.action.resubscribed'] = 'Prijavljeni ste na obavijesti';
+oneSignal_options['notifyButton']['text']['message.action.unsubscribed'] = 'Više nećete dobivati obavijesti';
+oneSignal_options['notifyButton']['text']['dialog.main.title'] = 'Notifikacije Net.hr';
+oneSignal_options['notifyButton']['text']['dialog.main.button.subscribe'] = 'Prijava';
+oneSignal_options['notifyButton']['text']['dialog.main.button.unsubscribe'] = 'Odjava';
+oneSignal_options['notifyButton']['text']['dialog.blocked.title'] = 'Prijava na obavijesti';
+oneSignal_options['notifyButton']['text']['dialog.blocked.message'] = 'Pratite ove korake da dozvolite obavijesti';
+                OneSignal.init(window._oneSignalInitOptions);
+                OneSignal.showSlidedownPrompt();      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+<link rel="amphtml" href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/amp/">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="OBJAVLJUJU I LAŽNE VIJESTI, A OD DRŽAVE ĆE DOBITI VIŠE OD MILIJUN KUNA: &#8216;Poslali ju da raskrinka laži, a onda joj se tamo ukazao Isus&#8230;&#8217;" />
+<meta property="og:url" content="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/" />
+<meta property="og:description" content="Među medijima koji su dobili novac Ministarstva kulture je i portal Priznajem.hr koji prenosi lažne vijesti i često ne promiče toleranciju Ministarstvo kulture i medija je 31. srpnja 2020. donijelo…" />
+<meta property="article:published_time" content="2020-08-06T15:37:33+00:00" />
+<meta property="article:modified_time" content="2020-08-06T16:07:02+00:00" />
+<meta property="og:site_name" content="Net.hr" />
+<meta property="og:image" content="https://net.hr/wp-content/uploads/2020/08/nasl-1.jpg?quality=100&amp;strip=all" />
+<meta property="og:image:width" content="669" />
+<meta property="og:image:height" content="502" />
+<meta property="og:locale" content="hr_HR" />
+<meta name="twitter:text:title" content="OBJAVLJUJU I LAŽNE VIJESTI, A OD DRŽAVE ĆE DOBITI VIŠE OD MILIJUN KUNA: &#8216;Poslali ju da raskrinka laži, a onda joj se tamo ukazao Isus&#8230;&#8217;" />
+<meta name="twitter:image" content="https://net.hr/wp-content/uploads/2020/08/nasl-1.jpg?quality=100&#038;strip=all&#038;w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="fb:app_id" content="103100136402693" />
+<meta property="fb:pages" content="86874647886" />
+<meta property="article:publisher" content="https://www.facebook.com/Net.hr" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://net.hr/wp-content/uploads/2020/05/cropped-net_icon.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://net.hr/wp-content/uploads/2020/05/cropped-net_icon.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://net.hr/wp-content/uploads/2020/05/cropped-net_icon.png?w=180" />
+<meta name="msapplication-TileImage" content="https://net.hr/wp-content/uploads/2020/05/cropped-net_icon.png?w=270" />
+	<!-- af7bf8cddd0fe677b5ecceef033ed47a -->
+</head>
+
+<body class="post-template-default single single-post postid-2300733 single-format-standard danas tmg-no-cookie">
+        <script>
+        var utag_data = {"site_name":"net.hr","page_name":"OBJAVLJUJU I LA\u017dNE VIJESTI, A OD DR\u017dAVE \u0106E DOBITI VI\u0160E OD MILIJUN KUNA: &#8216;Poslali ju da raskrinka la\u017ei, a onda joj se tamo ukazao Isus&#8230;&#8217;","page_type":"article","page_subtype":"","page_id":2300733,"article_author":"Ivana Petri\u0107","article_timestamp":"2020-08-06 17:37:33","article_keywords":["mediji","ministarstvo kulture","priznajem.hr"],"page_level1":"danas","page_level2":"hrvatska","page_level3":"ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus"}        </script>
+        <script type="text/javascript">
+        (function (a, b, c, d) {
+          a = '//tags.tiqcdn.com/utag/rtl-croatia/net-hr/prod/utag.js';
+          b = document;
+          c = 'script';
+          d = b.createElement(c);
+          d.src = a;
+          d.type = 'text/java' + c;
+          d.async = true;
+          a = b.getElementsByTagName(c)[0];
+          a.parentNode.insertBefore(d, a);
+        })();
+        </script>		<div id="fb-root"></div>
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '103100136402693',
+					xfbml      : true,
+					version    : 'v3.2'
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/hr_HR/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window,document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+
+            fbq('init', '864000226967467');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1"
+                 src="https://www.facebook.com/tr?id=864000226967467&ev=PageView&noscript=1"/>
+        </noscript>
+        <!-- End Facebook Pixel Code -->
+<!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ5ZQHC"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><div class="disclaimer">
+		<div class="container">
+			<i class="fa fa-empire"></i>
+			<div class="disclaimer-text">
+				<div class="disclaimer-title">
+					Pravilnik o upotrebi kolačića
+				</div>
+				Portal Net.hr unaprijedio je politiku privatnosti i korištenja takozvanih cookiesa, u skladu s novom europskom regulativom. Cookiese koristimo kako bismo mogli pružati našu online uslugu, analizirati korištenje sadržaja, nuditi oglašivačka rješenja, kao i za ostale funkcionalnosti koje ne bismo mogli pružati bez cookiesa. Daljnjim korištenjem ovog portala pristajete na korištenje cookiesa. Ovdje možete saznati više o <a href="https://net.hr/pravila-privatnosti/">zaštiti privatnosti</a> i <a href="https://net.hr/politika-o-cookiejima/">postavkama cookiesa</a>
+			</div>
+			<div class="disclaimer-btn">
+				<a href="#" onclick="tmg_hide_disclaimer()" class="dsc-btn">Shvaćam</a>
+			</div>
+
+		</div>
+		<style>
+			.disclaimer {
+				display:none;
+				background: #f5f5f5;
+				padding: 80px 0;
+				font-family: sans-serif;
+				font-size: 18px;
+			}
+
+			.disclaimer a:not(.dsc-btn) {
+				text-decoration: underline;
+			}
+
+			.disclaimer .container {
+				display: flex;
+				flex-wrap: nowrap;
+				position: relative;
+			}
+
+			.disclaimer i {
+				position: absolute;
+				top: 5px;
+				font-size: 72px;
+				left: -80px;
+				color: #999;
+			}
+
+			.disclaimer-title {
+				font-family: "Oswald", Impact, Sans-Serif;
+				font-size: 28px;
+				font-weight: normal;
+				margin-bottom: 5px;
+				color: #333;
+			}
+
+			.disclaimer-text {
+				padding-right: 20px;
+			}
+
+			.disclaimer-btn {
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				border-left: 1px solid #333;
+				padding-left: 20px;
+			}
+
+			.dsc-btn {
+				display: inline-block;
+				text-transform: uppercase;
+				font-family: "Oswald", Impact, Sans-Serif;
+				font-size: 18px;
+				background: #f15a22;
+				color: white;
+				padding: 6px 0;
+				width: 150px;
+			}
+
+			.dsc-btn:hover {
+				background: black;
+			}
+
+			.tmg-no-cookie .disclaimer {
+				display: block;
+			}
+		</style>
+		<script>
+            function tmg_hide_disclaimer() {
+                document.body.className = document.body.className.replace(/\btmg-no-cookie\b/,'');
+                return false;
+            }
+            if (document.cookie.indexOf("tmg_visited=") >= 0) {
+                tmg_hide_disclaimer();
+            }
+            else {
+                // set a new cookie
+                expiry = new Date();
+                expiry.setTime(expiry.getTime()+(365*24*60*60*1000)); // 1 year
+
+                // Date()'s toGMTSting() method will format the date correctly for a cookie
+                document.cookie = "tmg_visited=yes; domain=.net.hr; path=/; expires=" + expiry.toGMTString();
+            }
+		</script>
+	</div>
+<div id="overlay"></div>
+
+<div class="main-container">
+
+	
+<div class="top-menu">
+    <div class="container">
+        <div class="menu-servisni-container"><ul id="menu-servisni" class="menu"><li id="menu-item-534856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-534856"><a href="https://net.hr/">Net.hr</a></li>
+<li id="menu-item-387993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-387993"><a target="_blank" rel="noopener noreferrer" href="http://freemail.net.hr/">Freemail</a></li>
+<li id="menu-item-1322819" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1322819"><a href="http://sanjarica.net.hr">Sanjarica</a></li>
+<li id="menu-item-388004" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-388004"><a href="http://net.hr/igrice/">Net igrice</a></li>
+<li id="menu-item-388013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388013"><a href="https://net.hr/uvjeti_koristenja/">Uvjeti korištenja</a></li>
+<li id="menu-item-388012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388012"><a href="https://net.hr/marketing/">Marketing</a></li>
+<li id="menu-item-388011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388011"><a href="https://net.hr/impressum/">Impressum</a></li>
+</ul></div>    </div>
+</div>
+
+
+<header class="category danas">
+    <div class="container">
+
+        <div class="head">
+            <div class="logo">
+                <a href="https://net.hr">
+                    <img src="https://net.hr/wp-content/themes/adriaticmedia-nethr/img/net_colored_logo.svg" height="40"/>
+                </a>
+            </div>
+            <div class="nav-search">
+                        <form id="google-search" action="https://net.hr/pretrazivanje">
+            <input type="hidden" name="cx" value="partner-pub-2317149376955370:wn57ucrd4ll"/>
+            <input type="hidden" name="cof" value="FORID:10"/>
+            <input type="hidden" name="ie" value="UTF-8"/>
+            <input type="text" name="q" size="31" placeholder="Google pretraživanje"/>
+        </form>
+        <button type="submit" form="google-search" value="Submit"><i class="fa fa-search"></i></button>
+                    </div>
+
+            <div class="freemail">
+                <img src="https://net.hr/wp-content/themes/adriaticmedia-nethr/img/icons/net_ico_freemail.svg" height="22"/> Freemail
+                <a href="https://freemail.net.hr/" target="_blank" class="button button-small">Prijavi se</a>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+
+            <div class="small-logo">
+                <a href="https://net.hr">
+                    <img src="https://net.hr/wp-content/themes/adriaticmedia-nethr/img/net_icon.svg" height="24"/>
+                </a>
+            </div>
+
+            <div id="hamburger">
+                <div class="bar bar-top"></div>
+                <div class="bar bar-middle"></div>
+                <div class="bar bar-bottom"></div>
+            </div>
+
+            <div class="drop-menu">
+                			<div class="footer-categories">
+				<div class="container cf">
+												<div class="category-container">
+								<a href="https://net.hr/kategorija/danas/">
+									<h4>
+										Vijesti									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/danas/crna-kronika/">
+											Crna kronika										</a>
+																				<a href="https://net.hr/kategorija/danas/hrvatska/">
+											Hrvatska										</a>
+																				<a href="https://net.hr/kategorija/danas/kultura/">
+											Kultura										</a>
+																				<a href="https://net.hr/kategorija/danas/novac/">
+											Novac										</a>
+																				<a href="https://net.hr/kategorija/danas/svijet/">
+											Svijet										</a>
+																				<a href="https://net.hr/kategorija/danas/znanost/">
+											Znanost										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/sport/">
+									<h4>
+										Sport									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/sport/hokej/">
+											Hokej										</a>
+																				<a href="https://net.hr/kategorija/sport/klub-boraca/">
+											Klub boraca										</a>
+																				<a href="https://net.hr/kategorija/sport/kosarka/">
+											Košarka										</a>
+																				<a href="https://net.hr/kategorija/sport/na-rubu-sporta/">
+											Na rubu sporta										</a>
+																				<a href="https://net.hr/kategorija/sport/nogomet/">
+											Nogomet										</a>
+																				<a href="https://net.hr/kategorija/sport/oi-2016/">
+											OI										</a>
+																				<a href="https://net.hr/kategorija/sport/ostali-sportovi/">
+											Ostali sportovi										</a>
+																				<a href="https://net.hr/kategorija/sport/rukomet/">
+											Rukomet										</a>
+																				<a href="https://net.hr/kategorija/sport/skijanje/">
+											Skijanje										</a>
+																				<a href="https://net.hr/kategorija/sport/tenis/">
+											Tenis										</a>
+										                                    <a href="https://www.rezultati.com/" target="_blank">
+                                        Rezultati.com
+                                    </a>
+																</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/webcafe/">
+									<h4>
+										Webcafe									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/webcafe/astronet/">
+											Astronet										</a>
+																				<a href="https://net.hr/kategorija/webcafe/cura-dana/">
+											Cura dana										</a>
+																				<a href="https://net.hr/kategorija/webcafe/decko-dana/">
+											Dečko dana										</a>
+																				<a href="https://net.hr/kategorija/webcafe/dnevni-horoskop/">
+											Dnevni horoskop										</a>
+																				<a href="https://net.hr/kategorija/webcafe/fora-dana/">
+											Fora dana										</a>
+																				<a href="https://net.hr/kategorija/webcafe/forwarduse/">
+											Forwarduše										</a>
+																				<a href="https://net.hr/kategorija/webcafe/komnetar/">
+											Komnetar										</a>
+																				<a href="https://net.hr/kategorija/webcafe/overkloking/">
+											Overkloking										</a>
+																				<a href="https://net.hr/kategorija/webcafe/planet-x/">
+											Planet X										</a>
+																				<a href="https://net.hr/kategorija/webcafe/svastara/">
+											Svaštara										</a>
+																				<a href="https://net.hr/kategorija/webcafe/vic-dana/">
+											Vic dana										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/hot/">
+									<h4>
+										Hot									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/hot/lijepenase/">
+											#lijepenase										</a>
+																				<a href="https://net.hr/kategorija/hot/film/">
+											Film										</a>
+																				<a href="https://net.hr/kategorija/hot/glazba/">
+											Glazba										</a>
+																				<a href="https://net.hr/kategorija/hot/sexy/">
+											Sexy										</a>
+																				<a href="https://net.hr/kategorija/hot/tv/">
+											TV										</a>
+																				<a href="https://net.hr/kategorija/hot/zvijezde/">
+											Zvijezde										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/magazin/">
+									<h4>
+										Magazin									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/magazin/brakveze/">
+											Brak&amp;veze										</a>
+																				<a href="https://net.hr/kategorija/magazin/domvrt/">
+											Dom&amp;vrt										</a>
+																				<a href="https://net.hr/kategorija/magazin/hotspots/">
+											HotSpots										</a>
+																				<a href="https://net.hr/kategorija/magazin/kuhinja/">
+											Kuhinja										</a>
+																				<a href="https://net.hr/kategorija/magazin/kvizovi/">
+											Kvizovi										</a>
+																				<a href="https://net.hr/kategorija/magazin/lijepi_nasi/">
+											Lijepi naši										</a>
+																				<a href="https://net.hr/kategorija/magazin/ljepota/">
+											Ljepota										</a>
+																				<a href="https://net.hr/kategorija/magazin/ljubimci/">
+											Ljubimci										</a>
+																				<a href="https://net.hr/kategorija/magazin/moda/">
+											Moda										</a>
+																				<a href="https://net.hr/kategorija/magazin/muffini/">
+											Muffini										</a>
+																				<a href="https://net.hr/kategorija/magazin/putovanja/">
+											Putovanja										</a>
+																				<a href="https://net.hr/kategorija/magazin/roditeljstvo/">
+											Roditeljstvo										</a>
+																				<a href="https://net.hr/kategorija/magazin/zdravlje/">
+											Zdravlje										</a>
+																				<a href="https://net.hr/kategorija/magazin/zdravlje-i-ljepota/">
+											Zdravlje i ljepota										</a>
+																				<a href="https://net.hr/kategorija/magazin/zivotne-ispovijesti/">
+											Životne ispovijesti										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/tehnoklik/">
+									<h4>
+										Tehnoklik									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/tehnoklik/gadgeti/">
+											Gadgeti										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/mobile/">
+											Mobile										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/technobiz/">
+											Technobiz										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/vijesti-tehnoklik/">
+											Vijesti										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/web-social/">
+											Web &amp; social										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/auto/">
+									<h4>
+										Auto									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/auto/automoto/">
+											Automoto										</a>
+																				<a href="https://net.hr/kategorija/auto/automoto-sport/">
+											automoto-sport										</a>
+																				<a href="https://net.hr/kategorija/auto/bicikli/">
+											Bicikli										</a>
+																				<a href="https://net.hr/kategorija/auto/funmobil/">
+											Funmobil										</a>
+																				<a href="https://net.hr/kategorija/auto/nova-vozila/">
+											Nova vozila										</a>
+																				<a href="https://net.hr/kategorija/auto/techmobil/">
+											Techmobil										</a>
+																				<a href="https://net.hr/kategorija/auto/vijesti/">
+											Vijesti										</a>
+																	</div>
+										</div>
+			</div>
+			            </div>
+
+            <div class="menu-danas-container"><ul id="menu-danas" class="menu"><li id="menu-item-5351" class="primary menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-5351"><a href="https://net.hr/kategorija/danas/">Vijesti</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-50"><a href="https://net.hr/kategorija/danas/hrvatska/">Hrvatska</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-53"><a href="https://net.hr/kategorija/danas/svijet/">Svijet</a></li>
+<li id="menu-item-49" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-49"><a href="https://net.hr/kategorija/danas/crna-kronika/">Crna kronika</a></li>
+<li id="menu-item-51" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51"><a href="https://net.hr/kategorija/danas/kultura/">Kultura</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-52"><a href="https://net.hr/kategorija/danas/novac/">Novac</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-54"><a href="https://net.hr/kategorija/danas/znanost/">Znanost</a></li>
+</ul></div>
+            <div class="nav-icons">
+                <div class="icon">
+                    <a href="https://sanjarica.net.hr/" target="_blank">
+                        <img src="https://net.hr/wp-content/themes/adriaticmedia-nethr/img/icons/net_ico_sanjarica.svg" height="22"/> Sanjarica
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="https://finirecepti.net.hr/" target="_blank">
+                        <img src="https://net.hr/wp-content/themes/adriaticmedia-nethr/img/icons/net_ico_recepti.svg" height="22"/> Recepti
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="http://webshop.net.hr/" target="_blank">
+                        <img src="https://net.hr/wp-content/themes/adriaticmedia-nethr/img/icons/net_ico_webshop.svg" height="22"/> Webshop
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<div id="overlay-dark"></div>
+	<div class="content-container cf">
+		<div class="top-zone">
+								<div class="billboard">
+						<div class="banner">
+							      <div id='nethr_desktop_billboard_v1'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_billboard_v1');
+            });
+          }
+          </script>
+      </div>
+    						</div>
+					</div>
+					
+		</div>
+	<div class="container single cf">
+    <div class="single-inner cf">
+		<div class="section-header">
+			<div class="section-titles">
+								<a href="https://net.hr/kategorija/danas/hrvatska/"
+				   class="active">Hrvatska</a>
+                			</div>
+			
+<div class="socials">
+			<div class="c2action"><!-- as bg --></div>
+		<a href="https://www.facebook.com/Danas.hr" target="_blank" class="fb" data-social-network="Facebook" data-social-action="click" data-social-target="https://www.facebook.com/Danas.hr"><i
+			class="fa fa-facebook"></i></a>
+	<a href="https://twitter.com/danashr" target="_blank" class="tw" data-social-network="Twitter" data-social-action="click" data-social-target="https://twitter.com/danashr"><i
+			class="fa fa-twitter"></i></a>
+	<a href="https://net.hr/kategorija/danas/feed/" target="_blank" class="go"><i
+			class="fa fa-rss"></i></a>
+	
+</div>		</div>
+
+		<div class="page-grid single-article">
+
+			
+                				<h3 class="overtitle">OGLASILO SE MINISTARSTVO</h3>
+                				<h1 class="title">OBJAVLJUJU I LAŽNE VIJESTI, A OD DRŽAVE ĆE DOBITI VIŠE OD MILIJUN KUNA: &#8216;Poslali ju da raskrinka laži, a onda joj se tamo ukazao Isus&#8230;&#8217;</h1>
+
+				<div class="article-meta cf">
+					<div class="socials socials-count">
+
+	<span>
+		<a href="https://www.facebook.com/dialog/share?app_id=103100136402693&display=popup&href=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F&redirect_uri=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F" target="_blank" class="fb" data-social-network="Facebook" data-social-action="share" data-social-target="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/"><i
+				class="fa fa-facebook"></i></a>
+		<!--<label class="count-no"></label>-->
+	</span>
+
+	<span>
+		<a href="https://twitter.com/intent/tweet?counturl=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F&text=OBJAVLJUJU+I+LA%C5%BDNE+VIJESTI%2C+A+OD+DR%C5%BDAVE+%C4%86E+DOBITI+VI%C5%A0E+OD+MILIJUN+KUNA%3A+%26%238216%3BPoslali+ju+da+raskrinka+la%C5%BEi%2C+a+onda+joj+se+tamo+ukazao+Isus%26%238230%3B%26%238217%3B&url=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F&via=Nethr" target="_blank" class="tw" data-social-network="Twitter" data-social-target="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/" data-social-action="tweet"><i
+				class="fa fa-twitter"></i></a>
+		<!--<label class="count-no"></label>-->
+	</span>
+
+	<span>
+	<a href="https://plus.google.com/share?hl=hr&url=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F" target="_blank" class="go" data-social-network="GooglePlus" data-social-action="share" data-social-target="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/"><i
+				class="fa fa-google-plus"></i></a>
+		<!--<label class="count-no"></label>-->
+	</span>
+
+</div>
+					<div class="metabox">
+					<span></span>
+						<span>Autor: Ivana Petrić </span>
+						<span><i class="fa fa-clock-o"></i> 17:37 06.08.2020</span>
+					</div>
+				</div>
+											<div class="featured-img thumb">
+							<img width="670" height="400" src="https://net.hr/wp-content/uploads/2020/08/nasl-1.jpg?quality=100&amp;strip=all&amp;w=670&amp;h=400&amp;crop=1" class="attachment-single size-single wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/nasl-1.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/nasl-1.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/nasl-1.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/nasl-1.jpg?resize=670,400 670w" sizes="(max-width: 670px) 100vw, 670px" />							</div>
+											<div class="article-content" id="__xclaimwords_wrapper">
+					<h4>Među medijima koji su dobili novac Ministarstva kulture je i portal Priznajem.hr koji prenosi lažne vijesti i često ne promiče toleranciju</h4>
+<p>Ministarstvo kulture i medija je 31. srpnja 2020. donijelo <a href="https://www.min-kulture.hr/userdocsimages/2020%20programi/2020/Odluka%20o%20financiranju_Mediji%20zajednice001.pdf" target="_blank" rel="noopener noreferrer">Odluku</a> o financiranju projekata &#8220;Mediji zajednice – potpora socijalnom uključivanju putem medija&#8221;. Kako su napisali, ukupni iznos bespovratnih sredstava u okviru poziva iznosi 15 milijuna kuna. Iz Europskog socijalnog fonda osigurano je 85 posto sredstava dok se obavezni udio nacionalnog sufinanciranja od 15 posto osigurava iz Ministarstva kulture i medija iz Državnog proračuna RH.</p>
+<div class="banner banner-size3">
+<div id='nethr_desktop_intext_v1'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_intext_v1');
+            });
+          }
+          </script>
+      </div>
+</p></div>
+<p>&#8220;Opći cilj poziva Mediji zajednice – potpora socijalnom uključivanju putem medija, faza i je unaprjeđenje kvalitete medijskog izvještavanja o ranjivim skupinama i podizanje razine javne svijesti o njihovim pravima, a specifični ciljevi su jačanje kapaciteta medijskih djelatnika (novinara) za rad usmjeren na socijalno uključivanje ranjivih skupina te povećanje vidljivosti ranjivih skupina u društvu putem njihove medijske reprezentacije&#8221;, stoji u objavi Odluke Ministarstva kulture.</p>
+<p><img class="aligncenter wp-image-2300745 size-large" src="https://net.hr/wp-content/uploads/2020/08/priznajem.jpg?quality=100&amp;strip=all&amp;w=649" alt="" width="649" height="153" srcset="https://net.hr/wp-content/uploads/2020/08/priznajem.jpg 649w, https://net.hr/wp-content/uploads/2020/08/priznajem.jpg?resize=150,35 150w, https://net.hr/wp-content/uploads/2020/08/priznajem.jpg?resize=300,71 300w" sizes="(max-width: 649px) 100vw, 649px" /></p>
+<div class="banner banner-size3">
+<div id='nethr_desktop_intext_v2'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_intext_v2');
+            });
+          }
+          </script>
+      </div>
+</p></div>
+<p>Jedan od &#8220;sretnih medijskih dobitnika&#8221; je i Razvoj informativne platforme Hrvatski Branitelj, Udruga Priznajem iz Slavonskog Broda. Oni će biti financirani iznosom malo većim od milijun i 302.000 kuna. Ista udruga ima istoimeni portal Priznajem.hr, a problem je u tome što se na tom mediju često mogu pročitati lažne vijesti i huškački tekstovi.</p>
+<h3>Ministarstvo je prepoznalo kvalitetu sadržaja na Priznajem.hr?</h3>
+<p>Dakle, jedan portal kao Priznajem.hr dobit će novac Ministarstva kulture, ali ne i primjerice portal <a href="https://voxfeminae.net/" target="_blank" rel="noopener noreferrer">VoxFeminae</a> koji godinama svojim sadržajem i člancima podržava i ohrabruje žene inicijatorice kao i žene u umjetnosti, poduzetništvu te žene općenito.</p>
+<div class="banner banner-size3">
+<div id='nethr_desktop_intext_v3'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_intext_v3');
+            });
+          }
+          </script>
+      </div>
+</p></div>
+<p><fb:post href="https://www.facebook.com/VoxFeminae/posts/3659149747446598?__tn__=-R" data-width="552"></fb:post></p>
+<p>O tome da niti ove godine nisu dobili nikakva sredstva i potporu Ministarstva, izvijestio je VoxFeminae na svojoj službenoj Facebook stranici pa su naveli i jedan tekst s portala Priznajem.hr pod naslovom: &#8220;Novinarka iz Irske poslana u Međugorje raskrinkati laž! Tada joj se ukazao Isus…&#8221;, kako bi ukazali na to o kakvom portalu je riječ.</p>
+<p>Isto tako, Priznajem.hr često prenosi portal Dnevno.hr koji je već dobro poznat po veličanju ustaštva, govoru mržnje te huškanju protiv Srba i svih onih koji nisu ekstremno desno. Tako su prenijeli <a href="https://priznajem.hr/novosti/hrvatska/marcel-holjevac-plenkovicev-novi-srbin/127488/" target="_blank" rel="noopener noreferrer">kolumnu</a> <strong>Marcela Holjevca</strong> s Dnevno.hr naslova &#8220;<strong>Plenkovićev</strong> novi Srbin&#8221; o tome kako &#8220;Plenković uvijek ima <strong>Pupovca</strong>&#8221; nakon što su ga oporbenjaci &#8220;odbili za kavu&#8221;, odnosno neformalni sastanak.</p>
+<p><img class="aligncenter wp-image-2300748 size-large" src="https://net.hr/wp-content/uploads/2020/08/marcel.jpg?quality=100&amp;strip=all&amp;w=627" alt="" width="627" height="577" srcset="https://net.hr/wp-content/uploads/2020/08/marcel.jpg 627w, https://net.hr/wp-content/uploads/2020/08/marcel.jpg?resize=150,138 150w, https://net.hr/wp-content/uploads/2020/08/marcel.jpg?resize=300,276 300w" sizes="(max-width: 627px) 100vw, 627px" /></p>
+<p>Valja istaknuti da je u listopadu 2019. na Priznajem.hr objavljen <a href="https://priznajem.hr/domovina/faktograf-hr-promice-lazne-vijesti/101939/" target="_blank" rel="noopener noreferrer">članak</a> u kojem stoji da Faktograf, medij za provjeru informacija, laže, odnosno promiče lažne vijesti. Tekst je uglavnom sastavljen od &#8220;kukanja&#8221; o tome kako Faktograf cenzurira portal Narod.hr kao i brojne druge ekstremno desne portale i smanjuje im &#8220;reach&#8221;. Dakle, lažne vijesti s Dnevno.hr koje Faktograf cenzurira portal Priznajem.hr proglašava lažnim vijestima.</p>
+<p><img class="aligncenter wp-image-2300747 size-large" src="https://net.hr/wp-content/uploads/2020/08/faktograf.jpg?quality=100&amp;strip=all&amp;w=587" alt="" width="587" height="471" srcset="https://net.hr/wp-content/uploads/2020/08/faktograf.jpg 587w, https://net.hr/wp-content/uploads/2020/08/faktograf.jpg?resize=150,120 150w, https://net.hr/wp-content/uploads/2020/08/faktograf.jpg?resize=300,241 300w" sizes="(max-width: 587px) 100vw, 587px" /></p>
+<p>Ukratko, medij koji često objavljuje tekstove koji ne promiču uvažavanje u društvu i toleranciju, osobito prema manjinama, dobio je preko 1,3 milijuna kuna iz projekta Mediji zajednice. Znači li to da Ministarstvo kulture pronalazi kvalitetu u tekstovima o &#8220;ukazanju u Međugorju&#8221;, ali ne i u tekstovima koji promiču uspjehe žena?</p>
+<p>Prema Odluci Ministarstva stoji da će biti financirani mediji &#8220;čiji je rad usmjeren na socijalno uključivanje ranjivih skupina te povećanje vidljivosti ranjivih skupina u društvu&#8221;, što Priznajem.hr definitivno nije.</p>
+<p>Pitali smo Ministarstvo zašto je upravo Priznajem.hr dobio novac i to u tako velikom iznosu.</p>
+<h3>Ministarstvo: &#8216;Procjenu kvalitete ne donosi Nacionalna zaklada&#8217;</h3>
+<p>Ministarstvo kulture i medija u svom odgovoru kaže da zapravo oni ne procjenjuju kvalitetu nekog medija kojem dodjeljuju financijska sredstva nego da to čini Nacionalna zaklada za razvoj civilnoga društva, odnosno Odbor za odabir projekata (OOP). Osnivač tog Odbora je Nacionalna zaklada za razvoj civilnog društva i oni su, kako nam kažu iz Ministarstva, ti koji rade selekciju dok je Ministarstvo Posredničko tijelo razine 1 u okviru Operativnog programa &#8220;Učinkoviti ljudski potencijali&#8221;.</p>
+<p><img class="aligncenter wp-image-2302981 size-large" src="https://net.hr/wp-content/uploads/2020/08/min-kulture.jpg?quality=100&amp;strip=all&amp;w=669" alt="" width="669" height="361" srcset="https://net.hr/wp-content/uploads/2020/08/min-kulture.jpg 861w, https://net.hr/wp-content/uploads/2020/08/min-kulture.jpg?resize=150,81 150w, https://net.hr/wp-content/uploads/2020/08/min-kulture.jpg?resize=300,162 300w, https://net.hr/wp-content/uploads/2020/08/min-kulture.jpg?resize=768,415 768w, https://net.hr/wp-content/uploads/2020/08/min-kulture.jpg?resize=669,361 669w, https://net.hr/wp-content/uploads/2020/08/min-kulture.jpg?resize=670,362 670w" sizes="(max-width: 669px) 100vw, 669px" /></p>
+<p>&#8220;Odluka o financiranju donosi se za projektne prijedloge koji su uspješno prošli prethodna dva dijela postupka dodjele bespovratnih sredstava: administrativnu provjeru i procjenu kvalitete, a navedeni dijelovi postupka dodjele su u nadležnosti Nacionalne zaklade za razvoj civilnoga društva, odnosno Posredničkog tijela razine 2 u ovom pozivu. Jedan od uvjeta prihvatljivosti prijavitelja koji je naveden u Uputama za prijavitelje predmetnog poziva (točka 2.2 Uvjeti prihvatljivosti prijavitelja/partnera), a za čiju je provjeru nadležna Nacionalna zaklada za razvoj civilnoga društva jest da prijavitelj nije prekršajno kažnjen na temelju pravomoćne sudske odluke zbog kršenja odredbi Zakona o medijima/ Zakona o elektroničkim medijima u razdoblju od 12 mjeseci prije podnošenja projektnog prijedloga i, ako je primjenjivo, u razdoblju od 12 mjeseci prije podnošenja projektnog prijedloga, Vijeće za elektroničke medije nije mu izreklo opomenu. Predmetni projektni prijedlog uspješno je prošao navedene postupke dodjele.</p>
+<p>Za provedbu faze procjene kvalitete nadležna je također Nacionalna zaklada za razvoj civilnoga društva, koja osniva Odbor za odabir projekata (OOP) članovi kojeg ocjenjuju projektne prijave prema kriterijima dodjele koji su objavljeni u točki 6.2 Uputa za prijavitelje. Ministarstvo kulture i medija donosi Odluku o financiranju projektnih prijedloga na temelju popisa (rang-liste) Odbora za odabir projekata iz postupka procjene kvalitete, uključujući konačno Izvješće o provedenom postupku procjene kvalitete&#8221;, objašnjavaju nam iz Ministarstva.</p>
+<h3>Što je utjecalo na konačan iznos sredstava po pojedinom projektu?</h3>
+<p>Iz Ministarstva kulture kažu da je minimalni iznos bespovratnih sredstava, koji se mogao dodijeliti pojedinom projektnom prijedlogu, po ovom pozivu iznosio 450.000 kuna, a maksimalni milijun i 400.000 kuna. Ističu da su prijavitelji mogli prijaviti i drugi iznos unutar navedenih financijskih limita.</p>
+<p>&#8220;Na konačan iznos dodijeljenih sredstava pojedinom projektnom prijedlogu utjecala je provjera prihvatljivosti projektnih aktivnosti, budući da su iz proračuna projektnog/ih prijedloga brisani izdaci koji se odnose na neprihvatljive aktivnosti (u slučaju da su postojale).</p>
+<p>Kriteriji dodjele objavljeni su u točki 6.2 Uputa za prijavitelje predmetnog poziva, a riječ je o razradi kriterija koje je 18. svibnja 2015. godine usvojio Odbor za praćenje OP ULJP 2014. &#8211; 2020. Sukladno Smjernicama za ESF, identitet članova Odbora za odabir projekata (OOP) je tajan, kako se ne bi narušilo načelo tajnosti postupka dodjele i načelo jednakog postupanja&#8221;, odgovorili su za Net.hr iz Ministarstva kulture i medija.</p>
+<div class="banner banner-size3">
+<div id='nethr_desktop_intext_v4'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_intext_v4');
+            });
+          }
+          </script>
+      </div>
+</p></div>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Podijeli:</h3><div class="sd-content"><ul><li class="share-facebook"><div class="fb-share-button" data-href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/" data-layout="button_count"></div></li><li class="share-messenger"><div class="fb-send" data-href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/"></div></li><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/" data-text="OBJAVLJUJU I LAŽNE VIJESTI, A OD DRŽAVE ĆE DOBITI VIŠE OD MILIJUN KUNA: &#039;Poslali ju da raskrinka laži, a onda joj se tamo ukazao Isus...&#039;"  >Tweet</a></li><li class="share-jetpack-whatsapp"><a rel="nofollow noopener noreferrer" data-shared="" class="share-jetpack-whatsapp sd-button" href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/?share=jetpack-whatsapp" target="_blank" title="Click to share on WhatsApp"><span>WhatsApp</span></a></li><li class="share-telegram"><a rel="nofollow noopener noreferrer" data-shared="" class="share-telegram sd-button" href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/?share=telegram" target="_blank" title="Click to share on Telegram"><span>Telegram</span></a></li><li class="share-end"></li></ul></div></div></div>					<div class="tags">
+						<a href="https://net.hr/tema/mediji/" rel="tag">mediji</a> <a href="https://net.hr/tema/ministarstvo-kulture/" rel="tag">ministarstvo kulture</a> <a href="https://net.hr/tema/priznajem-hr/" rel="tag">priznajem.hr</a>					</div>
+				</div>
+								<div class="article-meta cf">
+					<div class="socials socials-count">
+
+	<span>
+		<a href="https://www.facebook.com/dialog/share?app_id=103100136402693&display=popup&href=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F&redirect_uri=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F" target="_blank" class="fb" data-social-network="Facebook" data-social-action="share" data-social-target="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/"><i
+				class="fa fa-facebook"></i></a>
+		<!--<label class="count-no"></label>-->
+	</span>
+
+	<span>
+		<a href="https://twitter.com/intent/tweet?counturl=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F&text=OBJAVLJUJU+I+LA%C5%BDNE+VIJESTI%2C+A+OD+DR%C5%BDAVE+%C4%86E+DOBITI+VI%C5%A0E+OD+MILIJUN+KUNA%3A+%26%238216%3BPoslali+ju+da+raskrinka+la%C5%BEi%2C+a+onda+joj+se+tamo+ukazao+Isus%26%238230%3B%26%238217%3B&url=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F&via=Nethr" target="_blank" class="tw" data-social-network="Twitter" data-social-target="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/" data-social-action="tweet"><i
+				class="fa fa-twitter"></i></a>
+		<!--<label class="count-no"></label>-->
+	</span>
+
+	<span>
+	<a href="https://plus.google.com/share?hl=hr&url=https%3A%2F%2Fnet.hr%2Fdanas%2Fhrvatska%2Fministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus%2F" target="_blank" class="go" data-social-network="GooglePlus" data-social-action="share" data-social-target="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/"><i
+				class="fa fa-google-plus"></i></a>
+		<!--<label class="count-no"></label>-->
+	</span>
+
+</div>
+					<div class="metabox">
+					<span></span>
+						<span>Autor: Ivana Petrić </span>
+						<span><i class="fa fa-clock-o"></i> 17:37 06.08.2020</span>
+					</div>
+				</div>
+			
+		</div>
+		<div class="sidebar single-sidebar single-sidebar-1">
+								<div class="banner banner-size3">
+						      <div id='nethr_desktop_300x250_v1'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_300x250_v1');
+            });
+          }
+          </script>
+      </div>
+    					</div>
+					            <div class="widget najcitanije-widget">
+                <div class="widget-header cf">
+                    <h2 class="section-title active">Najčitanije</h2>
+                    <h2 class="section-title latest">Najnovije</h2>
+                </div>
+	            <div class="tab tab_1">
+                <div class="widget-body gray cf">
+	                <article class="article-3 cf video">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/svijet/medijima-u-srbiji-danas-je-posebno-zazvonila-jedna-plenkoviceva-izjava-oglasio-se-vucic-necemo-trpjeti-ponizenje/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/PXL_040820_29725023.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/PXL_040820_29725023.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/PXL_040820_29725023.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/PXL_040820_29725023.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/PXL_040820_29725023.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+									<div class="article-icon"><i class="fa fa-play"></i> Video
+					</div>
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					OBLJETNICA &#039;OLUJE&#039;				</h2>
+
+				<h1 class="title">
+					MEDIJIMA U SRBIJI POSEBNO JE &#8216;ZAZVONILA&#8217; JEDNA PLENKOVIĆEVA IZJAVA; Oglasio se Vučić: &#8216;Nećemo trpjeti poniženje&#8217;</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/gotovina-u-kninu-komentirao-pripadnike-hos-a-u-svemu-pa-i-u-slobodi-postoji-disciplina-ne-mozemo-se-svi-u-svemu-slagati/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/Gotovina-A-e1596627151280.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/Gotovina-A-e1596627151280.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/Gotovina-A-e1596627151280.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/Gotovina-A-e1596627151280.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/Gotovina-A-e1596627151280.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					GENERALOVA PO(R)UKA				</h2>
+
+				<h1 class="title">
+					GOTOVINA KOMENTIRAO PONAŠANJE HOS-OVACA NA PROSLAVI &#8216;OLUJE&#8217; U KNINU: &#8216;U svemu, pa i u slobodi, postoji disciplina&#8217;</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/nova-ministrica-opteretila-pola-svoje-place-podignula-je-cak-tri-kredita-a-posjeduje-samo-auto-i-stan/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/PXL_240720_29622666.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/PXL_240720_29622666.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/PXL_240720_29622666.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/PXL_240720_29622666.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/PXL_240720_29622666.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					ŽIVOT NA KREDIT				</h2>
+
+				<h1 class="title">
+					NOVA MINISTRICA OPTERETILA POLA SVOJE PLAĆE: Podignula je čak tri kredita, a posjeduje samo auto i stan</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/uskoro-se-vraca-pravo-ljeto-oglasio-se-vakula-vrijeme-se-smiruje-ali-ne-jos-skroz-ponegdje-ce-jos-biti-problema-evo-gdje/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/1-25.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/1-25.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/1-25.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/1-25.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/1-25.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					JOŠ MALO I SMIRIVANJE				</h2>
+
+				<h1 class="title">
+					VAKULA IMA DVIJE VIJESTI &#8211; JEDNU DOBRU I JEDNU LOŠU: Koju ćete prvu?</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/rojs-priznao-da-je-htio-zadaviti-seksa-pa-dao-neocekivanu-pohvalu-vec-je-napravio-vise-nego-sve-moje-vlade-u-15-godina/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/rojs-o-milanoviću.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/rojs-o-milanoviću.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/rojs-o-milanoviću.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/rojs-o-milanoviću.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/rojs-o-milanoviću.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					IZNENADIO				</h2>
+
+				<h1 class="title">
+					ROJS PRIZNAO DA JE HTIO &#8216;ZADAVITI ŠEKSA&#8217; PA DAO NEOČEKIVANU POHVALU: &#8216;Već je napravio više nego sve moje vlade u 15 godina&#8217;</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/zagrepcani-spasavaju-jos-jedan-park-bandic-na-zelenoj-povrsini-zeli-osmerokatnicu-s-nekoliko-podzemnih-etaza/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/gradjani-brane-svoj-park-afed6d711d31e146838a591d47c5dea5_view_article_new.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/gradjani-brane-svoj-park-afed6d711d31e146838a591d47c5dea5_view_article_new.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/gradjani-brane-svoj-park-afed6d711d31e146838a591d47c5dea5_view_article_new.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/gradjani-brane-svoj-park-afed6d711d31e146838a591d47c5dea5_view_article_new.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/gradjani-brane-svoj-park-afed6d711d31e146838a591d47c5dea5_view_article_new.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					NOVA DRAMA S GUP-OM				</h2>
+
+				<h1 class="title">
+					ZAGREPČANI SPAŠAVAJU JOŠ JEDAN PARK: Bandić na zelenoj površini želi osmerokatnicu s nekoliko podzemnih etaža</h1>
+			</div>
+		</a>
+
+	</div>
+</article>                </div>
+	            </div>
+	            <div class="tab tab_2">
+
+		            <div class="widget-body gray cf">
+			            <article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/hrvatska-salje-pomoc-razorenom-bejrutu-osim-novca-u-libanon-saljemo-i-vrijedne-pakete-kemijskih-zastitnih-odijela-rukavica/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/beirut1.jpg 1250w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=150,92 150w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=300,183 300w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=768,469 768w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=669,409 669w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=670,410 670w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=1200,733 1200w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					HUMANITARNA POMOĆ				</h2>
+
+				<h1 class="title">
+					HRVATSKA ŠALJE POMOĆ RAZORENOM BEJRUTU: Osim novca, u Libanon šaljemo i vrijedne pakete kemijskih zaštitnih odijela, rukavica&#8230;</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/sport/barcelona-ce-potjerati-klupsku-legendu-i-tako-ispuniti-veliku-messijevu-zelju-otkriven-bizaran-plan-katalonaca/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle sport">
+					GLAVNI UVJET				</h2>
+
+				<h1 class="title">
+					BARCELONA ĆE POTJERATI KLUPSKU LEGENDU I TAKO ISPUNITI VELIKU MESSIJEVU ŽELJU? Otkriven bizaran plan Katalonaca</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf video">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/novi-crodemoskop-za-koga-bi-ljudi-danas-glasali-hdz-uvjerljivo-vodi-sdp-uvjerljivo-tone-a-skorina-opcija-vise-nije-treci-izbor/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+									<div class="article-icon"><i class="fa fa-play"></i> Video
+					</div>
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					IMA IZNENAĐENJA				</h2>
+
+				<h1 class="title">
+					NOVO ISTRAŽIVANJE, ZA KOGA BI LJUDI SADA GLASALI? HDZ uvjerljivo vodi, SDP uvjerljivo tone, a Škorin pokret više nije treći</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf video">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/plenkovic-ide-jos-jedan-korak-dalje-uskoro-planira-otici-na-komemoraciju-ratnog-zlocina-nad-srbima-za-kojeg-nitko-nije-odgovarao/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+									<div class="article-icon"><i class="fa fa-play"></i> Video
+					</div>
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					VAŽAN ISKORAK				</h2>
+
+				<h1 class="title">
+					PLENKOVIĆ IDE NA JOŠ JEDNO MJESTO UBOJSTVA SRBA NAKON &#8216;OLUJE&#8217;: Za taj strašan zločin nad devetero civila nikad nitko nije odgovarao</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf video">
+	<div class="inner cf">
+
+		<a href="https://net.hr/sport/video-foto-za-zlatana-nema-odmora-ibrahimovic-i-na-jahti-naporno-radi-na-svojoj-formi-ovo-je-odusevilo-njegove-fanove/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+									<div class="article-icon"><i class="fa fa-play"></i> Video
+					</div>
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle sport">
+					MAJSTOR				</h2>
+
+				<h1 class="title">
+					[VIDEO, FOTO] ZA ZLATANA NEMA ODMORA: Ibrahimović i na jahti naporno radi na svojoj formi, ovo je oduševilo njegove fanove</h1>
+			</div>
+		</a>
+
+	</div>
+</article><article class="article-3 cf ">
+	<div class="inner cf">
+
+		<a href="https://net.hr/danas/hrvatska/jos-se-ne-zna-kako-je-virus-prodro-u-dom-u-vinkovcima-svih-14-zarazenih-hospitalizirano-za-nultim-pacijentom-se-traga/" target="_top">
+
+			<div class="thumb">
+                <img width="100" height="60" src="https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?quality=100&amp;strip=all&amp;w=100&amp;h=60&amp;crop=1" class="attachment-article-3 size-article-3 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=670,400 670w" sizes="(max-width: 100px) 100vw, 100px" />
+				
+			</div>
+
+			<div class="article-text">
+								<h2 class="overtitle danas">
+					DOM JE U KARANTENI				</h2>
+
+				<h1 class="title">
+					KAKO JE VIRUS PRODRO U DOM ZA STARIJE U VINKOVCIMA? Svih 14 zaraženih hospitalizirano, za nultim pacijentom se traga</h1>
+			</div>
+		</a>
+
+	</div>
+</article>		            </div>
+	            </div>
+            </div>
+                <div id="net.hr_300x600_desktop-cnt">
+      <script>
+      (function(){
+        if (document.querySelector('script[src*="//lib.wtg-ads.com/lib.min.js"]')) {
+          return;
+        }
+        var domain = 'www.net.hr';
+        var slot = "net.hr_300x600_desktop";
+
+        if(window.self !== window.parent) {
+          var d = top.document, w = parent.window;
+          var parent = this.frameElement;
+          parent.style.display = "none";
+        } else {
+          var d = document, w = window, parent = null;
+
+          if(typeof d.currentScript !== 'undefined'){
+            parent = d.currentScript;
+            if(parent == null) {
+              parent = document.getElementById(slot+'-cnt');
+            }
+          } else {
+            parent = d.body.lastElementChild;
+          }
+        }
+
+        d.addEventListener('wtgLoaded', function (e) {
+          if(typeof w.w2g.single === 'function') {
+            w.w2g.single(domain, slot, parent);
+          }
+        }, false);
+
+
+        if(w.w2gLoaded === undefined) {
+          w.w2gLoaded = 0;
+        }
+
+        if(w.w2gLoaded < 1 && w.w2g === undefined) {
+
+          var element = d.createElement('script'), head = d.head || d.getElementsByTagName('head')[0];
+          element.type = 'text/javascript';
+          element.async = true;
+          element.src = 'https://lib.wtg-ads.com/lib.single.wtg.min.js';
+          head.appendChild(element);
+
+          w.w2gLoaded++;
+        }
+
+        if(w.w2g !== undefined && typeof w.w2g.single === 'function') {
+          w.w2g.single(domain, slot, parent);
+        }
+      })();
+
+      </script>
+    </div>
+        <div id="net.hr_300x250_desktop-cnt">
+      <script>
+      (function(){
+        if (document.querySelector('script[src*="//lib.wtg-ads.com/lib.min.js"]')) {
+          return;
+        }
+        var domain = 'www.net.hr';
+        var slot = "net.hr_300x250_desktop";
+
+        if(window.self !== window.parent) {
+          var d = top.document, w = parent.window;
+          var parent = this.frameElement;
+          parent.style.display = "none";
+        } else {
+          var d = document, w = window, parent = null;
+
+          if(typeof d.currentScript !== 'undefined'){
+            parent = d.currentScript;
+            if(parent == null) {
+              parent = document.getElementById(slot+'-cnt');
+            }
+          } else {
+            parent = d.body.lastElementChild;
+          }
+        }
+
+        d.addEventListener('wtgLoaded', function (e) {
+          if(typeof w.w2g.single === 'function') {
+            w.w2g.single(domain, slot, parent);
+          }
+        }, false);
+
+
+        if(w.w2gLoaded === undefined) {
+          w.w2gLoaded = 0;
+        }
+
+        if(w.w2gLoaded < 1 && w.w2g === undefined) {
+
+          var element = d.createElement('script'), head = d.head || d.getElementsByTagName('head')[0];
+          element.type = 'text/javascript';
+          element.async = true;
+          element.src = 'https://lib.wtg-ads.com/lib.single.wtg.min.js';
+          head.appendChild(element);
+
+          w.w2gLoaded++;
+        }
+
+        if(w.w2g !== undefined && typeof w.w2g.single === 'function') {
+          w.w2g.single(domain, slot, parent);
+        }
+      })();
+
+      </script>
+    </div>
+    			<div class="widget foto-news video-feed">
+				<div class="widget-header cf">
+					<h2 class="section-title">Video</h2>
+											<a href="https://net.hr/type/video/" class="more">
+							video							<i class="fa fa-chevron-right"></i>
+						</a>
+									</div>
+
+				<div class="widget-body cf">
+													<article class="widget-article big">
+									<a href="https://net.hr/danas/hrvatska/novi-crodemoskop-za-koga-bi-ljudi-danas-glasali-hdz-uvjerljivo-vodi-sdp-uvjerljivo-tone-a-skorina-opcija-vise-nije-treci-izbor/">
+										<div class="thumb">
+											<img width="300" height="170" src="https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?w=300&amp;h=170&amp;crop=1" class="attachment-feed-2 size-feed-2 wp-post-image" alt="" />											<div class="shaddow"></div>
+											<h3 class="title">
+												NOVO ISTRAŽIVANJE, ZA KOGA BI LJUDI SADA GLASALI? HDZ uvjerljivo vodi, SDP uvjerljivo tone, a Škorin pokret više nije treći											</h3>
+										</div>
+									</a>
+								</article>
+								<article class="widget-article">
+								<a href="https://net.hr/danas/hrvatska/plenkovic-ide-jos-jedan-korak-dalje-uskoro-planira-otici-na-komemoraciju-ratnog-zlocina-nad-srbima-za-kojeg-nitko-nije-odgovarao/">
+									<div class="thumb">
+										<img width="300" height="170" src="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?quality=100&amp;strip=all&amp;w=300&amp;h=170&amp;crop=1" class="attachment-feed-2 size-feed-2 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=300,170 300w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=996,560 996w" sizes="(max-width: 300px) 100vw, 300px" />										<div class="shaddow"></div>
+										<h3 class="title">
+											PLENKOVIĆ IDE NA JOŠ JEDNO MJESTO UBOJSTVA SRBA NAKON &#8216;OLUJE&#8217;: Za taj strašan zločin nad devetero civila nikad nitko nije odgovarao										</h3>
+									</div>
+								</a>
+								</article><article class="widget-article">
+								<a href="https://net.hr/sport/video-foto-za-zlatana-nema-odmora-ibrahimovic-i-na-jahti-naporno-radi-na-svojoj-formi-ovo-je-odusevilo-njegove-fanove/">
+									<div class="thumb">
+										<img width="300" height="170" src="https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?quality=100&amp;strip=all&amp;w=300&amp;h=170&amp;crop=1" class="attachment-feed-2 size-feed-2 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=300,170 300w, https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=996,560 996w" sizes="(max-width: 300px) 100vw, 300px" />										<div class="shaddow"></div>
+										<h3 class="title">
+											[VIDEO, FOTO] ZA ZLATANA NEMA ODMORA: Ibrahimović i na jahti naporno radi na svojoj formi, ovo je oduševilo njegove fanove										</h3>
+									</div>
+								</a>
+								</article><article class="widget-article">
+								<a href="https://net.hr/video/katastrofa-nakon-eksplozije-u-bejrutu-unistene-su-bolnice-gradani-nemaju-struje-hrane-niti-vode/">
+									<div class="thumb">
+										<img width="300" height="170" src="https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?quality=100&amp;strip=all&amp;w=300&amp;h=170&amp;crop=1" class="attachment-feed-2 size-feed-2 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/nesreća.jpg 3264w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=150,85 150w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=300,170 300w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=768,435 768w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=669,379 669w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=1536,869 1536w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=2048,1159 2048w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=670,379 670w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=996,560 996w, https://net.hr/wp-content/uploads/2020/08/nesreća.jpg?resize=1200,679 1200w" sizes="(max-width: 300px) 100vw, 300px" />										<div class="shaddow"></div>
+										<h3 class="title">
+											Katastrofa nakon eksplozije u Bejrutu: Uništene su bolnice, građani nemaju struje, hrane niti vode										</h3>
+									</div>
+								</a>
+								</article><article class="widget-article">
+								<a href="https://net.hr/danas/svijet/stanovnica-bejruta-ispricala-kako-su-izgledali-trenuci-uzasa-morali-smo-prelaziti-preko-tijela-zelim-zadaviti-vladu-vlastitim-rukama/">
+									<div class="thumb">
+										<img width="300" height="170" src="https://net.hr/wp-content/uploads/2020/08/beirut-eksplozija-c70eb9edb2a9b971a6b6eed1e98a5ec3_view_article_new.jpg?quality=100&amp;strip=all&amp;w=300&amp;h=170&amp;crop=1" class="attachment-feed-2 size-feed-2 wp-post-image" alt="" />										<div class="shaddow"></div>
+										<h3 class="title">
+											STANOVNICA BEJRUTA ISPRIČALA KAKO SU IZGLEDALI TRENUCI UŽASA: &#8216;Morali smo prelaziti preko tijela. Želim zadaviti vladu vlastitim rukama&#8217;										</h3>
+									</div>
+								</a>
+								</article>				</div>
+			</div>
+						<a href="https://net.hr/vase-vijesti-na-netu/" class="vase-vijesti-clanak"></a>
+		</div>
+        <script>
+            jQuery(document).ready(function() {
+            jQuery('.single-sidebar').stick_in_parent({
+                offset_top: 100,
+                spacer: false
+            });
+            })
+        </script>
+
+
+
+    </div>
+        <div class="single-inner cf">
+         <div class="page-grid single-article">
+	        	<div id="linkerWidget">
+					<div class="lwdgt" data-wid="219"></div>			<script async src="https://linker.hr/lw.js"></script>
+			</div>
+					<div class="widget widget-fb-comments">
+			<h2 class="section-title">Imaš komentar?</h2>
+			<div class="fb-comments"
+				 data-width="100%"
+				 data-numposts="5"
+				 data-colorscheme="light"
+				 data-href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/"></div>
+		</div>
+					<div class="banner banner-size3">
+						      <div id='nethr_desktop_intext_v4'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_intext_v4');
+            });
+          }
+          </script>
+      </div>
+    					</div>
+					
+			<div class="more-categories-widget widget">
+
+				<h2 class="section-title">Još iz rubrike</h2>
+				<div class="category-feed more-from-category cf">
+					
+	<article class="article-feed  cf"
+         data-id="2304743" data-layout="feed-1">
+		<div class="inner cf">
+			
+			<a href="https://net.hr/danas/hrvatska/hrvatska-salje-pomoc-razorenom-bejrutu-osim-novca-u-libanon-saljemo-i-vrijedne-pakete-kemijskih-zastitnih-odijela-rukavica/">
+				<div class="thumb">
+					<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/beirut1.jpg 1250w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=150,92 150w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=300,183 300w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=768,469 768w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=669,409 669w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=670,410 670w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=1200,733 1200w" sizes="(max-width: 165px) 100vw, 165px" />									</div>
+			</a>
+
+			<div class="article-text">
+				<a href="https://net.hr/danas/hrvatska/hrvatska-salje-pomoc-razorenom-bejrutu-osim-novca-u-libanon-saljemo-i-vrijedne-pakete-kemijskih-zastitnih-odijela-rukavica/">
+
+										<h2 class="overtitle hrvatska">
+						HUMANITARNA POMOĆ					</h2>
+					
+					<h1 class="title">HRVATSKA ŠALJE POMOĆ RAZORENOM BEJRUTU: Osim novca, u Libanon šaljemo i vrijedne pakete kemijskih zaštitnih odijela, rukavica&#8230;</h1>
+				</a>
+
+				<p class="undertitle">19:38 06.08.2020					<a href="https://net.hr/kategorija/danas/hrvatska/">Hrvatska</a>
+				</p>
+			</div>
+
+		</div>
+	</article>
+
+	
+	<article class="article-feed  cf"
+         data-id="2293957" data-layout="feed-1">
+		<div class="inner cf">
+			
+			<a href="https://povezanismosigurni.hr/povezani-na-korak-do-buducnosti/?utm_source=net&#038;utm_medium=display&#038;utm_campaign=pss-ljeto-2020&#038;utm_term=landing&#038;utm_content=native">
+				<div class="thumb">
+					<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/07/Stevica-Kuharski.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/07/Stevica-Kuharski.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/07/Stevica-Kuharski.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/07/Stevica-Kuharski.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/07/Stevica-Kuharski.jpg?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />									</div>
+			</a>
+
+			<div class="article-text">
+				<a href="https://povezanismosigurni.hr/povezani-na-korak-do-buducnosti/?utm_source=net&#038;utm_medium=display&#038;utm_campaign=pss-ljeto-2020&#038;utm_term=landing&#038;utm_content=native">
+
+										<h2 class="overtitle danas">
+						Povezani smo sigurni					</h2>
+					
+					<h1 class="title">Stevica Kuharski: budućnost prometa je u robotima i autonomnim vozilima</h1>
+				</a>
+
+				<p class="undertitle">20:02 24.07.2020					<a href="https://net.hr/kategorija/danas/"></a>
+				</p>
+			</div>
+
+		</div>
+	</article>
+
+	
+	<article class="article-feed video cf"
+         data-id="2304722" data-layout="feed-1">
+		<div class="inner cf">
+			
+			<a href="https://net.hr/danas/hrvatska/novi-crodemoskop-za-koga-bi-ljudi-danas-glasali-hdz-uvjerljivo-vodi-sdp-uvjerljivo-tone-a-skorina-opcija-vise-nije-treci-izbor/">
+				<div class="thumb">
+					<img width="300" height="170" src="https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?w=300&amp;h=170&amp;crop=1" class="attachment-feed-2 size-feed-2 wp-post-image" alt="" /><div class="icon"></div>									</div>
+			</a>
+
+			<div class="article-text">
+				<a href="https://net.hr/danas/hrvatska/novi-crodemoskop-za-koga-bi-ljudi-danas-glasali-hdz-uvjerljivo-vodi-sdp-uvjerljivo-tone-a-skorina-opcija-vise-nije-treci-izbor/">
+
+										<h2 class="overtitle hrvatska">
+						IMA IZNENAĐENJA					</h2>
+					
+					<h1 class="title">NOVO ISTRAŽIVANJE, ZA KOGA BI LJUDI SADA GLASALI? HDZ uvjerljivo vodi, SDP uvjerljivo tone, a Škorin pokret više nije treći</h1>
+				</a>
+
+				<p class="undertitle">19:13 06.08.2020					<a href="https://net.hr/kategorija/danas/hrvatska/">Hrvatska</a>
+				</p>
+			</div>
+
+		</div>
+	</article>
+
+	
+	<article class="article-feed video cf"
+         data-id="2304713" data-layout="feed-1">
+		<div class="inner cf">
+			
+			<a href="https://net.hr/danas/hrvatska/plenkovic-ide-jos-jedan-korak-dalje-uskoro-planira-otici-na-komemoraciju-ratnog-zlocina-nad-srbima-za-kojeg-nitko-nije-odgovarao/">
+				<div class="thumb">
+					<img width="300" height="170" src="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?quality=100&amp;strip=all&amp;w=300&amp;h=170&amp;crop=1" class="attachment-feed-2 size-feed-2 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=300,170 300w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=996,560 996w" sizes="(max-width: 300px) 100vw, 300px" /><div class="icon"></div>									</div>
+			</a>
+
+			<div class="article-text">
+				<a href="https://net.hr/danas/hrvatska/plenkovic-ide-jos-jedan-korak-dalje-uskoro-planira-otici-na-komemoraciju-ratnog-zlocina-nad-srbima-za-kojeg-nitko-nije-odgovarao/">
+
+										<h2 class="overtitle hrvatska">
+						VAŽAN ISKORAK					</h2>
+					
+					<h1 class="title">PLENKOVIĆ IDE NA JOŠ JEDNO MJESTO UBOJSTVA SRBA NAKON &#8216;OLUJE&#8217;: Za taj strašan zločin nad devetero civila nikad nitko nije odgovarao</h1>
+				</a>
+
+				<p class="undertitle">19:00 06.08.2020					<a href="https://net.hr/kategorija/danas/hrvatska/">Hrvatska</a>
+				</p>
+			</div>
+
+		</div>
+	</article>
+
+	
+	<article class="article-feed  cf"
+         data-id="2304702" data-layout="feed-1">
+		<div class="inner cf">
+			
+			<a href="https://net.hr/danas/hrvatska/jos-se-ne-zna-kako-je-virus-prodro-u-dom-u-vinkovcima-svih-14-zarazenih-hospitalizirano-za-nultim-pacijentom-se-traga/">
+				<div class="thumb">
+					<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/07/PXL_160720_29552413-1.jpg?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />									</div>
+			</a>
+
+			<div class="article-text">
+				<a href="https://net.hr/danas/hrvatska/jos-se-ne-zna-kako-je-virus-prodro-u-dom-u-vinkovcima-svih-14-zarazenih-hospitalizirano-za-nultim-pacijentom-se-traga/">
+
+										<h2 class="overtitle hrvatska">
+						DOM JE U KARANTENI					</h2>
+					
+					<h1 class="title">KAKO JE VIRUS PRODRO U DOM ZA STARIJE U VINKOVCIMA? Svih 14 zaraženih hospitalizirano, za nultim pacijentom se traga</h1>
+				</a>
+
+				<p class="undertitle">18:39 06.08.2020					<a href="https://net.hr/kategorija/danas/hrvatska/">Hrvatska</a>
+				</p>
+			</div>
+
+		</div>
+	</article>
+
+	
+	<article class="article-feed  cf"
+         data-id="2304692" data-layout="feed-1">
+		<div class="inner cf">
+			
+			<a href="https://net.hr/danas/svijet/stavili-cijelo-selo-u-karantenu-zbog-drevne-bolesti-koja-se-vratila-jedan-pacijent-umro-okrug-proglasio-drugi-stupanj-uzbune/">
+				<div class="thumb">
+					<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/05/profimedia-0518931767.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/05/profimedia-0518931767.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/05/profimedia-0518931767.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/05/profimedia-0518931767.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/05/profimedia-0518931767.jpg?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />									</div>
+			</a>
+
+			<div class="article-text">
+				<a href="https://net.hr/danas/svijet/stavili-cijelo-selo-u-karantenu-zbog-drevne-bolesti-koja-se-vratila-jedan-pacijent-umro-okrug-proglasio-drugi-stupanj-uzbune/">
+
+										<h2 class="overtitle svijet">
+						UZBUNA U KINI					</h2>
+					
+					<h1 class="title">STAVILI CIJELO SELO U KARANTENU ZBOG DREVNE BOLESTI KOJA SE VRATILA: Muškarac umro, okrug proglasio drugi stupanj uzbune</h1>
+				</a>
+
+				<p class="undertitle">18:23 06.08.2020					<a href="https://net.hr/kategorija/danas/svijet/">Svijet</a>
+				</p>
+			</div>
+
+		</div>
+	</article>
+
+	
+				</div>
+			</div>
+			            </div>
+        </div>
+					<div class="standard-widget widget more-news inline six cf">
+				<h2 class="section-title">Pročitajte i ovo</h2>
+
+				<div class="widget-body cf">
+					
+							<article class="widget-article">
+								<div class="inner">
+									<a href="https://net.hr/sport/robert-prosinecki-vise-nije-trener-kayserispora-do-razlaza-je-doslo-nakon-sto-mu-klub-nije-ispunio-glavni-zahtjev/">
+										<div class="thumb">
+											<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/03/profimedia-0446200169.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/03/profimedia-0446200169.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/03/profimedia-0446200169.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/03/profimedia-0446200169.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/03/profimedia-0446200169.jpg?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />										</div>
+										<div class="article-text">
+											<h3 class="overtitle">VELIKI ŽUTI</h3>
+											<h2 class="title">ROBERT PROSINEČKI VIŠE NIJE TRENER KAYSERISPORA: Do razlaza je došlo nakon što mu klub nije ispunio glavni zahtjev</h2>
+										</div>
+									</a>
+								</div>
+							</article>
+						
+							<article class="widget-article">
+								<div class="inner">
+									<a href="https://net.hr/danas/hrvatska/hrvatska-salje-pomoc-razorenom-bejrutu-osim-novca-u-libanon-saljemo-i-vrijedne-pakete-kemijskih-zastitnih-odijela-rukavica/">
+										<div class="thumb">
+											<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/beirut1.jpg 1250w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=150,92 150w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=300,183 300w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=768,469 768w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=669,409 669w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=670,410 670w, https://net.hr/wp-content/uploads/2020/08/beirut1.jpg?resize=1200,733 1200w" sizes="(max-width: 165px) 100vw, 165px" />										</div>
+										<div class="article-text">
+											<h3 class="overtitle">HUMANITARNA POMOĆ</h3>
+											<h2 class="title">HRVATSKA ŠALJE POMOĆ RAZORENOM BEJRUTU: Osim novca, u Libanon šaljemo i vrijedne pakete kemijskih zaštitnih odijela, rukavica&#8230;</h2>
+										</div>
+									</a>
+								</div>
+							</article>
+						
+							<article class="widget-article">
+								<div class="inner">
+									<a href="https://net.hr/sport/barcelona-ce-potjerati-klupsku-legendu-i-tako-ispuniti-veliku-messijevu-zelju-otkriven-bizaran-plan-katalonaca/">
+										<div class="thumb">
+											<img width="165" height="100" src="https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2019/10/profimedia-0475433231.jpg?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />										</div>
+										<div class="article-text">
+											<h3 class="overtitle">GLAVNI UVJET</h3>
+											<h2 class="title">BARCELONA ĆE POTJERATI KLUPSKU LEGENDU I TAKO ISPUNITI VELIKU MESSIJEVU ŽELJU? Otkriven bizaran plan Katalonaca</h2>
+										</div>
+									</a>
+								</div>
+							</article>
+						
+							<article class="widget-article">
+								<div class="inner">
+									<a href="https://net.hr/danas/hrvatska/novi-crodemoskop-za-koga-bi-ljudi-danas-glasali-hdz-uvjerljivo-vodi-sdp-uvjerljivo-tone-a-skorina-opcija-vise-nije-treci-izbor/">
+										<div class="thumb">
+											<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/demoskop-7cd536d1294c690fcf3df96a4682369d_view_article_new.png?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />										</div>
+										<div class="article-text">
+											<h3 class="overtitle">IMA IZNENAĐENJA</h3>
+											<h2 class="title">NOVO ISTRAŽIVANJE, ZA KOGA BI LJUDI SADA GLASALI? HDZ uvjerljivo vodi, SDP uvjerljivo tone, a Škorin pokret više nije treći</h2>
+										</div>
+									</a>
+								</div>
+							</article>
+						
+							<article class="widget-article">
+								<div class="inner">
+									<a href="https://net.hr/danas/hrvatska/plenkovic-ide-jos-jedan-korak-dalje-uskoro-planira-otici-na-komemoraciju-ratnog-zlocina-nad-srbima-za-kojeg-nitko-nije-odgovarao/">
+										<div class="thumb">
+											<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/06/PXL_290620_29382525.jpg?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />										</div>
+										<div class="article-text">
+											<h3 class="overtitle">VAŽAN ISKORAK</h3>
+											<h2 class="title">PLENKOVIĆ IDE NA JOŠ JEDNO MJESTO UBOJSTVA SRBA NAKON &#8216;OLUJE&#8217;: Za taj strašan zločin nad devetero civila nikad nitko nije odgovarao</h2>
+										</div>
+									</a>
+								</div>
+							</article>
+						
+							<article class="widget-article">
+								<div class="inner">
+									<a href="https://net.hr/sport/video-foto-za-zlatana-nema-odmora-ibrahimovic-i-na-jahti-naporno-radi-na-svojoj-formi-ovo-je-odusevilo-njegove-fanove/">
+										<div class="thumb">
+											<img width="165" height="100" src="https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?quality=100&amp;strip=all&amp;w=165&amp;h=100&amp;crop=1" class="attachment-feed-1 size-feed-1 wp-post-image" alt="" srcset="https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=100,60 100w, https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=200,120 200w, https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=165,100 165w, https://net.hr/wp-content/uploads/2020/08/profimedia-0550384093.jpg?resize=670,400 670w" sizes="(max-width: 165px) 100vw, 165px" />										</div>
+										<div class="article-text">
+											<h3 class="overtitle">MAJSTOR</h3>
+											<h2 class="title">[VIDEO, FOTO] ZA ZLATANA NEMA ODMORA: Ibrahimović i na jahti naporno radi na svojoj formi, ovo je oduševilo njegove fanove</h2>
+										</div>
+									</a>
+								</div>
+							</article>
+										</div>
+			</div>
+
+			                <div class="widget home-widget webshop-widget widget-wide cf">
+                    <div class="widget-header cf">
+                        <h2 class="section-title">
+                            <a href="http://webshop.net.hr"
+                               target="_blank"><img
+                                    src="https://net.hr/wp-content/uploads/2016/11/net_webshop_logo1.png"
+                                    height="30"/></a>
+                        </h2>
+                    </div>
+                    <div class="widget-body cf">
+                                                    <article class="article-2">
+                                <div class="inner">
+
+                                    <a href="http://bit.ly/net-hr-box-goslimmer"
+                                       target="_blank">
+                                        <div class="thumb">
+                                            <img
+                                                src="https://webshop.net.hr/wp-content/uploads/2018/09/goslimmer-flasteri-box.jpg"
+                                                width="186" height="119">
+                                        </div>
+                                    </a>
+                                    <div class="article-text">
+                                        <h2 class="overtitle danas">
+                                            UŠTEDI 50%                                        </h2>
+                                        <a href="http://bit.ly/net-hr-box-goslimmer" target="_blank">
+                                            <h1 class="title">
+                                                GoSlimmer flasteri za mršavljenje                                            </h1>
+                                        </a>
+                                        <div class="prices cf">
+	                                                                                    <div class="left price"><span class="red">149 kn</span> / <span>298 kn</span></div>
+			                                                                        </div>
+                                        <p class="description">
+                                            Za brzo, zdravo i sigurno mršavljenje.                                        </p>
+                                        <a href="http://bit.ly/net-hr-box-goslimmer" class="btn">Kupi ovdje</a>
+                                    </div>
+
+                                </div>
+                            </article>
+                                                    <article class="article-2">
+                                <div class="inner">
+
+                                    <a href="http://bit.ly/net-hr-box-zeodent-2x2"
+                                       target="_blank">
+                                        <div class="thumb">
+                                            <img
+                                                src="https://webshop.net.hr/wp-content/uploads/2018/09/zeodent-akcija-pakez.jpg"
+                                                width="186" height="119">
+                                        </div>
+                                    </a>
+                                    <div class="article-text">
+                                        <h2 class="overtitle danas">
+                                            AKCIJA 2+2 GRATIS                                        </h2>
+                                        <a href="http://bit.ly/net-hr-box-zeodent-2x2" target="_blank">
+                                            <h1 class="title">
+                                                Zeodent Akcijski Paket + Poklon                                            </h1>
+                                        </a>
+                                        <div class="prices cf">
+	                                                                                    <div class="left price"><span class="red">390 kn</span> / <span>1070 kn</span></div>
+			                                                                        </div>
+                                        <p class="description">
+                                            Za blistav osmijeh bez zubnog kamenca.                                        </p>
+                                        <a href="http://bit.ly/net-hr-box-zeodent-2x2" class="btn">Kupi ovdje</a>
+                                    </div>
+
+                                </div>
+                            </article>
+                                                    <article class="article-2">
+                                <div class="inner">
+
+                                    <a href="http://bit.ly/net-box-oxygen-carape"
+                                       target="_blank">
+                                        <div class="thumb">
+                                            <img
+                                                src="http://webshop.net.hr/wp-content/uploads/2017/09/oxygen-carape.jpg"
+                                                width="186" height="119">
+                                        </div>
+                                    </a>
+                                    <div class="article-text">
+                                        <h2 class="overtitle danas">
+                                            CIRKULACIJA                                        </h2>
+                                        <a href="http://bit.ly/net-box-oxygen-carape" target="_blank">
+                                            <h1 class="title">
+                                                Oxygen optimal/celliant pamučne čarape                                            </h1>
+                                        </a>
+                                        <div class="prices cf">
+	                                                                                    <div class="left price"><span class="red">160 kn</span> / <span>200 kn</span></div>
+			                                                                        </div>
+                                        <p class="description">
+                                            Poboljšavaju cirkulaciju i otklanjaju bolove u nogama!                                        </p>
+                                        <a href="http://bit.ly/net-box-oxygen-carape" class="btn">Kupi ovdje</a>
+                                    </div>
+
+                                </div>
+                            </article>
+                                                    <article class="article-2">
+                                <div class="inner">
+
+                                    <a href="http://bit.ly/net-hr-box-vein-stopper"
+                                       target="_blank">
+                                        <div class="thumb">
+                                            <img
+                                                src="https://webshop.net.hr/wp-content/uploads/2018/09/vein-stopper-netbox-1.jpg"
+                                                width="186" height="119">
+                                        </div>
+                                    </a>
+                                    <div class="article-text">
+                                        <h2 class="overtitle danas">
+                                            PROŠIRENE VENE                                        </h2>
+                                        <a href="http://bit.ly/net-hr-box-vein-stopper" target="_blank">
+                                            <h1 class="title">
+                                                VeinStopper krema - 50% POPUSTA                                            </h1>
+                                        </a>
+                                        <div class="prices cf">
+	                                                                                    <div class="left price"><span class="red">229 kn</span> / <span>460 kn</span></div>
+			                                                                        </div>
+                                        <p class="description">
+                                            Protiv proširenih vena i ispucalih kapilara.                                        </p>
+                                        <a href="http://bit.ly/net-hr-box-vein-stopper" class="btn">Kupi ovdje</a>
+                                    </div>
+
+                                </div>
+                            </article>
+                                                    <article class="article-2">
+                                <div class="inner">
+
+                                    <a href="http://bit.ly/net-hr-box-squatty-potty"
+                                       target="_blank">
+                                        <div class="thumb">
+                                            <img
+                                                src="https://webshop.net.hr/wp-content/uploads/2017/11/squatty-potty.jpg"
+                                                width="186" height="119">
+                                        </div>
+                                    </a>
+                                    <div class="article-text">
+                                        <h2 class="overtitle danas">
+                                            AKCIJA!                                        </h2>
+                                        <a href="http://bit.ly/net-hr-box-squatty-potty" target="_blank">
+                                            <h1 class="title">
+                                                Squatty Potty – Stolica Čučavac za WC školjku                                            </h1>
+                                        </a>
+                                        <div class="prices cf">
+	                                                                                    <div class="left price"><span class="red">244 kn</span> / <span>305 kn</span></div>
+			                                                                        </div>
+                                        <p class="description">
+                                            Za pravilan i udoban položaj prilikom pražnjenja crijeva.                                        </p>
+                                        <a href="http://bit.ly/net-hr-box-squatty-potty" class="btn">Kupi ovdje</a>
+                                    </div>
+
+                                </div>
+                            </article>
+                                            </div>
+                </div>
+                					<div class="banner banner-size3">
+						      <div id='nethr_desktop_floater'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_floater');
+            });
+          }
+          </script>
+      </div>
+    					</div>
+						</div>
+
+					<div class="wallpaper fixed wallpaper-left">
+						<div class="banner">
+							      <div id='nethr_desktop_wallpaper_left'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_wallpaper_left');
+            });
+          }
+          </script>
+      </div>
+    						</div>
+					</div>
+										<div class="wallpaper fixed wallpaper-right">
+						<div class="banner">
+							      <div id='nethr_desktop_wallpaper_right'>
+          <script>
+          if (trafficSplit == '234doo') {
+            googletag.cmd.push(function () {
+              googletag.display('nethr_desktop_wallpaper_right');
+            });
+          }
+          </script>
+      </div>
+    						</div>
+					</div>
+					
+</div> <!-- END Content container -->
+
+<footer>
+
+				<div class="footer-categories">
+				<div class="container cf">
+												<div class="category-container">
+								<a href="https://net.hr/kategorija/danas/">
+									<h4>
+										Vijesti									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/danas/crna-kronika/">
+											Crna kronika										</a>
+																				<a href="https://net.hr/kategorija/danas/hrvatska/">
+											Hrvatska										</a>
+																				<a href="https://net.hr/kategorija/danas/kultura/">
+											Kultura										</a>
+																				<a href="https://net.hr/kategorija/danas/novac/">
+											Novac										</a>
+																				<a href="https://net.hr/kategorija/danas/svijet/">
+											Svijet										</a>
+																				<a href="https://net.hr/kategorija/danas/znanost/">
+											Znanost										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/sport/">
+									<h4>
+										Sport									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/sport/hokej/">
+											Hokej										</a>
+																				<a href="https://net.hr/kategorija/sport/klub-boraca/">
+											Klub boraca										</a>
+																				<a href="https://net.hr/kategorija/sport/kosarka/">
+											Košarka										</a>
+																				<a href="https://net.hr/kategorija/sport/na-rubu-sporta/">
+											Na rubu sporta										</a>
+																				<a href="https://net.hr/kategorija/sport/nogomet/">
+											Nogomet										</a>
+																				<a href="https://net.hr/kategorija/sport/oi-2016/">
+											OI										</a>
+																				<a href="https://net.hr/kategorija/sport/ostali-sportovi/">
+											Ostali sportovi										</a>
+																				<a href="https://net.hr/kategorija/sport/rukomet/">
+											Rukomet										</a>
+																				<a href="https://net.hr/kategorija/sport/skijanje/">
+											Skijanje										</a>
+																				<a href="https://net.hr/kategorija/sport/tenis/">
+											Tenis										</a>
+										                                    <a href="https://www.rezultati.com/" target="_blank">
+                                        Rezultati.com
+                                    </a>
+																</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/webcafe/">
+									<h4>
+										Webcafe									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/webcafe/astronet/">
+											Astronet										</a>
+																				<a href="https://net.hr/kategorija/webcafe/cura-dana/">
+											Cura dana										</a>
+																				<a href="https://net.hr/kategorija/webcafe/decko-dana/">
+											Dečko dana										</a>
+																				<a href="https://net.hr/kategorija/webcafe/dnevni-horoskop/">
+											Dnevni horoskop										</a>
+																				<a href="https://net.hr/kategorija/webcafe/fora-dana/">
+											Fora dana										</a>
+																				<a href="https://net.hr/kategorija/webcafe/forwarduse/">
+											Forwarduše										</a>
+																				<a href="https://net.hr/kategorija/webcafe/komnetar/">
+											Komnetar										</a>
+																				<a href="https://net.hr/kategorija/webcafe/overkloking/">
+											Overkloking										</a>
+																				<a href="https://net.hr/kategorija/webcafe/planet-x/">
+											Planet X										</a>
+																				<a href="https://net.hr/kategorija/webcafe/svastara/">
+											Svaštara										</a>
+																				<a href="https://net.hr/kategorija/webcafe/vic-dana/">
+											Vic dana										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/hot/">
+									<h4>
+										Hot									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/hot/lijepenase/">
+											#lijepenase										</a>
+																				<a href="https://net.hr/kategorija/hot/film/">
+											Film										</a>
+																				<a href="https://net.hr/kategorija/hot/glazba/">
+											Glazba										</a>
+																				<a href="https://net.hr/kategorija/hot/sexy/">
+											Sexy										</a>
+																				<a href="https://net.hr/kategorija/hot/tv/">
+											TV										</a>
+																				<a href="https://net.hr/kategorija/hot/zvijezde/">
+											Zvijezde										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/magazin/">
+									<h4>
+										Magazin									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/magazin/brakveze/">
+											Brak&amp;veze										</a>
+																				<a href="https://net.hr/kategorija/magazin/domvrt/">
+											Dom&amp;vrt										</a>
+																				<a href="https://net.hr/kategorija/magazin/hotspots/">
+											HotSpots										</a>
+																				<a href="https://net.hr/kategorija/magazin/kuhinja/">
+											Kuhinja										</a>
+																				<a href="https://net.hr/kategorija/magazin/kvizovi/">
+											Kvizovi										</a>
+																				<a href="https://net.hr/kategorija/magazin/lijepi_nasi/">
+											Lijepi naši										</a>
+																				<a href="https://net.hr/kategorija/magazin/ljepota/">
+											Ljepota										</a>
+																				<a href="https://net.hr/kategorija/magazin/ljubimci/">
+											Ljubimci										</a>
+																				<a href="https://net.hr/kategorija/magazin/moda/">
+											Moda										</a>
+																				<a href="https://net.hr/kategorija/magazin/muffini/">
+											Muffini										</a>
+																				<a href="https://net.hr/kategorija/magazin/putovanja/">
+											Putovanja										</a>
+																				<a href="https://net.hr/kategorija/magazin/roditeljstvo/">
+											Roditeljstvo										</a>
+																				<a href="https://net.hr/kategorija/magazin/zdravlje/">
+											Zdravlje										</a>
+																				<a href="https://net.hr/kategorija/magazin/zdravlje-i-ljepota/">
+											Zdravlje i ljepota										</a>
+																				<a href="https://net.hr/kategorija/magazin/zivotne-ispovijesti/">
+											Životne ispovijesti										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/tehnoklik/">
+									<h4>
+										Tehnoklik									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/tehnoklik/gadgeti/">
+											Gadgeti										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/mobile/">
+											Mobile										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/technobiz/">
+											Technobiz										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/vijesti-tehnoklik/">
+											Vijesti										</a>
+																				<a href="https://net.hr/kategorija/tehnoklik/web-social/">
+											Web &amp; social										</a>
+																	</div>
+													<div class="category-container">
+								<a href="https://net.hr/kategorija/auto/">
+									<h4>
+										Auto									</h4>
+								</a>
+																		<a href="https://net.hr/kategorija/auto/automoto/">
+											Automoto										</a>
+																				<a href="https://net.hr/kategorija/auto/automoto-sport/">
+											automoto-sport										</a>
+																				<a href="https://net.hr/kategorija/auto/bicikli/">
+											Bicikli										</a>
+																				<a href="https://net.hr/kategorija/auto/funmobil/">
+											Funmobil										</a>
+																				<a href="https://net.hr/kategorija/auto/nova-vozila/">
+											Nova vozila										</a>
+																				<a href="https://net.hr/kategorija/auto/techmobil/">
+											Techmobil										</a>
+																				<a href="https://net.hr/kategorija/auto/vijesti/">
+											Vijesti										</a>
+																	</div>
+										</div>
+			</div>
+			
+	<div class="footer-bottom cf">
+
+		<div class="container cf">
+			<a href="https://net.hr">
+				<div class="logo">
+					<h1>Net.hr</h1>
+				</div>
+			</a>
+			<a href="https://www.rtl.hr">
+				<div class="logortl">
+					<h1>rtl.hr</h1>
+				</div>
+			</a>
+
+			<div class="meta">
+				Sva prava pridržana.
+								<a href="https://net.hr/uvjeti_koristenja">Uvjeti korištenja</a> |
+				<a href="https://net.hr/marketing">Marketing</a> |
+				<a href="https://net.hr/impressum">Impressum</a> |
+				<a href="mailto:vijesti@portal.net.hr?subject=Net.hr - kontakt">Kontakt</a> |
+				<a href="https://net.hr/danas/hrvatska/ministarstvo-kulture-dat-ce-13-milijun-kuna-mediju-koji-prenosi-lazne-vijesti-novinarki-se-u-medugorju-ukazao-isus/?ak_action=accept_mobile">Mobilna verzija</a>
+			</div>
+
+			<div class="wp-vip">
+				<i class="fa fa-wordpress"></i>
+				Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&#038;utm_medium=web&#038;utm_campaign=VIP%20Footer%20Credit&#038;utm_term=net.hr" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a>			</div>
+		</div>
+	</div>
+
+</footer>
+
+<!-- /1092744/nethr/nethr_desktop_scripts -->
+<div id='div-gpt-ad-1539078936758-0'>
+    <script>
+        googletag.cmd.push(function() { googletag.display('nethr_desktop_scripts'); });
+    </script>
+</div>
+
+</div> <!-- END Main container -->
+
+	<a href="https://net.hr" id="back_home">
+		<i class="fa  fa-arrow-left"></i> Povratak na Net.hr
+	</a>
+
+<div id="fb-root"></div>
+			<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/hr_HR/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+			<script>
+			document.body.addEventListener( 'post-load', function() {
+				if ( 'undefined' !== typeof FB ) {
+					FB.XFBML.parse();
+				}
+			} );
+			</script>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			<script>
+var nethrVars = {"ajaxurl":"https:\/\/net.hr\/wp-admin\/admin-ajax.php"};
+</script>
+<script type='text/javascript' src='https://net.hr/_static/??-eJyNy0EOQEAMheELoREkZiHOMmYqOrRkpuL6urG3fO/PB89Vh1MURUE3ZCzgYyavFBgj+VpQtwypgD075iaVCn6b9ZagdEr5GEk47mjAok3kBWPDJNZnntrBdW3vxs6lFyasN2w='></script>
+<script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=5.4.2' async='async'></script>
+<script>
+var jpfbembed = {"appid":"249643311490","locale":"en_US"};
+</script>
+<script type='text/javascript' src='https://net.hr/wp-content/mu-plugins/jetpack/_inc/build/facebook-embed.min.js?m=1592229653g'></script>
+<script>
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+</script>
+<script src='https://net.hr/wp-content/mu-plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=8.7.1'></script>
+<script>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-telegram', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtelegram', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+</script>
+			<script id="xclaim_script" type="text/javascript" language="javascript">
+				(function () {
+					function async_load() {
+						var s = document.createElement('script');
+						s.type = 'text/javascript';
+						s.async = true;
+						s.src ='https://hr-engine.xclaimwords.net/script.aspx?partnerid=200166';
+						var x = document.getElementsByTagName('script')[0];
+						x.parentNode.insertBefore(s, x);
+					}
+
+					if (window.attachEvent)
+						window.attachEvent('onload', async_load);
+					else
+						window.addEventListener('load', async_load, false);
+				})();
+			</script>
+			<script>
+				function onXClaimSettingsLoaded(){}
+			</script>
+			<script type='text/javascript' src='https://stats.wp.com/e-202032.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.7.1',blog:'174083121',post:'2300733',tz:'2',srv:'net.hr'} ]);
+	_stq.push([ 'clickTrackerInit', '174083121', '2300733' ]);
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-b7f7d55cf616160d615","applicationID":"423456151","transactionName":"YVQBZksAX0oFAEZRXlgeIlFNCF5XSxBbVlZaVA==","queueTime":0,"applicationTime":194,"atts":"TRMWEAMaTBVGAhACSktM","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
