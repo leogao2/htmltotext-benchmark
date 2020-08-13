@@ -1,0 +1,63 @@
+Vivaldi 3.2 für Android: Chromium-Browser erhält verbesserten Tracking-Schutz
+
+12.8.2020 18:18 Uhr Sven Bauduin 33 Kommentare
+
+Bild: Vivaldi
+
+Die Android-Ausgabe des Chromium-Browsers Vivaldi verbessert in der Version 3.2 den Werbe- und Tracking-Schutz. Wie der in Oslo ansässige Entwickler Vivaldi Technologies mitteilt, setzt der kostenlose Browser jetzt auch unter Android auf länderspezifische Filterlisten wie die EasyList Germany für Deutschland.
+
+Neue konfigurierbare Filterlisten
+
+Nutzer können die Filterlisten des Ad- und Tracking-Schutzes außerdem konfigurieren und nach Wunsch weitere Listen hinzufügen oder entfernen sowie selbst zusammengestellte Filterlisten verwenden. Die entsprechenden Schutzmaßnahmen können bei Bedarf deaktiviert werden.
+
+Neuer Tracking-Schutz in Vivaldi 3.2 für Android (Bild: Vivaldi)
+
+Mit Vivaldi 3.2 für Android ist es zudem möglich, einzelne Filterliste bestimmten Tabs zuzuweisen oder diese für einzelne Tabulatoren zu deaktivieren. Hiermit soll der Tracking-Schutz flexibler werden.
+
+Tab-Ansicht wechseln leicht gemacht
+
+Neben den neuen Filtermöglichkeiten bietet die UI von Vivaldi 3.2 für Android nun die Möglichkeit, schneller zwischen unterschiedlichen Tab-Arten und -Ansichten zu wechseln.
+
+Über eine neue Auswahl am unteren Rand der Browser-UI können Anwender zwischen den Lesezeichen, der Historie und den Downloads sowie geöffneten, privaten und zuvor geschlossenen oder synchronisierten Tabs wechseln.
+
+Vivaldi 3.2 für Android wechselt schneller zwischen Tabs (Bild: Vivaldi)
+
+Weitere Informationen und Details zu Vivaldi 3.2 für Android haben die Entwickler in den offiziellen Release Notes zusammengefasst.
+
+Vivaldi 3.2 für Android steht bereits als Download im Google Play Store bereit. Die Desktop-Version des Browsers für Windows, Linux und macOS, die ebenfalls in der Version 3.2 vorliegt, lässt sich wie gewohnt unterhalb dieser Meldung aus dem Download-Archiv von ComputerBase herunterladen.
+
+Downloads
+
+Vivaldi Download
+
+4,5 Sterne
+
+Vivaldi ist ein Browser auf Basis von Chromium, der von ehemaligen Opera-Mitarbeitern entwickelt wird.
+
+Version 3.2 Build 1967.41 Deutsch
+
+33 Kommentare
+
+Themen:
+
+Android
+
+Apps
+
+Browser
+
+Internet
+
+Smartphone
+
+Tablet
+
+Vivaldi
+
+Sven Bauduin
+
+… schreibt an der Schnittstelle zwischen Redaktion und Community. Interessante Inhalte aus dem Forum sind sein Thema.
+
+Quelle: Vivaldi
+
+ComputerBase Pro: werbefrei, schnell, flexibel und zugleich fair. Mehr Infos.
