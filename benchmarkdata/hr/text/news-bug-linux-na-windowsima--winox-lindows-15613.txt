@@ -1,0 +1,70 @@
+LINUX NA WINDOWSIMA = WINOX? LINDOWS?
+ 
+VIRTUALIZACIJA
+Radoslav Dejanović
+utorak, 4. kolovoza 2020. u 06:00
+Želja za pokretanjem aplikacija pisanih za drugo računalo ili operacijski sustav nije nikakav novitet. Zašto je Microsoft, onda, odlučio podržati i, na neki način u Windowse integrirati, konkurenciju na koju je ne tako davno pucao iz svih oruđa? Odgovor je jednostavan: developers, developers, developers, developers!
+
+Otkad je digitalnog svijeta i vijeka, korisnici računala maštali su o tome da na svom računalu pokrenu neku aplikaciju rađenu za neko drugo računalo. Najčešće se maštalo o igrama i nekoj primitivnoj kompatibilnosti, što je znalo rezultirati frankensteinovskim čudovištima poput ZX Spectrum emulatora za Commodore 64, no već duže vrijeme ta priča bivala je tek nedosanjanim snom. Neizbježan napredak računalne tehnologije približavao je svjetove međusobno nekompatibilnih rješenja i doveo ih do vrlo visoke interoperabilnosti, pruživši korisniku mogućnost da paralelno izvršava programe pisane za različite operacijske sustave na jednom računalu, i – što je puno važnije – omogućio elegantnu i učinkovitu razmjenu podataka. Zbog toga danas možemo pokretati, ne samo virtualizirana stara 8-bitna računala, već i moderne operacijske sustave, uz tek mali gubitak performansi.
+
+Prije nego što razmotrimo pomalo neočekivani Microsoftov potez uvođenja podrške za Linux u Windows 10, podsjetimo se ukratko ne baš trivijalne priče koja se događa ispod haube.
+
+EMULA.. VIRTUA... ELMU.. MA, ONA DIGITALIZACIJA!
+Programe rađene za drugi OS ili drugu arhitekturu možemo, ugrubo, pokrenuti na dva načina: emulacijom i virtualizacijom.
+
+Emulacija je zahtjevniji proces, u kojem se posebnim softverom simulira dio, ili, pak, cijeli hardverski sklop drugog računala; praktično, u softveru se opiše arhitektura i način rada ciljanog računala i njegovih perifernih uređaja, kako bi se program pisan za to računalo zavarao: program pokrenut u emulatoru nije svjestan činjenice da se vrti u virtualnom svijetu te kako hardver na kojem se “izvršava” u stvarnosti ne postoji.
+
+Emulacija cijelog računala procesorski je “skupa” i posve nepraktična za emuliranje PC računala – popularni emulator 32-bitnog PC računala Bochs, koji je u stanju pokrenuti i Windows XP (pa i na uređajima s Androidom), čini to toliko sporo da je koristan rad nemoguć. No, s druge strane, emulacije popularnih 8-bitnih računala, kao i jačih Amige, Atarija i starijih modela Macintosha – rade izvrsno, jer je arhitektura tih računala za današnje pojmove trivijalna.
+
+Virtualizacija u modernom obliku izgleda nešto drugačije: iako je i emulacija u svojoj naravi jedna vrsta virtualizacije, virtualizacijska rješenja koja se koriste u praksi rade na malo drugačiji način: vezana su uz arhitekturu, koriste optimizacije ugrađene u sam procesor i imaju značajno manji “trošak” pokretanja virtualiziranih računala, te su u stanju pokretati moderne operacijske sustave brzinama koje su bliske brzini koju bi sustav postigao da nije virtualiziran. Zauzvrat, ograničena su kompatibilnošću na operacijske sustave koji su pisani za hardver računala na kojima se pogone.
+
+Virtualizaciju, ponovno ugrubo, možemo podijeliti na punu virtualizaciju i paravirtualizaciju. Puna virtualizacija sličnija je emulaciji i omogućuje pokretanje operacijskog sustava bez bilo kakve modifikacije, dok je za paravirtualizaciju potrebno modificirati gostujući OS; zauzvrat, paravirtualizacija nudi bolje performanse od pune virtualizacije.
+
+Ako vas zbunjuje ova nepotpuna slika virtualizacijske tehnologije, možemo to objasniti relativno jednostavno: emulatore starih računala pokrećemo kao emulacije (sic!), a moderne operacijske sustave pokrećemo kao virtualizacije.
+
+ZAŠTO JE MICROSOFTU UOPĆE VAŽNO BAVITI SE TIME?
+Ispostavilo se kako je virtualizacija vrlo praktična u cijelom spektru informatičkih rješenja, od velikih podatkovnih centara do poslovnog ili kućnog PC računala. Virtualizacija omogućuje optimizaciju iskorištenja hardverskih resursa i jeftinije poslovanje na poslužiteljskom dijelu, dok na korisničkom ima izvrsnu praktičnu svrhu omogućavanja izvršavanja korisničkih aplikacija jedne platforme na drugoj, što ljudi kojima to treba itekako znaju cijeniti. Davateljima usluga, što Microsoft želi biti, virtualizacija znači korisnike i novac, točnije: izdašan poslovni model.
+
+U tom smjeru ide i Microsoftova podrška za Linux na desetki: pojavila se kako bi zadovoljila specifične potrebe Microsoftovih korisnika. To je pomalo kontroverzan potez svima koji znaju povijest lošesusjedskih odnosa Microsofta i Linuxa, no s druge strane stoji činjenica da se tvrtka, od promjene vladajuće garniture (odlazak Stevea Ballmera i dolazak Satye Nadelle 2014. godine) polako otvarala prema kohabitaciji, pa i suradnji sa svijetom slobodnog softvera. Windows Subsystem for Linux (WSL) rezultat je upravo tog zatopljavanja.
+
+WSL dolazi u dvije inkarnacije: prva inkarnacija, izdana 2016. godine, sustav je koji omogućuje pokretanje aplikacija za Linux bez sudjelovanja samog Linux kernela, a druga inkarnacija, dostupna od Windows builda 2004, redizajnirana je u propisnu virtualizaciju baziranu na Hyper-V tehnologiji i uključuje i Linuxov kernel (Microsoftov build), rezultirajući u povećanoj kompatibilnosti s aplikacijama za Linux i poboljšanoj interoperabilnosti. Microsoft načelno preporučuje korištenje WSL2, osim u specifičnim slučajevima, gdje se WSL1 pokazao bržim.
+
+RAZOČARANJE ZA OBIČNE KORISNIKE
+No, što to znači za krajnjeg korisnika, posebice znamo li da već duže vrijeme postoje virtualizacijska rješenja koja korisnicima Windowsa omogućuju pokretanje Linux distribucije prema izboru, a uz nešto truda i (protuzakonito) pokretanje Mac OS-a? Je li to konkurencija etabliranim igračima na području desktop virtualizacije?
+
+Pravi odgovor je, čini se, kako ovaj novitet cilja na vrlo specifičnu nišu: programere koji razvijaju proizvode za više platformi. WSL nije pretjerano korisnički orijentirana stvar: instaliranje i održavanje Linuxa pod njim posao je koji značajno ovisi o korištenju terminala i utipkavanju naredbi, i sve je, samo ne korisnički ljubazan. No, s druge strane, programerima koji su navikli na takvo održavanje alata za razvoj softvera, servisa i baza podataka to je prirodno okruženje, u kojem se bez problema snalaze.
+
+Zaista, najavio je Satya i kako će GUI aplikacije biti jednostavne za instaliranje, najzad već i WSL1 omogućavao je (uz dosta truda i dosta znanja) pokretanje grafičkih aplikacija. No, to iskustvo vjerojatno nikad neće biti tako jednostavno kao iskustvo korištenja “pravih” virtualki. Programerima to vjerojatno nije niti toliko važno: najbitnija prednost, posjedovanje paralelnih alata za razvoj softvera na jednom računalu, dostupnih iz jednog, unificiranog okruženja – već je tu.
+
+Svakodnevni korisnici, sad je vjerojatno jasno, od Windows Subsystem for Linux neće imati neke pretjerane koristi, jer je snažno orijentiran prema programerima i relativno težak za postavljanje u odnosu na druga virtualizacijska rješenja na tržištu (pa i klasični dual-boot Linuxa i Windowsa). Iako omogućuje rad u grafičkom okruženju, barem zasad, dovoljno je kompliciran da odvrati sve “amatere”, osim najzagriženijih znatiželjnika.
+
+Najavom Microsofta da će u Linux kernel (Microsoftov build, naravno) uključiti i DirectX podršku za direktan pristup grafičkoj kartici, ova priča postaje vrlo zanimljiva i osobama koje se bave umjetnom inteligencijom, procesiranjem slika i drugim GPU-zahtjevnim aplikacijama, jer će aplikacije pisane za Linux imati ravnopravan pristup grafičkoj kartici, što je za njih od esencijalne važnosti.
+
+Igrači vjerojatno neće imati veće koristi od toga, jer je teško naći igre koje postoje na Linuxu, a ne postoje na Windowsima, no to svakako otvara zanimljivu mogućnost transfera tehnologije u obrnutom smjeru, prema Linuxu koji pokreće igre za Windowse, bilo kroz pravu virtualizaciju, bilo kroz projekt Wine.
+
+Zaključimo: WSL je rješenje koje, kad ga pokrenete, u pozadini uma začujete: “Developers, developers, developers, developers!” – rješenje prije svega namijenjeno privlačenju programera i zadovoljavanju njihovih konkretnih poslovnih potreba. Svi ostali zasad će se puno lakše snaći korištenjem provjerenih virtualizacijskih alata (VMware player, Qemu, Hyper-V), gdje je uz samo nekoliko klikova mišem moguće dobiti punokrvni Linux Desktop prema želji. Čisto, brzo, jednostavno.
+
+
+KAKO JE NA DRUGOJ STRANI?
+Kako se snalaze linuxaši koji žele pokrenuti programe pisane za Windows?
+
+Tradicionalno, više je zainteresiranih ljudi koji žele pokrenuti Windows programe pod Linuxom, nego onih koji žele pokrenuti Linux programe pod Windowsima, a dijele se na dvije struje: ljude koji trebaju koristiti aplikacije koje nisu napisane za Linux (ponajviše Microsoft Office) te igrače koji iz ovog ili onog razloga žele igrati igre pisane za Windowse. Povijest podrške za “suprotni” OS zato je bogatija pod Linuxom: windowsaši zapravo nikad nisu imali neku posebnu želju pokretati aplikacije za Linux, a one koje su se pokazale popularnima, ionako su u nekom trenutku dobile i svoju inačicu u Windowsima.
+
+Ovu priču ne možemo započeti na bilo koji drugi način, već spominjanjem Wine projekta, dugoživuće inicijative stvaranja rješenja koja će omogućiti linuxašima da igraju Solitaire ili Minesweeper, možda i pokrenu kakav ozbiljan softver.
+
+Slično kao i WSL1, Wine nije prava virtualizacija: u oba slučaja riječ je o rješenju koja presreće sistemske pozive aplikacije i prevodi ih u sistemske pozive operacijskog sustava pod kojim se aplikacija pogoni; praktično, to znači da Wine preuzima sve pozive prema Windows OS-u, prevodi ih u odgovarajuće pozive prema Linux OS-u i zatim izvršava, vraćajući rezultat natrag u obliku u kojem ga aplikacija može prepoznati i iskoristiti.
+
+Taj način rada može biti iznenađujuće učinkovit, pa je pad performansi aplikacije koja se umjesto pod Windowsima vrti pod patronatom Winea razmjerno mali – od gotovo neprimjetnog, do 10-15%, ovisno o količini i kompleksnosti posla koji Wine za aplikaciju treba odraditi.
+
+Wine ima dvije velike zamjerke: jedna je zaostajanje za razvojem Windowsa, zbog čega Wine nema implementirane sve pozive, što može rezultirati aplikacijom koja radi sporo, radi djelomično ili – naprosto ne radi, jer neki kritičan poziv ne može biti preveden. Iz tog problema proizilazi druga velika zamjerka, zaostajanje u grafičkom podsustavu: Wine je predugi niz godina podržavao DirectX 9.0c – posve nedovoljno za većinu modernih igara. Srećom, novija izdanja podržavaju Vulkan i DirectX 12, što značajno poboljšava kompatibilnost s modernim naslovima.
+
+WSL2 ekvivalent na Linuxu se vjerojatno nikad neće pojaviti, jer je potrebno prilagoditi kernel Windowsa, za što Microsoft ima vrlo malo interesa: bilo bi to istoznačno pucnju u vlastitu nogu.
+
+Stoga je najbolje rješenje pitanja Windowsa pod Linuxom prava virtualizacija pomoću nekog od uobičajenih virtualizacijskih rješenja: VMware, Virtualbox, Xen.
+
+ 
+
+WSL ILI NE?
+Isplati li se onda igranje s igračkom Windows System for Linux? Da, ako ste programer koji razvija na više platformi: integracija korisnih alata Linuxa u poznato Windows okruženje, uz mogućnost automatizacije procesa, spasit će vas potrebe za skakanjem iz jedne okoline u drugu ili petljanja po virtualnim računalima. Dapače, kako Microsoft obećava u budućnosti i podršku za programerske alate s grafičkim sučeljem, WSL se čini kao pravi izbor za programere – posebice ako nemate potrebu pokretati korisničke aplikacije. Zauzvrat, od korisnika se očekuje viša razina tehničkih znanja i spremnost za tipkanje kriptičnih naredbi u terminalu.
+
+Ako ste, pak, entuzijast koji bi se samo malo poigrao Linuxom, vidio kako to izgleda, kako radi, čemu služi i kako izgleda Linux desktop – puna virtualizacija omogućit će jednostavno instaliranje i sasvim ugodan rad, uz primjerenu dozu interoperabilnosti; ne trebate se zamarati kriptičnijim WSL-om koji vam u ovom trenutku ne nudi nikakvu posebnu prednost u odnosu na već etablirana rješenja.

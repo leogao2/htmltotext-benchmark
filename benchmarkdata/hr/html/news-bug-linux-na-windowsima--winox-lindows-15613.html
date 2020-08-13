@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Linux na Windowsima = Winox? Lindows? - Softver @ Bug.hr
+    </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#FFFFFF" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/Assets/images/apple-touch-icon.png" />
+
+    <link
+      rel="stylesheet"
+      href="/assets/styles/screen?v=2CbkPW6wPA_5EUtF92_vBWzhrOKTHtsY9r-hVr6dEEc1"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/styles/print?v=XI2itsN0uHRbkne2HO0jfqXePBXwiq1IEA2anhJenVA1"
+      media="print"
+    />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-49062017-1", "bug.hr");
+      ga("require", "displayfeatures");
+      ga("send", "pageview");
+    </script>
+
+    <!-- (C)2000-2014 Gemius SA - gemiusAudience / bug.hr / BOL -->
+    <script type="text/javascript">
+      <!--    //--><![CDATA[//><!--
+      var pp_gemius_identifier = 'baow5ALgyvKJ.nB57Vw9vfU2DkDd4I782kByTPYPq3z.O7';
+      // lines below shouldn't be edited
+      function gemius_pending(i) { window[i] = window[i] || function () { var x = window[i + '_pdata'] = window[i + '_pdata'] || []; x[x.length] = arguments; }; };
+      gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+      (function (d, t) {
+          try {
+              var gt = d.createElement(t), s = d.getElementsByTagName(t)[0], l = 'http' + ((location.protocol == 'https:') ? 's' : ''); gt.setAttribute('async', 'async');
+              gt.setAttribute('defer', 'defer'); gt.src = l + '://hr.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt, s);
+          } catch (e) { }
+      })(document, 'script');
+      //--><!]]>
+    </script>
+
+    <!--- 234ADS -->
+    <script
+      async="async"
+      src="https://www.googletagservices.com/tag/js/gpt.js"
+    ></script>
+    <script src="https://cdn.234doo.com/bug.js"></script>
+
+    <script src="/scripts/preload?v=ZjT3L1v67GTB7ZCKK3XCxsVW3-sp_OrXHuoksMCX9fc1"></script>
+
+    <meta property="og:title" content="Linux na Windowsima = Winox? Lindows?" />
+    <meta
+      property="og:description"
+      content="Želja za pokretanjem aplikacija pisanih za drugo računalo ili operacijski sustav nije nikakav novitet. Zašto je Microsoft, onda, odlučio podržati i, na neki način u Windowse integrirati, konkurenciju na koju je ne tako davno pucao iz svih oruđa? Odgovor je jednostavan: developers, developers, developers, developers!"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.bug.hr/softver/linux-na-windowsima--winox-lindows-15613"
+    />
+    <meta
+      property="og:image"
+      content="https://www.bug.hr/img/linux-na-windowsima--winox-lindows_PJcf2t.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta
+      name="description"
+      content="Želja za pokretanjem aplikacija pisanih za drugo računalo ili operacijski sustav nije nikakav novitet. Zašto je Microsoft, onda, odlučio podržati i, na neki način u Windowse integrirati, konkurenciju na koju je ne tako davno pucao iz svih oruđa? Odgovor je jednostavan: developers, developers, developers, developers!"
+    />
+
+    <script type="text/javascript">
+      var articleId = 15613;
+    </script>
+  </head>
+  <body class="page-article-centered">
+    <!-- Skip links -->
+    <div class="skip-links">
+      <a class="skip-links__link" href="#nav"
+        >Skoči na <strong>navigaciju</strong></a
+      >
+      <a class="skip-links__link" href="#main"
+        >Skoči na <strong>sadržaj</strong></a
+      >
+    </div>
+    <!-- /Skip links -->
+
+    <!-- Page header -->
+    <header class="section section--header" id="header" role="banner">
+      <div class="block header-block">
+        <div class="block__container">
+          <!-- Site branding -->
+          <div class="site-branding">
+            <span class="site-ladybird"></span>
+            <h1 class="site-logo">
+              <a href="/">
+                <svg
+                  width="96"
+                  height="30"
+                  viewBox="0 0 96 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Bug.hr</title>
+                  <g fill-rule="evenodd">
+                    <path
+                      d="M1.77 9v12.59h19.628v-.5h.482v.5h.382v-.5h.524v.5h.38v-.5h.908v-.57h.495v.57h.367v-.57h.538v.57h.368v-.57h.44v-.516h.48v-.5h.48v.5h.37v-.5h.537v.5h.382v-.5h.425v-2.59h-.425V15.83h-.382v1.084h-.538V15.83h-.368v1.084h-.48V15.83h-.48v-.502H23.59v-.567h.482v-.567h.495v.568h.367v-.567h.538v.568h.368v-.567h.44v-1.02h.48v-2.086h-.48v-1.07h-2.69V9.5h-2.675V9H1.768zm10.727 3.156h3.057v.517h.48v.5h-.48v.502h-3.057v-1.52zm-.906 1.52h.426v-1.52h-.425v1.52zm-.862 0h.382v-1.52h-.382v1.52zm6.71-.502h.367v-.5h-.368v.5zm-.92 0h.38v-.5h-.38v.5zm.92 3.74v-.518h.367v.518h.423v1.002h-.423v.518h-.368v-.518h-.54v.518h-.38v-.518h-.482v.518h-3.538v-2.038h3.538v.518h.482v-.518h.38v.518h.54zm-5.847 1.52h.426v-2.038h-.425v2.038zm-.862 0h.382v-2.038h-.382v2.038zM.863 21.59h.424V9H.863v12.59zm-.863 0h.382V9H0v12.59zm28.15-8.416h.382v-2.087h-.382v2.087zm-.906 0h.368v-2.087h-.368v2.087zM60.193 18.418h.424V9h-.424v9.418zm-.85 0h.368V9h-.366v9.418zM47.71 9v8.465h-.438v.52h-.525v-.52h-.382v.52h-.48v-.52h-.426v.52h-.92v-.52h-.425v.52h-.48v-.52h-.383v.52h-.524v-.52h-.44V9H31.194v9.418h.44v1.085h.423v.5h.425v-.5h.482v.5h.383v-.5h.538v.5h.424v.57h.424v.5h.44v-.5h.482v.5h.368v-.5h.537v.5h3.113v.517h10.658v-.518h3.114v-.5h.538v.5h.368v-.5h.48v.5h.44v-.5h.424v-.568h.425v-.5h.537v.5h.383v-.5h.48v.5h.425v-.5h.425v-1.086h.44V9H47.708zm-17.423 9.418h.368V9h-.368v9.418zm-.905 0h.424V9h-.424v9.418zM84.31 9v.568h-.538V9h-.383v.568h-.482V9H74.02v.568h-.48V9h-.44v.568h-.48V9h-.368v.568h-3.17v.5h-.426v.518h-.48v-.517h-.426v.516h-.48v-.517h-.383v.516h-.482v.568h-.424v.5h-.48v-.5h-.44v.5h-.48v-.5h-.368v.5h-.48v.502h-.44v1.085h-.48v-1.084h-.426v1.085h-.48v-1.084h-.383v1.085h-.48v4.175h.48v1.003h.382v-1.003h.48v1.003h.426v-1.003h.482v1.003h.44v.567h.48v1.02h.368v-1.02h.48v1.02h.44v-1.02h.48v1.02h.907v.567h.382v-.568h.48v.568h.425v-.568h.48v.568h.426v.5h3.172v.518h.367v-.518h.48v.518h.44v-.518h.48v.518h8.888v-.518h.48v.518h.384v-.518h.537v.518h.367v-.518h.92v-.5h.482v.5h.366v-.5h.538v.5h.382v-.5h.424v-.568h.538v1.068h.37v-1.068h.48v1.068h.438v-1.068h.482v1.586h5.732v-7.28H79.37v3.105h3.113v.57h-5.845v-.52h-.368v.52h-.538v-.52h-.382v.52h-.48v-.52h-.482V16.9h-.425v-3.223h.425v-.5h.48v-.502h.482v.5h.382v-.5h.538v.5h.368v-.5h3.652v.5h.368v-.5h.48v.5h.44v-.5h.48v.5h.425v.502h2.633v-.5h2.674v-.502h3.157v-.567h.482v.567h.38v-.567h.54v.567h.367v-.567h.92v-.45h-.482v-.502h-.438v-.568h-.368v.568h-.54v-.568h-.38v.568h-.483v-.568h-.48v-.517H87.79v-.502h-3.113V9h-.368zM73.1 16.847h.44v-3.105h-.44v3.105zm-.848 0h.367v-3.105h-.368v3.105zm22.77-4.74h.383v-.452h-.382v.45zm-.905 0h.37v-.452h-.37v.45zm-15.653 5.308h.424V14.31h-.424v3.105zm-.864 0h.383V14.31H77.6v3.105z"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </h1>
+            <p class="site-tagline">Bug.hr</p>
+          </div>
+          <!-- /Site branding -->
+          <a class="nav-news nav-news--mobile" href="/week">
+            <svg class="icon icon-menu-list">
+              <use
+                xlink:href="/assets/images/symbol-defs2.svg#icon-menu-list"
+              ></use>
+            </svg>
+
+            <span class="button__label">Tjedni prikaz</span>
+          </a>
+
+          <button class="nav-toggle mobile-detector">
+            <svg class="icon icon-menu">
+              <use xlink:href="/assets/images/symbol-defs2.svg#icon-menu"></use>
+            </svg>
+
+            <span class="button__label">Meni</span>
+          </button>
+
+          <div class="nav-mobile-overlay"></div>
+          <div class="nav-toggle-content">
+            <a class="nav-news nav-news--desktop" href="/week">
+              <svg class="icon icon-menu-list">
+                <use
+                  xlink:href="/assets/images/symbol-defs2.svg#icon-menu-list"
+                ></use>
+              </svg>
+
+              <span class="button__label">Tjedni prikaz</span>
+            </a>
+
+            <!-- Header profile -->
+            <div class="header-profile">
+              <button class="profile-toggle">
+                <span class="button__avatar button__avatar--anonymous">
+                  <svg class="icon icon-account">
+                    <use
+                      xlink:href="/assets/images/symbol-defs2.svg#icon-account"
+                    ></use>
+                  </svg>
+                </span>
+                <span class="button__label">Profil</span>
+              </button>
+              <div class="nav profile-nav profile-toggle-content">
+                <ul class="nav__items">
+                  <li class="nav__item">
+                    <a
+                      class="nav__link"
+                      href="/account/login?returnUrl=%2Fsoftver%2Flinux-na-windowsima--winox-lindows-15613"
+                      >Prijava</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="/account/register"
+                      >Registracija</a
+                    >
+                  </li>
+                </ul>
+                <ul class="nav__items nav__items--theme">
+                  <li class="nav__item nav__item--theme-light">
+                    <a
+                      class="nav__link js-switch-theme"
+                      data-theme="light"
+                      href="#"
+                      >Svijetla tema</a
+                    >
+                  </li>
+                  <li class="nav__item nav__item--theme-dark">
+                    <a
+                      class="nav__link js-switch-theme"
+                      data-theme="dark"
+                      href="#"
+                      >Tamna tema</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /Header profile -->
+
+            <!-- Header search -->
+            <div class="header-search" role="search">
+              <button class="search-toggle">
+                <svg class="icon icon-search">
+                  <use
+                    xlink:href="/assets/images/symbol-defs2.svg#icon-search"
+                  ></use>
+                </svg>
+
+                <span class="button__label">Pretraživanje</span>
+              </button>
+
+              <div class="search-content">
+                <form
+                  action="/search/results"
+                  onsubmit="return $('#form--header-search').val() !== '';"
+                >
+                  <div class="field field--search">
+                    <label class="field__label" for="field-header-search"
+                      >Pretraživanje</label
+                    >
+                    <div class="field__group">
+                      <input
+                        placeholder="Pretraži Bug.hr"
+                        id="field-header-search"
+                        type="text"
+                        name="q"
+                      />
+                      <button class="button">
+                        <svg class="icon icon-search">
+                          <use
+                            xlink:href="/assets/images/symbol-defs2.svg#icon-search"
+                          ></use>
+                        </svg>
+
+                        <span class="button__label">Pretraži</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- /Header search -->
+
+            <!-- Header nav -->
+            <nav class="nav header-nav" id="nav" role="navigation">
+              <ul class="nav__items">
+                <li class="nav__item nav__item--parent">
+                  <a class="nav__link" href="/recenzije">Recenzije</a>
+                  <button class="nav__toggle-children">
+                    <span class="button__label">Podkategorije</span>
+                    <svg class="icon icon-arrow-down">
+                      <use
+                        xlink:href="/assets/images/symbol-defs2.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </button>
+                  <ul class="nav__children">
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~racunala"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/racunala_Iiwdno.svg"
+                        />
+                        Računala</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~pc-komponente"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/pc-komponente_SFiAAv.svg"
+                        />
+                        PC komponente</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~pc-periferija"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/pc-periferija_r7x_iG.svg"
+                        />
+                        PC periferija</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~mobilni-uredaji"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/mobilni-uredjaji_Y4atth.svg"
+                        />
+                        Mobilni uređaji</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~foto-video"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/foto-i-video_EqMPzx.svg"
+                        />
+                        Foto i video</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~dnevni-boravak"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/dnevni-boravak_wEpYOd.svg"
+                        />
+                        Dnevni boravak</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~audio"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/audio_R9ezZ9.svg"
+                        />
+                        Audio</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~servisi"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/servisi_IJwsyF.svg"
+                        />
+                        Servisi</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~mrezna-oprema"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/mrezna-oprema_37ygSe.svg"
+                        />
+                        Mrežna oprema</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~softver"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/softver_5eIT9T.svg"
+                        />
+                        Softver</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/recenzije~ostalo"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/ostalo_afQ0Ao.svg"
+                        />
+                        Ostalo</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/biznis">Biznis</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/savjeti">Savjeti</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/znanost">Znanost</a>
+                </li>
+                <li class="nav__item nav__item--parent">
+                  <a class="nav__link" href="/igre">Igre</a>
+                  <button class="nav__toggle-children">
+                    <span class="button__label">Podkategorije</span>
+                    <svg class="icon icon-arrow-down">
+                      <use
+                        xlink:href="/assets/images/symbol-defs2.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </button>
+                  <ul class="nav__children">
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~najava"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/najava_lnF_tz.svg"
+                        />
+                        Najava</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~igrali-smo"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/igrali-smo_qhp232.svg"
+                        />
+                        Igrali smo</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~fps"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/fpstps_TnhnZ1.svg"
+                        />
+                        FPS/TPS</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~akcijske"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/akcijske_B7tJtu.svg"
+                        />
+                        Akcijske</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~strateske"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/strateske_wK6qDz.svg"
+                        />
+                        Strateške</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~rpg"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/rpg_HUXg00.svg"
+                        />
+                        RPG</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~mmo"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/mmo_E-woAq.svg"
+                        />
+                        MMO</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~avanture"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/avanture_dhcbwk.svg"
+                        />
+                        Avanture</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~platformske"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/platformske_iNUppe.svg"
+                        />
+                        Platformske</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~simulacije"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/simulacije_-zw4_3.svg"
+                        />
+                        Simulacije</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~sportske"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/sportske_R6dZtu.svg"
+                        />
+                        Sportske</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/igre~ostale-igre"
+                        ><img
+                          class="icon svg-inline"
+                          src="/img/ostale-igre_lSj5tm.svg"
+                        />
+                        Ostale igre</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/zabava">Zabava</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/appdana">APP DANA</a>
+                </li>
+
+                <li class="nav__item">
+                  <a class="nav__link" href="/forum/">Forum</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/bug/">Časopis</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /Header nav -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Page header -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://google.com/article"
+        },
+        "headline": "Linux na Windowsima = Winox? Lindows?",
+        "image": [
+          "https://www.bug.hr/img/linux-na-windowsima--winox-lindows_PJcf2t.png"
+        ],
+        "datePublished": "2020-08-04T06:00:00+02:00",
+        "dateModified": "2020-08-04T06:00:00+02:00",
+        "author": {
+          "@type": "Person",
+          "name": "Drago Galić"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Bug.hr",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bug.hr/assets/images/logo-jsonld.png"
+          }
+        },
+        "description": "Želja za pokretanjem aplikacija pisanih za drugo računalo ili operacijski sustav nije nikakav novitet. Zašto je Microsoft, onda, odlučio podržati i, na neki način u Windowse integrirati, konkurenciju na koju je ne tako davno pucao iz svih oruđa? Odgovor je jednostavan: developers, developers, developers, developers!"
+      }
+    </script>
+
+    <section class="section section--main" id="main">
+      <div class="intro-blocks"></div>
+
+      <div class="main-blocks">
+        <div class="block">
+          <div class="block__container">
+            <div class="block__content">
+              <div class="main-content">
+                <article class="post-full post-full--leading">
+                  <header class="post-full__header">
+                    <a href="/softver" class="post-full__tag">Softver</a>
+
+                    <h1 class="post-full__title">
+                      Linux na Windowsima = Winox? Lindows?
+                    </h1>
+
+                    <div class="post-full__social">
+                      <ul class="nav share-nav">
+                        <li class="nav__item nav__item--facebook">
+                          <a
+                            onclick="window.open(&#39;http://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.bug.hr%2fsoftver%2flinux-na-windowsima--winox-lindows-15613&#39;, &#39;share1566&#39;, &#39;width=520,height=350&#39;); return false;"
+                            href="#"
+                            class="nav__link"
+                          >
+                            <svg class="icon icon-facebook">
+                              <use
+                                xlink:href="/assets/images/symbol-defs2.svg#icon-facebook"
+                              ></use>
+                            </svg>
+
+                            <span class="nav__label">Facebook</span>
+                          </a>
+                        </li>
+
+                        <li class="nav__item nav__item--twitter">
+                          <a
+                            onclick="window.open(&#39;http://twitter.com/share?url=https%3a%2f%2fwww.bug.hr%2fsoftver%2flinux-na-windowsima--winox-lindows-15613&amp;text=Linux+na+Windowsima+%3d+Winox%3f+Lindows%3f&#39;, &#39;share1566&#39;, &#39;width=520,height=350&#39;); return false;"
+                            href="#"
+                            class="nav__link"
+                          >
+                            <svg class="icon icon-twitter">
+                              <use
+                                xlink:href="/assets/images/symbol-defs2.svg#icon-twitter"
+                              ></use>
+                            </svg>
+
+                            <span class="nav__label">Twitter</span>
+                          </a>
+                        </li>
+
+                        <li
+                          class="nav__item nav__item--linkedin u-hide-only-mobile"
+                        >
+                          <a
+                            onclick="window.open(&#39;https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.bug.hr%2fsoftver%2flinux-na-windowsima--winox-lindows-15613&amp;title=Linux+na+Windowsima+%3d+Winox%3f+Lindows%3f&#39;, &#39;share1566&#39;, &#39;width=520,height=350&#39;); return false;"
+                            href="#"
+                            class="nav__link"
+                          >
+                            <svg class="icon icon-linkedin">
+                              <use
+                                xlink:href="/assets/images/symbol-defs2.svg#icon-linkedin"
+                              ></use>
+                            </svg>
+
+                            <span class="nav__label">LinkedIn</span>
+                          </a>
+                        </li>
+                        <li
+                          class="nav__item nav__item--whatsapp u-hide-only-desktop"
+                        >
+                          <a
+                            href="whatsapp://send?text=Linux+na+Windowsima+%3d+Winox%3f+Lindows%3f+https%3a%2f%2fwww.bug.hr%2fsoftver%2flinux-na-windowsima--winox-lindows-15613"
+                            data-action="share/whatsapp/share"
+                            class="nav__link"
+                          >
+                            <svg class="icon icon-whatsapp">
+                              <use
+                                xlink:href="/assets/images/symbol-defs2.svg#icon-whatsapp"
+                              ></use>
+                            </svg>
+
+                            <span class="nav__label">WhatsApp</span>
+                          </a>
+                        </li>
+                        <li
+                          class="nav__item nav__item--viber u-hide-only-desktop"
+                        >
+                          <a
+                            href="viber://forward?text=Linux na Windowsima %3d Winox%3f Lindows%3f https%3a%2f%2fwww.bug.hr%2fsoftver%2flinux-na-windowsima--winox-lindows-15613"
+                            class="nav__link"
+                          >
+                            <svg class="icon icon-viber">
+                              <use
+                                xlink:href="/assets/images/symbol-defs2.svg#icon-viber"
+                              ></use>
+                            </svg>
+
+                            <span class="nav__label">Viber</span>
+                          </a>
+                        </li>
+
+                        <li class="nav__item nav__item--email">
+                          <a
+                            href="mailto:?subject=Linux na Windowsima %3d Winox%3f Lindows%3f&amp;body=https://www.bug.hr/softver/linux-na-windowsima--winox-lindows-15613"
+                            class="nav__link"
+                          >
+                            <svg class="icon icon-email">
+                              <use
+                                xlink:href="/assets/images/symbol-defs2.svg#icon-email"
+                              ></use>
+                            </svg>
+
+                            <span class="nav__label">E-mail</span>
+                          </a>
+                        </li>
+                      </ul>
+
+                      <a
+                        class="post-full__comments"
+                        href="/forum/topic/komentari-lanaka-bughr/linux-windowsima--winox-lindows/276932.aspx"
+                        >9</a
+                      >
+                    </div>
+
+                    <div class="post-full__media">
+                      <a
+                        href="/img/linux-na-windowsima--winox-lindows_dUVBPY.png"
+                        class="img-gallery"
+                        ><img
+                          src="/img/linux-na-windowsima--winox-lindows_kQs3CE.png"
+                          alt=""
+                      /></a>
+                    </div>
+                  </header>
+
+                  <ul class="list-tags">
+                    <li><a class="tag tag--color-2" href="/linux">Linux</a></li>
+                    <li>
+                      <a class="tag tag--color-2" href="/microsoft"
+                        >Microsoft</a
+                      >
+                    </li>
+                    <li>
+                      <a class="tag tag--color-2" href="/windows">Windows</a>
+                    </li>
+                    <li>
+                      <a class="tag tag--color-3" href="/tag/wsl1">wsl1</a>
+                    </li>
+                    <li>
+                      <a class="tag tag--color-3" href="/tag/wsl2">wsl2</a>
+                    </li>
+                    <li>
+                      <a class="tag tag--color-3" href="/tag/emulator"
+                        >emulator</a
+                      >
+                    </li>
+                    <li>
+                      <a class="tag tag--color-3" href="/tag/virtualizacija"
+                        >virtualizacija</a
+                      >
+                    </li>
+                  </ul>
+
+                  <div class="post-full__meta">
+                    <span class="post-full__author">Radoslav Dejanović</span>
+                    <span class="post-full__date"
+                      >utorak, 4. kolovoza 2020. u 06:00</span
+                    >
+                  </div>
+                  <div class="post-full__summary">
+                    <p>
+                      Želja za pokretanjem aplikacija pisanih za drugo računalo
+                      ili operacijski sustav nije nikakav novitet. Zašto je
+                      Microsoft, onda, odlučio podržati i, na neki način u
+                      Windowse integrirati, konkurenciju na koju je ne tako
+                      davno pucao iz svih oruđa? Odgovor je jednostavan:
+                      developers, developers, developers, developers!
+                    </p>
+                  </div>
+
+                  <div class="post-full__content">
+                    <p>
+                      Otkad je digitalnog svijeta i vijeka, korisnici računala
+                      maštali su o tome da na svom računalu pokrenu neku
+                      aplikaciju rađenu za neko drugo računalo. Najčešće se
+                      maštalo o igrama i nekoj primitivnoj kompatibilnosti, što
+                      je znalo rezultirati frankensteinovskim čudovištima poput
+                      ZX Spectrum emulatora za Commodore 64, no već duže vrijeme
+                      ta priča bivala je tek nedosanjanim snom. Neizbježan
+                      napredak računalne tehnologije približavao je svjetove
+                      međusobno nekompatibilnih rješenja i doveo ih do vrlo
+                      visoke interoperabilnosti, pruživši korisniku mogućnost da
+                      paralelno izvršava programe pisane za različite
+                      operacijske sustave na jednom računalu, i &ndash; što je
+                      puno važnije &ndash; omogućio elegantnu i učinkovitu
+                      razmjenu podataka. Zbog toga danas možemo pokretati, ne
+                      samo virtualizirana stara 8-bitna računala, već i moderne
+                      operacijske sustave, uz tek mali gubitak performansi.
+                    </p>
+                    <p>
+                      Prije nego što razmotrimo pomalo neočekivani Microsoftov
+                      potez uvođenja podrške za Linux u Windows 10, podsjetimo
+                      se ukratko ne baš trivijalne priče koja se događa ispod
+                      haube.
+                    </p>
+                    <figure class="image image--full">
+                      <a
+                        href="/img/linux-na-windowsima--winox-lindows_X5uwiA.png"
+                        class="img-gallery"
+                        ><img
+                          data-original="/img/linux-na-windowsima--winox-lindows_7Y3M5n.png"
+                          alt="Budite oprezni s Microsoftovom trgovinom, jer osim (očekivano) besplatnih Linux distribucija, neki trgovci pokušat će vam uvaliti „optimizirane” komercijalne verzije inače besplatnih distribucija."
+                          class="lazy"
+                      /></a>
+                      <figcaption>
+                        Budite oprezni s Microsoftovom trgovinom, jer osim
+                        (očekivano) besplatnih Linux distribucija, neki trgovci
+                        pokušat će vam uvaliti „optimizirane” komercijalne
+                        verzije inače besplatnih distribucija.
+                      </figcaption>
+                    </figure>
+                    <h2>Emula.. virtua... elmu.. ma, ona digitalizacija!</h2>
+                    <p>
+                      Programe rađene za drugi OS ili drugu arhitekturu možemo,
+                      ugrubo, pokrenuti na dva načina: emulacijom i
+                      virtualizacijom.
+                    </p>
+                    <p>
+                      Emulacija je zahtjevniji proces, u kojem se posebnim
+                      softverom simulira dio, ili, pak, cijeli hardverski sklop
+                      drugog računala; praktično, u softveru se opiše
+                      arhitektura i način rada ciljanog računala i njegovih
+                      perifernih uređaja, kako bi se program pisan za to
+                      računalo zavarao: program pokrenut u emulatoru nije
+                      svjestan činjenice da se vrti u virtualnom svijetu te kako
+                      hardver na kojem se &ldquo;izvršava&rdquo; u stvarnosti ne
+                      postoji.
+                    </p>
+                    <p>
+                      Emulacija cijelog računala procesorski je
+                      &ldquo;skupa&rdquo; i posve nepraktična za emuliranje PC
+                      računala &ndash; popularni emulator 32-bitnog PC računala
+                      Bochs, koji je u stanju pokrenuti i Windows XP (pa i na
+                      uređajima s Androidom), čini to toliko sporo da je
+                      koristan rad nemoguć. No, s druge strane, emulacije
+                      popularnih 8-bitnih računala, kao i jačih Amige, Atarija i
+                      starijih modela Macintosha &ndash; rade izvrsno, jer je
+                      arhitektura tih računala za današnje pojmove trivijalna.
+                    </p>
+                    <p>
+                      Virtualizacija u modernom obliku izgleda nešto drugačije:
+                      iako je i emulacija u svojoj naravi jedna vrsta
+                      virtualizacije, virtualizacijska rješenja koja se koriste
+                      u praksi rade na malo drugačiji način: vezana su uz
+                      arhitekturu, koriste optimizacije ugrađene u sam procesor
+                      i imaju značajno manji &ldquo;trošak&rdquo; pokretanja
+                      virtualiziranih računala, te su u stanju pokretati moderne
+                      operacijske sustave brzinama koje su bliske brzini koju bi
+                      sustav postigao da nije virtualiziran. Zauzvrat,
+                      ograničena su kompatibilnošću na operacijske sustave koji
+                      su pisani za hardver računala na kojima se pogone.
+                    </p>
+                    <p>
+                      Virtualizaciju, ponovno ugrubo, možemo podijeliti na punu
+                      virtualizaciju i paravirtualizaciju. Puna virtualizacija
+                      sličnija je emulaciji i omogućuje pokretanje operacijskog
+                      sustava bez bilo kakve modifikacije, dok je za
+                      paravirtualizaciju potrebno modificirati gostujući OS;
+                      zauzvrat, paravirtualizacija nudi bolje performanse od
+                      pune virtualizacije.
+                    </p>
+                    <p>
+                      Ako vas zbunjuje ova nepotpuna slika virtualizacijske
+                      tehnologije, možemo to objasniti relativno jednostavno:
+                      emulatore starih računala pokrećemo kao emulacije (sic!),
+                      a moderne operacijske sustave pokrećemo kao
+                      virtualizacije.
+                    </p>
+                    <figure class="image image--full">
+                      <a
+                        href="/img/linux-na-windowsima--winox-lindows_n4X5Ra.png"
+                        class="img-gallery"
+                        ><img
+                          data-original="/img/linux-na-windowsima--winox-lindows_cjKE8y.png"
+                          alt="Da biste nadjačali zbunjenost, možda bi bilo bolje izbjegavati izbjegavati hrvatsku lokalizaciju?"
+                          class="lazy"
+                      /></a>
+                      <figcaption>
+                        Da biste nadjačali zbunjenost, možda bi bilo bolje
+                        izbjegavati izbjegavati hrvatsku lokalizaciju?
+                      </figcaption>
+                    </figure>
+                    <h2>Zašto je Microsoftu uopće važno baviti se time?</h2>
+                    <p>
+                      Ispostavilo se kako je virtualizacija vrlo praktična u
+                      cijelom spektru informatičkih rješenja, od velikih
+                      podatkovnih centara do poslovnog ili kućnog PC računala.
+                      Virtualizacija omogućuje optimizaciju iskorištenja
+                      hardverskih resursa i jeftinije poslovanje na
+                      poslužiteljskom dijelu, dok na korisničkom ima izvrsnu
+                      praktičnu svrhu omogućavanja izvršavanja korisničkih
+                      aplikacija jedne platforme na drugoj, što ljudi kojima to
+                      treba itekako znaju cijeniti. Davateljima usluga, što
+                      Microsoft želi biti, virtualizacija znači korisnike i
+                      novac, točnije: izdašan poslovni model.
+                    </p>
+                    <p>
+                      U tom smjeru ide i Microsoftova podrška za Linux na
+                      desetki: pojavila se kako bi zadovoljila specifične
+                      potrebe Microsoftovih korisnika. To je pomalo kontroverzan
+                      potez svima koji znaju povijest lošesusjedskih odnosa
+                      Microsofta i Linuxa, no s druge strane stoji činjenica da
+                      se tvrtka, od promjene vladajuće garniture (odlazak Stevea
+                      Ballmera i dolazak Satye Nadelle 2014. godine) polako
+                      otvarala prema kohabitaciji, pa i suradnji sa svijetom
+                      slobodnog softvera. Windows Subsystem for Linux (WSL)
+                      rezultat je upravo tog zatopljavanja.
+                    </p>
+                    <p>
+                      WSL dolazi u dvije inkarnacije: prva inkarnacija, izdana
+                      2016. godine, sustav je koji omogućuje pokretanje
+                      aplikacija za Linux bez sudjelovanja samog Linux kernela,
+                      a druga inkarnacija, dostupna od Windows builda 2004,
+                      redizajnirana je u propisnu virtualizaciju baziranu na
+                      Hyper-V tehnologiji i uključuje i Linuxov kernel
+                      (Microsoftov build), rezultirajući u povećanoj
+                      kompatibilnosti s aplikacijama za Linux i poboljšanoj
+                      interoperabilnosti. Microsoft načelno preporučuje
+                      korištenje WSL2, osim u specifičnim slučajevima, gdje se
+                      WSL1 pokazao bržim.
+                    </p>
+                    <figure class="image image--full">
+                      <a
+                        href="/img/linux-na-windowsima--winox-lindows_MBu1MX.png"
+                        class="img-gallery"
+                        ><img
+                          data-original="/img/linux-na-windowsima--winox-lindows_y5nH-3.png"
+                          alt="Savjetujemo da prilikom izbora korisničkog imena i lozinke ne koristite iste podatke koje koristite za Windows."
+                          class="lazy"
+                      /></a>
+                      <figcaption>
+                        Savjetujemo da prilikom izbora korisničkog imena i
+                        lozinke ne koristite iste podatke koje koristite za
+                        Windows.
+                      </figcaption>
+                    </figure>
+                    <script type="text/javascript">
+                      //<![CDATA[
+                      adShow(
+                        "BughrArticleInside",
+                        "ad--inside-note",
+                        "",
+                        "76|213|56|159",
+                        ""
+                      );
+                      //]]>
+                    </script>
+
+                    <h2>Razočaranje za obične korisnike</h2>
+                    <p>
+                      No, što to znači za krajnjeg korisnika, posebice znamo li
+                      da već duže vrijeme postoje virtualizacijska rješenja koja
+                      korisnicima Windowsa omogućuju pokretanje Linux
+                      distribucije prema izboru, a uz nešto truda i
+                      (protuzakonito) pokretanje Mac OS-a? Je li to konkurencija
+                      etabliranim igračima na području
+                      <em>desktop</em> virtualizacije?
+                    </p>
+                    <p>
+                      Pravi odgovor je, čini se, kako ovaj novitet cilja na vrlo
+                      specifičnu nišu: programere koji razvijaju proizvode za
+                      više platformi. WSL nije pretjerano korisnički
+                      orijentirana stvar: instaliranje i održavanje Linuxa pod
+                      njim posao je koji značajno ovisi o korištenju terminala i
+                      utipkavanju naredbi, i sve je, samo ne korisnički
+                      ljubazan. No, s druge strane, programerima koji su navikli
+                      na takvo održavanje alata za razvoj softvera, servisa i
+                      baza podataka to je prirodno okruženje, u kojem se bez
+                      problema snalaze.
+                    </p>
+                    <figure class="image image--full">
+                      <a
+                        href="/img/linux-na-windowsima--winox-lindows_aWkEFL.png"
+                        class="img-gallery"
+                        ><img
+                          data-original="/img/linux-na-windowsima--winox-lindows_tw46x-.png"
+                          alt="Nezgodan propust: aplikacije ponuđene Ubuntu distribucije neće biti dostupne dok ne napravite prvo osvježavanje repozitorija naredbom „apt update”."
+                          class="lazy"
+                      /></a>
+                      <figcaption>
+                        Nezgodan propust: aplikacije ponuđene Ubuntu
+                        distribucije neće biti dostupne dok ne napravite prvo
+                        osvježavanje repozitorija naredbom „apt update”.
+                      </figcaption>
+                    </figure>
+                    <p>
+                      Zaista, najavio je Satya i kako će GUI aplikacije biti
+                      jednostavne za instaliranje, najzad već i WSL1 omogućavao
+                      je (uz dosta truda i dosta znanja) pokretanje grafičkih
+                      aplikacija. No, to iskustvo vjerojatno nikad neće biti
+                      tako jednostavno kao iskustvo korištenja
+                      &ldquo;pravih&rdquo; virtualki. Programerima to vjerojatno
+                      nije niti toliko važno: najbitnija prednost, posjedovanje
+                      paralelnih alata za razvoj softvera na jednom računalu,
+                      dostupnih iz jednog, unificiranog okruženja &ndash; već je
+                      tu.
+                    </p>
+                    <p>
+                      Svakodnevni korisnici, sad je vjerojatno jasno, od Windows
+                      Subsystem for Linux neće imati neke pretjerane koristi,
+                      jer je snažno orijentiran prema programerima i relativno
+                      težak za postavljanje u odnosu na druga virtualizacijska
+                      rješenja na tržištu (pa i klasični
+                      <em>dual-boot</em> Linuxa i Windowsa). Iako omogućuje rad
+                      u grafičkom okruženju, barem zasad, dovoljno je
+                      kompliciran da odvrati sve &ldquo;amatere&rdquo;, osim
+                      najzagriženijih znatiželjnika.
+                    </p>
+                    <p>
+                      Najavom Microsofta da će u Linux kernel (Microsoftov
+                      build, naravno) uključiti i DirectX podršku za direktan
+                      pristup grafičkoj kartici, ova priča postaje vrlo
+                      zanimljiva i osobama koje se bave umjetnom inteligencijom,
+                      procesiranjem slika i drugim GPU-zahtjevnim aplikacijama,
+                      jer će aplikacije pisane za Linux imati ravnopravan
+                      pristup grafičkoj kartici, što je za njih od esencijalne
+                      važnosti.
+                    </p>
+                    <p>
+                      Igrači vjerojatno neće imati veće koristi od toga, jer je
+                      teško naći igre koje postoje na Linuxu, a ne postoje na
+                      Windowsima, no to svakako otvara zanimljivu mogućnost
+                      transfera tehnologije u obrnutom smjeru, prema Linuxu koji
+                      pokreće igre za Windowse, bilo kroz pravu virtualizaciju,
+                      bilo kroz projekt Wine.
+                    </p>
+                    <p>
+                      Zaključimo: WSL je rješenje koje, kad ga pokrenete, u
+                      pozadini uma začujete: &ldquo;<em
+                        >Developers, developers, developers, developers</em
+                      >!&rdquo; &ndash; rješenje prije svega namijenjeno
+                      privlačenju programera i zadovoljavanju njihovih
+                      konkretnih poslovnih potreba. Svi ostali zasad će se puno
+                      lakše snaći korištenjem provjerenih virtualizacijskih
+                      alata (VMware player, Qemu, Hyper-V), gdje je uz samo
+                      nekoliko klikova mišem moguće dobiti punokrvni Linux
+                      Desktop prema želji. Čisto, brzo, jednostavno.
+                    </p>
+                    <figure class="image image--full">
+                      <a
+                        href="/img/linux-na-windowsima--winox-lindows_wpbFm6.png"
+                        class="img-gallery"
+                        ><img
+                          data-original="/img/linux-na-windowsima--winox-lindows_dKAQV0.png"
+                          alt="Konačno! 2020. je godina Linux terminala na Windows desktopu!!!"
+                          class="lazy"
+                      /></a>
+                      <figcaption>
+                        Konačno! 2020. je godina Linux terminala na Windows
+                        desktopu!!!
+                      </figcaption>
+                    </figure>
+                    <h2>Kako je na drugoj strani?</h2>
+                    <p>
+                      Kako se snalaze linuxaši koji žele pokrenuti programe
+                      pisane za Windows?
+                    </p>
+                    <p>
+                      Tradicionalno, više je zainteresiranih ljudi koji žele
+                      pokrenuti Windows programe pod Linuxom, nego onih koji
+                      žele pokrenuti Linux programe pod Windowsima, a dijele se
+                      na dvije struje: ljude koji trebaju koristiti aplikacije
+                      koje nisu napisane za Linux (ponajviše Microsoft Office)
+                      te igrače koji iz ovog ili onog razloga žele igrati igre
+                      pisane za Windowse. Povijest podrške za
+                      &ldquo;suprotni&rdquo; OS zato je bogatija pod Linuxom:
+                      windowsaši zapravo nikad nisu imali neku posebnu želju
+                      pokretati aplikacije za Linux, a one koje su se pokazale
+                      popularnima, ionako su u nekom trenutku dobile i svoju
+                      inačicu u Windowsima.
+                    </p>
+                    <p>
+                      Ovu priču ne možemo započeti na bilo koji drugi način, već
+                      spominjanjem Wine projekta, dugoživuće inicijative
+                      stvaranja rješenja koja će omogućiti linuxašima da igraju
+                      Solitaire ili Minesweeper, možda i pokrenu kakav ozbiljan
+                      softver.
+                    </p>
+                    <p>
+                      Slično kao i WSL1, Wine nije prava virtualizacija: u oba
+                      slučaja riječ je o rješenju koja presreće sistemske pozive
+                      aplikacije i prevodi ih u sistemske pozive operacijskog
+                      sustava pod kojim se aplikacija pogoni; praktično, to
+                      znači da Wine preuzima sve pozive prema Windows OS-u,
+                      prevodi ih u odgovarajuće pozive prema Linux OS-u i zatim
+                      izvršava, vraćajući rezultat natrag u obliku u kojem ga
+                      aplikacija može prepoznati i iskoristiti.
+                    </p>
+                    <p>
+                      Taj način rada može biti iznenađujuće učinkovit, pa je pad
+                      performansi aplikacije koja se umjesto pod Windowsima vrti
+                      pod patronatom Winea razmjerno mali &ndash; od gotovo
+                      neprimjetnog, do 10-15%, ovisno o količini i kompleksnosti
+                      posla koji Wine za aplikaciju treba odraditi.
+                    </p>
+                    <p>
+                      Wine ima dvije velike zamjerke: jedna je zaostajanje za
+                      razvojem Windowsa, zbog čega Wine nema implementirane sve
+                      pozive, što može rezultirati aplikacijom koja radi sporo,
+                      radi djelomično ili &ndash; naprosto ne radi, jer neki
+                      kritičan poziv ne može biti preveden. Iz tog problema
+                      proizilazi druga velika zamjerka, zaostajanje u grafičkom
+                      podsustavu: Wine je predugi niz godina podržavao DirectX
+                      9.0c &ndash; posve nedovoljno za većinu modernih igara.
+                      Srećom, novija izdanja podržavaju Vulkan i DirectX 12, što
+                      značajno poboljšava kompatibilnost s modernim naslovima.
+                    </p>
+                    <p>
+                      WSL2 ekvivalent na Linuxu se vjerojatno nikad neće
+                      pojaviti, jer je potrebno prilagoditi kernel Windowsa, za
+                      što Microsoft ima vrlo malo interesa: bilo bi to
+                      istoznačno pucnju u vlastitu nogu.
+                    </p>
+                    <p>
+                      Stoga je najbolje rješenje pitanja Windowsa pod Linuxom
+                      prava virtualizacija pomoću nekog od uobičajenih
+                      virtualizacijskih rješenja: VMware, Virtualbox, Xen.
+                    </p>
+                    <p>&nbsp;</p>
+                    <h2>WSL ili ne?</h2>
+                    <p>
+                      Isplati li se onda igranje s igračkom Windows System for
+                      Linux? Da, ako ste programer koji razvija na više
+                      platformi: integracija korisnih alata Linuxa u poznato
+                      Windows okruženje, uz mogućnost automatizacije procesa,
+                      spasit će vas potrebe za skakanjem iz jedne okoline u
+                      drugu ili petljanja po virtualnim računalima. Dapače, kako
+                      Microsoft obećava u budućnosti i podršku za programerske
+                      alate s grafičkim sučeljem, WSL se čini kao pravi izbor za
+                      programere &ndash; posebice ako nemate potrebu pokretati
+                      korisničke aplikacije. Zauzvrat, od korisnika se očekuje
+                      viša razina tehničkih znanja i spremnost za tipkanje
+                      kriptičnih naredbi u terminalu.
+                    </p>
+                    <p>
+                      Ako ste, pak, entuzijast koji bi se samo malo poigrao
+                      Linuxom, vidio kako to izgleda, kako radi, čemu služi i
+                      kako izgleda Linux desktop &ndash; puna virtualizacija
+                      omogućit će jednostavno instaliranje i sasvim ugodan rad,
+                      uz primjerenu dozu interoperabilnosti; ne trebate se
+                      zamarati kriptičnijim WSL-om koji vam u ovom trenutku ne
+                      nudi nikakvu posebnu prednost u odnosu na već etablirana
+                      rješenja.
+                    </p>
+                    <aside class="island">
+                      <h3 class="island__title">
+                        Instaliranje Window Subsystem for Linux
+                      </h3>
+                      <div class="island__content">
+                        <p>
+                          Instalacija WSL-a na računalo nije pretjerano složena
+                          operacija, iako se veći dio posla odvija u terminalu.
+                          Za početak, valja biti siguran da je operacijski
+                          sustav ažuran: WSL1 neće se instalirati na starije
+                          verzije Windowsa 10, a WSL2 neće se instalirati na
+                          verzije niže od 2004 (svibanj 2020).
+                        </p>
+
+                        <p>
+                          Windows Subsystem for Linux moguće je instalirati na
+                          dva načina: korištenjem PowerShell ljuske, ili
+                          klikanjem kroz grafičko sučelje.
+                        </p>
+
+                        <p>
+                          Želite li WSL instalirati kroz PowerShell, otvorite
+                          (kao administrator) PowerShell terminal i u njemu
+                          upišite sljedeću naredbu:
+                        </p>
+
+                        <p>
+                          <strong
+                            >Enable-WindowsOptionalFeature -Online -FeatureName
+                            Microsoft-Windows-Subsystem-Linux</strong
+                          >
+                        </p>
+
+                        <p>
+                          Utipkajte &ldquo;Y&rdquo; i ponovno pokrenite računalo
+                          kad proces završi i &ndash; to je to. Možete na
+                          sljedeći korak.
+                        </p>
+
+                        <p>
+                          Ako ipak više volite klikati mišem, trebate otvoriti
+                          Settings/Apps te tamo pronaći u gornjem desnom kutu
+                          &ldquo;Programs and features&rdquo;;
+                        </p>
+
+                        <p>
+                          potom trebate u sekciji &ldquo;Turn Windows features
+                          on or off&rdquo;
+                        </p>
+
+                        <p>
+                          pronaći i izabrati &ldquo;Windows Subsystem for
+                          Linux&rdquo;. Kliknite na OK, i potom ponovno
+                          pokrenite računalo.
+                        </p>
+
+                        <p>
+                          Sljedeći korak je instalacija željene Linux
+                          distribucije u netom aktivirani WSL. Za to je najbolje
+                          izabrati neku od ponuđenih distribucija u
+                          Microsoftovoj trgovini, posebice ako ste s Linuxom na
+                          &ldquo;vi&rdquo; &ndash; prije instalacije moći ćete
+                          pročitati informacije o distribuciji, iako se u našem
+                          konkretnom slučaju sve distribucije (zasad) svedu na
+                          pokretanje Linuxa u terminalu, bez desktop sučelja i
+                          lijepe grafike.
+                        </p>
+
+                        <p>
+                          Želite li baš instalirati distribuciju iz PowerShella,
+                          možete to učiniti ovako:
+                        </p>
+
+                        <p>
+                          <strong
+                            >Invoke-WebRequest -Uri
+                            https://wsldownload.azureedge.net/Ubuntu_1604.2019.523.0_x64.appx
+                            -OutFile Ubuntu.appx -UseBasicParsing</strong
+                          >
+                        </p>
+
+                        <p>
+                          Ova naredba povući će odgovarajuću distribuciju (u
+                          ovom slučaju Ubuntu), koju zatim instalirate
+                          jednostavnom naredbom:
+                        </p>
+
+                        <p><strong>Add-AppxPackage .\Ubuntu.app</strong></p>
+
+                        <p>
+                          Nakon što ste izabrali i skinuli željenu distribuciju,
+                          pokrenite je klikom na &ldquo;Launch&rdquo; ako ste je
+                          instalirali kroz Microsoft Store, ili pokretanjem kroz
+                          Start izbornik ako ste to učinili iz PowerShella;
+                          distribucija će se instalirati, a odmah potom zatražit
+                          će od vas da stvorite novog korisnika i pridijelite mu
+                          odgovarajuću lozinku. Za svaki virtualni Linux koji
+                          instalirate trebate stvoriti novog korisnika (koji se
+                          može zvati jednako kao i korisnik kojeg imate u
+                          Windowsima) i nikako mu (iz sigurnosnih razloga)
+                          nemojte dati istu lozinku kao korisniku Windowsa. Iz
+                          sigurnosnih razloga ne preporučujemo zadavanje
+                          jednostavne lozinke, čak i ako imate namjeru samo se
+                          malo poigrati i potom zaboraviti na WSL.
+                        </p>
+
+                        <p>
+                          I, to je to: razveselit će vas raskošni terminal u
+                          kojem možete odmah početi tipkati svoje moćne naredbe
+                          i promatrati rezultate izvršavanja!
+                        </p>
+
+                        <p>
+                          Šalu na stranu, programerima ovdje tek započinje pravi
+                          posao: instaliranje alata za izradu programa i
+                          usklađivanje s alatima koje koriste pod Windowsima.
+                          No, to je opsežna tema za sebe.
+                        </p>
+                      </div>
+                    </aside>
+                    <figure class="image image--full">
+                      <a
+                        href="/img/linux-na-windowsima--winox-lindows_zUqq9g.png"
+                        class="img-gallery"
+                        ><img
+                          data-original="/img/linux-na-windowsima--winox-lindows_1remW9.png"
+                          alt=""
+                          class="lazy"
+                      /></a>
+                    </figure>
+                  </div>
+                </article>
+
+                <div class="block block-similar">
+                  <div>
+                    <div class="block__content">
+                      <h3 class="heading-section">
+                        Vezano
+                      </h3>
+
+                      <ul>
+                        <li>
+                          <a
+                            href="/softver/microsoftove-aplikacije-na-chrome-os-u-bez-potrebe-za-internetskom-vezom-15559"
+                            style="font-weight: bold;"
+                            >Microsoftove aplikacije na Chrome OS-u bez potrebe
+                            za internetskom vezom</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="block">
+                  <div class="">
+                    <div class="block__content">
+                      <h3 class="heading-section">
+                        Links preporučuje
+                      </h3>
+
+                      <div class="post-grid post-grid--mobile-scroll">
+                        <div class="grid-item span-third">
+                          <article class="post-listing">
+                            <a
+                              class="post-listing__image"
+                              target="_blank"
+                              href="https://www.links.hr/hr/prijenosno-racunalo-lenovo-ideapad-3-81we00j9sc-core-i5-1035g4-8gb-512gb-ssd-hd-graphics-15-6-led-fhd-freedos-sivo-014600545?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=lenovo_ideapad"
+                            >
+                              <img
+                                src="/img/lenovo-ideapad-3prilagodjen-po-tvojoj-mjeri_WNjcIy.jpg"
+                              />
+                            </a>
+
+                            <div
+                              class="post-listing__content"
+                              data-url="https://www.links.hr/hr/prijenosno-racunalo-lenovo-ideapad-3-81we00j9sc-core-i5-1035g4-8gb-512gb-ssd-hd-graphics-15-6-led-fhd-freedos-sivo-014600545?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=lenovo_ideapad"
+                              data-isexternal="True"
+                            >
+                              <a
+                                class="post-listing__tag"
+                                target="_blank"
+                                href="https://www.links.hr/hr/prijenosno-racunalo-lenovo-ideapad-3-81we00j9sc-core-i5-1035g4-8gb-512gb-ssd-hd-graphics-15-6-led-fhd-freedos-sivo-014600545?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=lenovo_ideapad"
+                                >Besplatna dostava!</a
+                              >
+
+                              <h3 class="post-listing__subtitle"></h3>
+
+                              <h2 class="post-listing__title">
+                                <a
+                                  target="_blank"
+                                  href="https://www.links.hr/hr/prijenosno-racunalo-lenovo-ideapad-3-81we00j9sc-core-i5-1035g4-8gb-512gb-ssd-hd-graphics-15-6-led-fhd-freedos-sivo-014600545?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=lenovo_ideapad"
+                                  >LENOVO IdeaPad 3; Prilagođen po tvojoj
+                                  mjeri!</a
+                                >
+                              </h2>
+
+                              <div class="post-listing__meta">
+                                <span class="post-listing__author"
+                                  >Core i5</span
+                                >
+                                <span class="post-listing__date">links.hr</span>
+
+                                <a
+                                  class="post-listing__external"
+                                  target="_blank"
+                                  href="https://www.links.hr/hr/prijenosno-racunalo-lenovo-ideapad-3-81we00j9sc-core-i5-1035g4-8gb-512gb-ssd-hd-graphics-15-6-led-fhd-freedos-sivo-014600545?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=lenovo_ideapad"
+                                  ><svg class="icon icon-external">
+                                    <use
+                                      xlink:href="/assets/images/symbol-defs2.svg#icon-external"
+                                    ></use>
+                                  </svg>
+                                  <span class="visually-hidden"
+                                    >Vanjski link</span
+                                  ></a
+                                >
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="grid-item span-third">
+                          <article class="post-listing">
+                            <a
+                              class="post-listing__image"
+                              target="_blank"
+                              href="https://www.links.hr/hr/microsoft-office-365-personal-engleski-qq2-00543-qq2-00790-godisnja-pretplata-250115130?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=microsoft_365"
+                            >
+                              <img
+                                src="/img/microsoft-office-365-personal-licenca-za-racunalo--telefontablet_BazI5J.jpg"
+                              />
+                            </a>
+
+                            <div
+                              class="post-listing__content"
+                              data-url="https://www.links.hr/hr/microsoft-office-365-personal-engleski-qq2-00543-qq2-00790-godisnja-pretplata-250115130?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=microsoft_365"
+                              data-isexternal="True"
+                            >
+                              <a
+                                class="post-listing__tag"
+                                target="_blank"
+                                href="https://www.links.hr/hr/microsoft-office-365-personal-engleski-qq2-00543-qq2-00790-godisnja-pretplata-250115130?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=microsoft_365"
+                                >AKCIJA!</a
+                              >
+
+                              <h3 class="post-listing__subtitle"></h3>
+
+                              <h2 class="post-listing__title">
+                                <a
+                                  target="_blank"
+                                  href="https://www.links.hr/hr/microsoft-office-365-personal-engleski-qq2-00543-qq2-00790-godisnja-pretplata-250115130?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=microsoft_365"
+                                  >MICROSOFT Office 365 Personal; Licenca za
+                                  računalo + telefon/tablet</a
+                                >
+                              </h2>
+
+                              <div class="post-listing__meta">
+                                <span class="post-listing__author"
+                                  >Godišnja pretplata</span
+                                >
+                                <span class="post-listing__date">links.hr</span>
+
+                                <a
+                                  class="post-listing__external"
+                                  target="_blank"
+                                  href="https://www.links.hr/hr/microsoft-office-365-personal-engleski-qq2-00543-qq2-00790-godisnja-pretplata-250115130?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=microsoft_365"
+                                  ><svg class="icon icon-external">
+                                    <use
+                                      xlink:href="/assets/images/symbol-defs2.svg#icon-external"
+                                    ></use>
+                                  </svg>
+                                  <span class="visually-hidden"
+                                    >Vanjski link</span
+                                  ></a
+                                >
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="grid-item span-third">
+                          <article class="post-listing">
+                            <a
+                              class="post-listing__image"
+                              target="_blank"
+                              href="https://www.links.hr/hr/satovi-i-narukvice-7707?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=apple_watch#/manFilters=1274"
+                            >
+                              <img
+                                src="/img/apple-watch-velik-izbor-modela-pametnih-satova_Gdyqh3.jpg"
+                              />
+                            </a>
+
+                            <div
+                              class="post-listing__content"
+                              data-url="https://www.links.hr/hr/satovi-i-narukvice-7707?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=apple_watch#/manFilters=1274"
+                              data-isexternal="True"
+                            >
+                              <a
+                                class="post-listing__tag"
+                                target="_blank"
+                                href="https://www.links.hr/hr/satovi-i-narukvice-7707?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=apple_watch#/manFilters=1274"
+                                >Već od 2.099 kn.</a
+                              >
+
+                              <h3 class="post-listing__subtitle"></h3>
+
+                              <h2 class="post-listing__title">
+                                <a
+                                  target="_blank"
+                                  href="https://www.links.hr/hr/satovi-i-narukvice-7707?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=apple_watch#/manFilters=1274"
+                                  >APPLE WATCH; Velik izbor modela pametnih
+                                  satova!</a
+                                >
+                              </h2>
+
+                              <div class="post-listing__meta">
+                                <span class="post-listing__author"
+                                  >Odlična ponuda!</span
+                                >
+                                <span class="post-listing__date">links.hr</span>
+
+                                <a
+                                  class="post-listing__external"
+                                  target="_blank"
+                                  href="https://www.links.hr/hr/satovi-i-narukvice-7707?utm_source=bug.hr&amp;utm_medium=top_ponuda&amp;utm_campaign=apple_watch#/manFilters=1274"
+                                  ><svg class="icon icon-external">
+                                    <use
+                                      xlink:href="/assets/images/symbol-defs2.svg#icon-external"
+                                    ></use>
+                                  </svg>
+                                  <span class="visually-hidden"
+                                    >Vanjski link</span
+                                  ></a
+                                >
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <script type="text/javascript">
+                  //<![CDATA[
+                  adShow("BughrArticleAfter", "", "", "76|213|56|159", "");
+                  //]]>
+                </script>
+
+                <script type="text/javascript">
+                  //<![CDATA[
+                  adShow("BughrArticleAfter2", "", "", "76|213|56|159", "");
+                  //]]>
+                </script>
+
+                <aside>
+                  <div class="heading-forum">
+                    <h3 class="heading-forum__title">
+                      <a
+                        href="/forum/topic/komentari-lanaka-bughr/linux-windowsima--winox-lindows/276932.aspx"
+                      >
+                        Zadnji komentari na forumu
+                      </a>
+                    </h3>
+                    <a
+                      class="heading-forum__comments"
+                      href="/forum/topic/komentari-lanaka-bughr/linux-windowsima--winox-lindows/276932.aspx"
+                      ><svg class="icon icon-plus">
+                        <use
+                          xlink:href="/assets/images/symbol-defs2.svg#icon-plus"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div
+                    class="comment-listing"
+                    onclick="document.location = '/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6174352.aspx';"
+                  >
+                    <span class="comment-listing__header">
+                      <span class="comment-listing__author">Zechina</span>
+                      <a
+                        href="/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6174352.aspx"
+                        class="comment-listing__date"
+                        >jučer 17:59</a
+                      >
+                    </span>
+
+                    <div class="comment-listing__content">
+                      <p>Rado Radu čitam.Linux ftw ;)</p>
+                    </div>
+                  </div>
+                  <div
+                    class="comment-listing"
+                    onclick="document.location = '/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173860.aspx';"
+                  >
+                    <span class="comment-listing__header">
+                      <span class="comment-listing__author"
+                        >syncmaster245b</span
+                      >
+                      <a
+                        href="/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173860.aspx"
+                        class="comment-listing__date"
+                        >utorak</a
+                      >
+                    </span>
+
+                    <div class="comment-listing__content">
+                      <p>
+                        Pa&#160; &#39;ajd neka sam i to dozivio na
+                        BOL-u.Povratak OSS gurua Radoslava.&#160;Nadam se da
+                        nece opet ostati na jednom tekstu u
+                        dekadi.&#160;&#160;Sto se tice MS-ovog petljanja po
+                        Linuxu, to je normalan slijed od kada je stari poslovni
+                        model (prodavanja licenci za OS i licenci zlatne koke
+                        Officea) p...
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="comment-listing"
+                    onclick="document.location = '/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173718.aspx';"
+                  >
+                    <span class="comment-listing__header">
+                      <span class="comment-listing__author">BaklavaMetal</span>
+                      <a
+                        href="/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173718.aspx"
+                        class="comment-listing__date"
+                        >utorak</a
+                      >
+                    </span>
+
+                    <div class="comment-listing__content">
+                      <p>
+                        Koristim WSL vec 3 god na poslu i dosta je
+                        dobar.&#160;Poceo sam s ubuntuom, al kad vidis da ti
+                        skype,slack i webex (s tim da webex do prije godinu i
+                        nes nije uopce radio na linuxima, a i skype je bio u
+                        vjecnoj beti) uzmu 8giga rama zapitas se...Na windowsima
+                        to radi besprijekorno.Za neke kubernetes...
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="comment-listing"
+                    onclick="document.location = '/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173668.aspx';"
+                  >
+                    <span class="comment-listing__header">
+                      <span class="comment-listing__author">Thinker</span>
+                      <a
+                        href="/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173668.aspx"
+                        class="comment-listing__date"
+                        >utorak</a
+                      >
+                    </span>
+
+                    <div class="comment-listing__content">
+                      <p>
+                        Samo da malo nadopunim &quot;ovu žustru raspravu&quot;
+                        kolege ihusha, već dulje vrijeme se šuška o Windowsima
+                        koji su zasnovani na Linux jezgri, nešto kao OS X,
+                        koliko je to osnovano - ne znam i neću ulaziti u analizu
+                        ali s obzirom da se oko ARM procesora kuha puno toga ne
+                        bih se čudio da jednog dana stvarno
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="comment-listing"
+                    onclick="document.location = '/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173620.aspx';"
+                  >
+                    <span class="comment-listing__header">
+                      <span class="comment-listing__author">andrijam</span>
+                      <a
+                        href="/forum/post/komentari-lanaka-bughr/linux-windowsima--winox-lindows/6173620.aspx"
+                        class="comment-listing__date"
+                        >utorak</a
+                      >
+                    </span>
+
+                    <div class="comment-listing__content">
+                      <p>
+                        A eto ja cijelo vrijeme mislim da je to implemntirano
+                        zbog Dokera i popularizcije&#160;arhitektura baziranih
+                        na kontejnerima, čitaj mikroservisi u claud
+                        rješenjima.&#160;&#160;
+                      </p>
+                    </div>
+                  </div>
+                </aside>
+
+                <script type="text/javascript">
+                  //<![CDATA[
+                  adShow("BughrArticleBottom", "", "", "76|213|56|159", "");
+                  //]]>
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-top">
+      <a class="footer-top__action" href="#">
+        Povratak na vrh
+      </a>
+    </div>
+
+    <footer class="section section--footer" id="footer" role="contentinfo">
+      <div class="block logo-block">
+        <div class="block__container">
+          <ul class="footer-logo">
+            <li>
+              <a href="/forum/">
+                <span class="label">Forum</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/forum.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="/bug/">
+                <span class="label">Bug</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/bug.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="http://mreza.bug.hr/">
+                <span class="label">Mreža</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/mreza.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="http://www.autonet.hr/">
+                <span class="label">Autonet</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/autonet.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="http://bfs.bug.hr/">
+                <span class="label">Bug Future Show</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/bfs.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="http://ideaknockout.com/">
+                <span class="label">Idea Knockout</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/ideaknockout.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="http://3t.bug.hr/">
+                <span class="label">Tourism, Travel & Tech</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/t3.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="http://f2.bug.hr/">
+                <span class="label">Future of Fintech</span>
+                <img
+                  class="svg-inline"
+                  src="/assets/images/logo/f2.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="block footer-block">
+        <div class="block__container">
+          <div class="footer-newsletter">
+            <form
+              id="newsletter-form"
+              action="/newsletter/subscribe"
+              method="POST"
+            >
+              <input
+                name="__RequestVerificationToken"
+                type="hidden"
+                value="rTe7bGBqjDPu07IiqzjEuOyTzFY4mK-sinQHeQea7-RpPya4Agh1-jVYDzASvFnUG7Fby1Ol9c6-05NnanmBdDKRMt41"
+              />
+
+              <fieldset>
+                <h3 class="footer-newsletter__title">Newsletter</h3>
+
+                <div class="field field--label-hidden">
+                  <label class="field__label" for="newsletter-email"
+                    >E-mail</label
+                  >
+                  <div class="field__group">
+                    <input
+                      placeholder="E-mail adresa"
+                      name="email"
+                      id="newsletter-email"
+                      type="email"
+                    />
+                    <button type="submit" class="button">
+                      <svg class="icon icon-arrow-right-alt">
+                        <use
+                          xlink:href="/assets/images/symbol-defs2.svg#icon-arrow-right-alt"
+                        ></use>
+                      </svg>
+
+                      <span class="label">Pretplata</span>
+                    </button>
+                  </div>
+                </div>
+                <p class="footer-newsletter__error">Error</p>
+              </fieldset>
+            </form>
+            <p class="footer-newsletter__success">
+              <strong>Hvala vam na prijavi.</strong> Molimo da svoju pretplatu
+              potvrdite putem poruke koja je upravo otišla u vaš sandučić.
+            </p>
+          </div>
+
+          <div class="footer-social">
+            <a class="footer-eisa" href="https://www.eisa.eu/">
+              <span class="label">EISA</span>
+              <img
+                class="svg-inline"
+                src="/assets/images/logo/eisa.svg"
+                alt=""
+              />
+            </a>
+
+            <ul class="nav social-nav">
+              <li class="nav__item">
+                <a href="https://www.facebook.com/bugonline/" class="nav__link">
+                  <svg class="icon icon-facebook">
+                    <use
+                      xlink:href="/assets/images/symbol-defs2.svg#icon-facebook"
+                    ></use>
+                  </svg>
+
+                  <span class="nav__label">Facebook</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="https://www.youtube.com/user/BugOnlineTV"
+                  class="nav__link"
+                >
+                  <svg class="icon icon-youtube">
+                    <use
+                      xlink:href="/assets/images/symbol-defs2.svg#icon-youtube"
+                    ></use>
+                  </svg>
+
+                  <span class="nav__label">YouTube</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="https://twitter.com/bugonline/" class="nav__link">
+                  <svg class="icon icon-twitter">
+                    <use
+                      xlink:href="/assets/images/symbol-defs2.svg#icon-twitter"
+                    ></use>
+                  </svg>
+
+                  <span class="nav__label">Twitter</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="https://www.instagram.com/bug.hr/" class="nav__link">
+                  <svg class="icon icon-instagram">
+                    <use
+                      xlink:href="/assets/images/symbol-defs2.svg#icon-instagram"
+                    ></use>
+                  </svg>
+
+                  <span class="nav__label">Instagram</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="https://www.linkedin.com/company/933442"
+                  class="nav__link"
+                >
+                  <svg class="icon icon-linkedin">
+                    <use
+                      xlink:href="/assets/images/symbol-defs2.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+
+                  <span class="nav__label">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav footer-nav">
+            <ul class="nav__items">
+              <li class="nav__item">
+                <a class="nav__link" href="/rss">RSS</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="/uvjeti">Uvjeti korištenja</a>
+              </li>
+              <li class="nav__item">
+                <a
+                  class="nav__link"
+                  href="https://mreza.bug.hr/politika-zastite-privatnosti/"
+                  >Politika zaštite privatnosti</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="/impresum">Impressum</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="/marketing">Marketing</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="/kontakt">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+
+          <p class="footer-copy">&copy; BUG MEDIA 2020. Sva prava pridržana.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cookie" style="display: none;">
+      <p class="cookie__information">
+        Koristimo kolačiće (eng. „cookies“) za pružanje boljeg korisničkog
+        iskustva. Nastavkom pregleda web-stranice slažete se s uvjetima
+        korištenja.
+      </p>
+      <div class="cookie__action">
+        <a
+          class="button button--small button--primary"
+          id="cookie-close"
+          href="#"
+          >Slažem se</a
+        >
+        <a class="button button--small" href="/uvjeti">Uvjeti korištenja</a>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="/scripts/libraries?v=eS2-eEcL0wfnNvLCjNQsCJfOkkJ9vYJbm4NJmr2ltbA1"></script>
+
+    <script src="/scripts/project?v=eHPyKhbRV1wx7oRZgoeGIHJy1APewovF4005-YE5Oic1"></script>
+
+    <!-- fonts -->
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: {
+          families: [
+            "Ubuntu:400italic,500,700,700italic:latin-ext",
+            "Oswald:400:latin-ext",
+            "Teko:300:latin-ext",
+          ],
+        },
+        active: function () {
+          $(window).resize();
+        },
+      };
+      (function () {
+        var wf = document.createElement("script");
+        wf.src = "https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";
+        wf.type = "text/javascript";
+        wf.async = "true";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+
+    <!--    bug.hr   -->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      (function () {
+        (window.dm = window.dm || { AjaxData: [] }),
+          (window.dm.AjaxEvent = function (et, d) {
+            dm.AjaxData.push({ et: et, d: d }),
+              window.DotMetricsObj && DotMetricsObj.onAjaxDataUpdate();
+          });
+        var d = document,
+          h = d.getElementsByTagName("head")[0],
+          s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          document.location.protocol +
+          "//script.dotmetrics.net/door.js?id=2631";
+        h.appendChild(s);
+      })();
+      /* ]]> */
+    </script>
+
+    <!--  -->
+  </body>
+</html>
