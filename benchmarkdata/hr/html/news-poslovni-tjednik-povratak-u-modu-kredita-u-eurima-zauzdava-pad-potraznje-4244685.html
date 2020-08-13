@@ -1,0 +1,3868 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (window.NREUM || (NREUM = {})).loader_config = {
+        licenseKey: "a4a4aebca1",
+        applicationID: "385265805",
+      };
+      window.NREUM || (NREUM = {}),
+        (__nr_require = (function (e, n, t) {
+          function r(t) {
+            if (!n[t]) {
+              var i = (n[t] = { exports: {} });
+              e[t][0].call(
+                i.exports,
+                function (n) {
+                  var i = e[t][1][n];
+                  return r(i || n);
+                },
+                i,
+                i.exports
+              );
+            }
+            return n[t].exports;
+          }
+          if ("function" == typeof __nr_require) return __nr_require;
+          for (var i = 0; i < t.length; i++) r(t[i]);
+          return r;
+        })(
+          {
+            1: [
+              function (e, n, t) {
+                function r() {}
+                function i(e, n, t) {
+                  return function () {
+                    return (
+                      o(e, [u.now()].concat(f(arguments)), n ? null : this, t),
+                      n ? void 0 : this
+                    );
+                  };
+                }
+                var o = e("handle"),
+                  a = e(4),
+                  f = e(5),
+                  c = e("ee").get("tracer"),
+                  u = e("loader"),
+                  s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = [
+                    "setPageViewName",
+                    "setCustomAttribute",
+                    "setErrorHandler",
+                    "finished",
+                    "addToTrace",
+                    "inlineHit",
+                    "addRelease",
+                  ],
+                  l = "api-",
+                  d = l + "ixn-";
+                a(p, function (e, n) {
+                  s[n] = i(l + n, !0, "api");
+                }),
+                  (s.addPageAction = i(l + "addPageAction", !0)),
+                  (s.setCurrentRouteName = i(l + "routeName", !0)),
+                  (n.exports = newrelic),
+                  (s.interaction = function () {
+                    return new r().get();
+                  });
+                var m = (r.prototype = {
+                  createTracer: function (e, n) {
+                    var t = {},
+                      r = this,
+                      i = "function" == typeof n;
+                    return (
+                      o(d + "tracer", [u.now(), e, t], r),
+                      function () {
+                        if (
+                          (c.emit(
+                            (i ? "" : "no-") + "fn-start",
+                            [u.now(), r, i],
+                            t
+                          ),
+                          i)
+                        )
+                          try {
+                            return n.apply(this, arguments);
+                          } catch (e) {
+                            throw (
+                              (c.emit("fn-err", [arguments, this, e], t), e)
+                            );
+                          } finally {
+                            c.emit("fn-end", [u.now()], t);
+                          }
+                      }
+                    );
+                  },
+                });
+                a(
+                  "actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(
+                    ","
+                  ),
+                  function (e, n) {
+                    m[n] = i(d + n);
+                  }
+                ),
+                  (newrelic.noticeError = function (e, n) {
+                    "string" == typeof e && (e = new Error(e)),
+                      o("err", [e, u.now(), !1, n]);
+                  });
+              },
+              {},
+            ],
+            2: [
+              function (e, n, t) {
+                function r(e, n) {
+                  var t = e.getEntries();
+                  t.forEach(function (e) {
+                    "first-paint" === e.name
+                      ? c("timing", ["fp", Math.floor(e.startTime)])
+                      : "first-contentful-paint" === e.name &&
+                        c("timing", ["fcp", Math.floor(e.startTime)]);
+                  });
+                }
+                function i(e, n) {
+                  var t = e.getEntries();
+                  t.length > 0 && c("lcp", [t[t.length - 1]]);
+                }
+                function o(e) {
+                  if (e instanceof s && !l) {
+                    var n,
+                      t = Math.round(e.timeStamp);
+                    (n = t > 1e12 ? Date.now() - t : u.now() - t),
+                      (l = !0),
+                      c("timing", ["fi", t, { type: e.type, fid: n }]);
+                  }
+                }
+                if (
+                  !(
+                    "init" in NREUM &&
+                    "page_view_timing" in NREUM.init &&
+                    "enabled" in NREUM.init.page_view_timing &&
+                    NREUM.init.page_view_timing.enabled === !1
+                  )
+                ) {
+                  var a,
+                    f,
+                    c = e("handle"),
+                    u = e("loader"),
+                    s = NREUM.o.EV;
+                  if (
+                    "PerformanceObserver" in window &&
+                    "function" == typeof window.PerformanceObserver
+                  ) {
+                    (a = new PerformanceObserver(r)),
+                      (f = new PerformanceObserver(i));
+                    try {
+                      a.observe({ entryTypes: ["paint"] }),
+                        f.observe({ entryTypes: ["largest-contentful-paint"] });
+                    } catch (p) {}
+                  }
+                  if ("addEventListener" in document) {
+                    var l = !1,
+                      d = [
+                        "click",
+                        "keydown",
+                        "mousedown",
+                        "pointerdown",
+                        "touchstart",
+                      ];
+                    d.forEach(function (e) {
+                      document.addEventListener(e, o, !1);
+                    });
+                  }
+                }
+              },
+              {},
+            ],
+            3: [
+              function (e, n, t) {
+                function r(e, n) {
+                  if (!i) return !1;
+                  if (e !== i) return !1;
+                  if (!n) return !0;
+                  if (!o) return !1;
+                  for (
+                    var t = o.split("."), r = n.split("."), a = 0;
+                    a < r.length;
+                    a++
+                  )
+                    if (r[a] !== t[a]) return !1;
+                  return !0;
+                }
+                var i = null,
+                  o = null,
+                  a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                  var f = navigator.userAgent,
+                    c = f.match(a);
+                  c &&
+                    f.indexOf("Chrome") === -1 &&
+                    f.indexOf("Chromium") === -1 &&
+                    ((i = "Safari"), (o = c[1]));
+                }
+                n.exports = { agent: i, version: o, match: r };
+              },
+              {},
+            ],
+            4: [
+              function (e, n, t) {
+                function r(e, n) {
+                  var t = [],
+                    r = "",
+                    o = 0;
+                  for (r in e) i.call(e, r) && ((t[o] = n(r, e[r])), (o += 1));
+                  return t;
+                }
+                var i = Object.prototype.hasOwnProperty;
+                n.exports = r;
+              },
+              {},
+            ],
+            5: [
+              function (e, n, t) {
+                function r(e, n, t) {
+                  n || (n = 0),
+                    "undefined" == typeof t && (t = e ? e.length : 0);
+                  for (
+                    var r = -1, i = t - n || 0, o = Array(i < 0 ? 0 : i);
+                    ++r < i;
+
+                  )
+                    o[r] = e[n + r];
+                  return o;
+                }
+                n.exports = r;
+              },
+              {},
+            ],
+            6: [
+              function (e, n, t) {
+                n.exports = {
+                  exists:
+                    "undefined" != typeof window.performance &&
+                    window.performance.timing &&
+                    "undefined" !=
+                      typeof window.performance.timing.navigationStart,
+                };
+              },
+              {},
+            ],
+            ee: [
+              function (e, n, t) {
+                function r() {}
+                function i(e) {
+                  function n(e) {
+                    return e && e instanceof r ? e : e ? c(e, f, o) : o();
+                  }
+                  function t(t, r, i, o) {
+                    if (!l.aborted || o) {
+                      e && e(t, r, i);
+                      for (
+                        var a = n(i), f = v(t), c = f.length, u = 0;
+                        u < c;
+                        u++
+                      )
+                        f[u].apply(a, r);
+                      var p = s[y[t]];
+                      return p && p.push([b, t, r, a]), a;
+                    }
+                  }
+                  function d(e, n) {
+                    h[e] = v(e).concat(n);
+                  }
+                  function m(e, n) {
+                    var t = h[e];
+                    if (t)
+                      for (var r = 0; r < t.length; r++)
+                        t[r] === n && t.splice(r, 1);
+                  }
+                  function v(e) {
+                    return h[e] || [];
+                  }
+                  function g(e) {
+                    return (p[e] = p[e] || i(t));
+                  }
+                  function w(e, n) {
+                    u(e, function (e, t) {
+                      (n = n || "feature"), (y[t] = n), n in s || (s[n] = []);
+                    });
+                  }
+                  var h = {},
+                    y = {},
+                    b = {
+                      on: d,
+                      addEventListener: d,
+                      removeEventListener: m,
+                      emit: t,
+                      get: g,
+                      listeners: v,
+                      context: n,
+                      buffer: w,
+                      abort: a,
+                      aborted: !1,
+                    };
+                  return b;
+                }
+                function o() {
+                  return new r();
+                }
+                function a() {
+                  (s.api || s.feature) &&
+                    ((l.aborted = !0), (s = l.backlog = {}));
+                }
+                var f = "nr@context",
+                  c = e("gos"),
+                  u = e(4),
+                  s = {},
+                  p = {},
+                  l = (n.exports = i());
+                l.backlog = s;
+              },
+              {},
+            ],
+            gos: [
+              function (e, n, t) {
+                function r(e, n, t) {
+                  if (i.call(e, n)) return e[n];
+                  var r = t();
+                  if (Object.defineProperty && Object.keys)
+                    try {
+                      return (
+                        Object.defineProperty(e, n, {
+                          value: r,
+                          writable: !0,
+                          enumerable: !1,
+                        }),
+                        r
+                      );
+                    } catch (o) {}
+                  return (e[n] = r), r;
+                }
+                var i = Object.prototype.hasOwnProperty;
+                n.exports = r;
+              },
+              {},
+            ],
+            handle: [
+              function (e, n, t) {
+                function r(e, n, t, r) {
+                  i.buffer([e], r), i.emit(e, n, t);
+                }
+                var i = e("ee").get("handle");
+                (n.exports = r), (r.ee = i);
+              },
+              {},
+            ],
+            id: [
+              function (e, n, t) {
+                function r(e) {
+                  var n = typeof e;
+                  return !e || ("object" !== n && "function" !== n)
+                    ? -1
+                    : e === window
+                    ? 0
+                    : a(e, o, function () {
+                        return i++;
+                      });
+                }
+                var i = 1,
+                  o = "nr@id",
+                  a = e("gos");
+                n.exports = r;
+              },
+              {},
+            ],
+            loader: [
+              function (e, n, t) {
+                function r() {
+                  if (!x++) {
+                    var e = (E.info = NREUM.info),
+                      n = d.getElementsByTagName("script")[0];
+                    if (
+                      (setTimeout(s.abort, 3e4),
+                      !(e && e.licenseKey && e.applicationID && n))
+                    )
+                      return s.abort();
+                    u(y, function (n, t) {
+                      e[n] || (e[n] = t);
+                    }),
+                      c("mark", ["onload", a() + E.offset], null, "api");
+                    var t = d.createElement("script");
+                    (t.src = "https://" + e.agent),
+                      n.parentNode.insertBefore(t, n);
+                  }
+                }
+                function i() {
+                  "complete" === d.readyState && o();
+                }
+                function o() {
+                  c("mark", ["domContent", a() + E.offset], null, "api");
+                }
+                function a() {
+                  return O.exists && performance.now
+                    ? Math.round(performance.now())
+                    : (f = Math.max(new Date().getTime(), f)) - E.offset;
+                }
+                var f = new Date().getTime(),
+                  c = e("handle"),
+                  u = e(4),
+                  s = e("ee"),
+                  p = e(3),
+                  l = window,
+                  d = l.document,
+                  m = "addEventListener",
+                  v = "attachEvent",
+                  g = l.XMLHttpRequest,
+                  w = g && g.prototype;
+                NREUM.o = {
+                  ST: setTimeout,
+                  SI: l.setImmediate,
+                  CT: clearTimeout,
+                  XHR: g,
+                  REQ: l.Request,
+                  EV: l.Event,
+                  PR: l.Promise,
+                  MO: l.MutationObserver,
+                };
+                var h = "" + location,
+                  y = {
+                    beacon: "bam.nr-data.net",
+                    errorBeacon: "bam.nr-data.net",
+                    agent: "js-agent.newrelic.com/nr-1173.min.js",
+                  },
+                  b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                  E = (n.exports = {
+                    offset: f,
+                    now: a,
+                    origin: h,
+                    features: {},
+                    xhrWrappable: b,
+                    userAgent: p,
+                  });
+                e(1),
+                  e(2),
+                  d[m]
+                    ? (d[m]("DOMContentLoaded", o, !1), l[m]("load", r, !1))
+                    : (d[v]("onreadystatechange", i), l[v]("onload", r)),
+                  c("mark", ["firstbyte", f], null, "api");
+                var x = 0,
+                  O = e(6);
+              },
+              {},
+            ],
+            "wrap-function": [
+              function (e, n, t) {
+                function r(e) {
+                  return !(e && e instanceof Function && e.apply && !e[a]);
+                }
+                var i = e("ee"),
+                  o = e(5),
+                  a = "nr@original",
+                  f = Object.prototype.hasOwnProperty,
+                  c = !1;
+                n.exports = function (e, n) {
+                  function t(e, n, t, i) {
+                    function nrWrapper() {
+                      var r, a, f, c;
+                      try {
+                        (a = this),
+                          (r = o(arguments)),
+                          (f = "function" == typeof t ? t(r, a) : t || {});
+                      } catch (u) {
+                        l([u, "", [r, a, i], f]);
+                      }
+                      s(n + "start", [r, a, i], f);
+                      try {
+                        return (c = e.apply(a, r));
+                      } catch (p) {
+                        throw (s(n + "err", [r, a, p], f), p);
+                      } finally {
+                        s(n + "end", [r, a, c], f);
+                      }
+                    }
+                    return r(e)
+                      ? e
+                      : (n || (n = ""),
+                        (nrWrapper[a] = e),
+                        p(e, nrWrapper),
+                        nrWrapper);
+                  }
+                  function u(e, n, i, o) {
+                    i || (i = "");
+                    var a,
+                      f,
+                      c,
+                      u = "-" === i.charAt(0);
+                    for (c = 0; c < n.length; c++)
+                      (f = n[c]),
+                        (a = e[f]),
+                        r(a) || (e[f] = t(a, u ? f + i : i, o, f));
+                  }
+                  function s(t, r, i) {
+                    if (!c || n) {
+                      var o = c;
+                      c = !0;
+                      try {
+                        e.emit(t, r, i, n);
+                      } catch (a) {
+                        l([a, t, r, i]);
+                      }
+                      c = o;
+                    }
+                  }
+                  function p(e, n) {
+                    if (Object.defineProperty && Object.keys)
+                      try {
+                        var t = Object.keys(e);
+                        return (
+                          t.forEach(function (t) {
+                            Object.defineProperty(n, t, {
+                              get: function () {
+                                return e[t];
+                              },
+                              set: function (n) {
+                                return (e[t] = n), n;
+                              },
+                            });
+                          }),
+                          n
+                        );
+                      } catch (r) {
+                        l([r]);
+                      }
+                    for (var i in e) f.call(e, i) && (n[i] = e[i]);
+                    return n;
+                  }
+                  function l(n) {
+                    try {
+                      e.emit("internal-error", n);
+                    } catch (t) {}
+                  }
+                  return e || (e = i), (t.inPlace = u), (t.flag = a), t;
+                };
+              },
+              {},
+            ],
+          },
+          {},
+          ["loader"]
+        ));
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Martel+Sans:400,800|Martel:300,400,700,900&amp;display=swap&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      media="all"
+      href="https://www.poslovni.hr/wp-content/cache/autoptimize/css/autoptimize_11995c8d26c0dbbba30826027c7d21df.css"
+      rel="stylesheet"
+    />
+    <link
+      media="screen"
+      href="https://www.poslovni.hr/wp-content/cache/autoptimize/css/autoptimize_843bd04fc0bb483b3515e8f2a8ce4876.css"
+      rel="stylesheet"
+    />
+    <title>
+      Povratak u modu kredita u eurima zauzdava pad potražnje - Poslovni dnevnik
+    </title>
+    <link
+      rel="canonical"
+      href="https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="Plasmani koji su jedan od vodećih izvora prihoda banaka sve se manje traže zbog ekonomske nesigurn osti, ali i oštrijih uvjeta odobravanja."
+    />
+    <meta
+      name="twitter:title"
+      content="Povratak u modu kredita u eurima zauzdava pad potražnje - Poslovni dnevnik"
+    />
+    <meta name="twitter:site" content="@poslovni" />
+    <meta
+      name="twitter:image"
+      content="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08.jpg"
+    />
+    <meta name="twitter:creator" content="@poslovni" />
+    <script
+      type="application/ld+json"
+      class="yoast-schema-graph yoast-schema-graph--main"
+    >
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.poslovni.hr/#website",
+            "url": "https://www.poslovni.hr/",
+            "name": "Poslovni dnevnik",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.poslovni.hr/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "ImageObject",
+            "@id": "https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685#primaryimage",
+            "url": "https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08.jpg",
+            "width": 2305,
+            "height": 1383
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685#webpage",
+            "url": "https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685",
+            "inLanguage": "en-US",
+            "name": "Povratak u modu kredita u eurima zauzdava pad potra\u017enje - Poslovni dnevnik",
+            "isPartOf": { "@id": "https://www.poslovni.hr/#website" },
+            "primaryImageOfPage": {
+              "@id": "https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685#primaryimage"
+            },
+            "datePublished": "2020-08-06T12:53:47+00:00",
+            "dateModified": "2020-08-06T12:53:26+00:00",
+            "author": {
+              "@id": "https://www.poslovni.hr/#/schema/person/f97375a0da10a715a14096828060190b"
+            }
+          },
+          {
+            "@type": ["Person"],
+            "@id": "https://www.poslovni.hr/#/schema/person/f97375a0da10a715a14096828060190b",
+            "name": "Tomislav Pili",
+            "image": {
+              "@type": "ImageObject",
+              "@id": "https://www.poslovni.hr/#authorlogo",
+              "url": "https://www.poslovni.hr/wp-content/uploads/avatars/4/5e3d4525f054e-bpfull.jpg",
+              "caption": "Tomislav Pili"
+            },
+            "sameAs": []
+          }
+        ]
+      }
+    </script>
+    <link rel="dns-prefetch" href="//www.poslovni.hr" />
+    <link rel="dns-prefetch" href="//imasdk.googleapis.com" />
+    <link rel="dns-prefetch" href="//s.w.org" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Poslovni dnevnik &raquo; Feed"
+      href="https://www.poslovni.hr/feed"
+    />
+    <script type="text/javascript">
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji:
+            "https:\/\/www.poslovni.hr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4",
+        },
+      };
+      !(function (a, b, c) {
+        function d(a, b) {
+          var c = String.fromCharCode;
+          l.clearRect(0, 0, k.width, k.height),
+            l.fillText(c.apply(this, a), 0, 0);
+          var d = k.toDataURL();
+          l.clearRect(0, 0, k.width, k.height),
+            l.fillText(c.apply(this, b), 0, 0);
+          var e = k.toDataURL();
+          return d === e;
+        }
+        function e(a) {
+          var b;
+          if (!l || !l.fillText) return !1;
+          switch (((l.textBaseline = "top"), (l.font = "600 32px Arial"), a)) {
+            case "flag":
+              return (
+                !(b = d(
+                  [55356, 56826, 55356, 56819],
+                  [55356, 56826, 8203, 55356, 56819]
+                )) &&
+                ((b = d(
+                  [
+                    55356,
+                    57332,
+                    56128,
+                    56423,
+                    56128,
+                    56418,
+                    56128,
+                    56421,
+                    56128,
+                    56430,
+                    56128,
+                    56423,
+                    56128,
+                    56447,
+                  ],
+                  [
+                    55356,
+                    57332,
+                    8203,
+                    56128,
+                    56423,
+                    8203,
+                    56128,
+                    56418,
+                    8203,
+                    56128,
+                    56421,
+                    8203,
+                    56128,
+                    56430,
+                    8203,
+                    56128,
+                    56423,
+                    8203,
+                    56128,
+                    56447,
+                  ]
+                )),
+                !b)
+              );
+            case "emoji":
+              return (
+                (b = d(
+                  [
+                    55357,
+                    56424,
+                    55356,
+                    57342,
+                    8205,
+                    55358,
+                    56605,
+                    8205,
+                    55357,
+                    56424,
+                    55356,
+                    57340,
+                  ],
+                  [
+                    55357,
+                    56424,
+                    55356,
+                    57342,
+                    8203,
+                    55358,
+                    56605,
+                    8203,
+                    55357,
+                    56424,
+                    55356,
+                    57340,
+                  ]
+                )),
+                !b
+              );
+          }
+          return !1;
+        }
+        function f(a) {
+          var c = b.createElement("script");
+          (c.src = a),
+            (c.defer = c.type = "text/javascript"),
+            b.getElementsByTagName("head")[0].appendChild(c);
+        }
+        var g,
+          h,
+          i,
+          j,
+          k = b.createElement("canvas"),
+          l = k.getContext && k.getContext("2d");
+        for (
+          j = Array("flag", "emoji"),
+            c.supports = { everything: !0, everythingExceptFlag: !0 },
+            i = 0;
+          i < j.length;
+          i++
+        )
+          (c.supports[j[i]] = e(j[i])),
+            (c.supports.everything = c.supports.everything && c.supports[j[i]]),
+            "flag" !== j[i] &&
+              (c.supports.everythingExceptFlag =
+                c.supports.everythingExceptFlag && c.supports[j[i]]);
+        (c.supports.everythingExceptFlag =
+          c.supports.everythingExceptFlag && !c.supports.flag),
+          (c.DOMReady = !1),
+          (c.readyCallback = function () {
+            c.DOMReady = !0;
+          }),
+          c.supports.everything ||
+            ((h = function () {
+              c.readyCallback();
+            }),
+            b.addEventListener
+              ? (b.addEventListener("DOMContentLoaded", h, !1),
+                a.addEventListener("load", h, !1))
+              : (a.attachEvent("onload", h),
+                b.attachEvent("onreadystatechange", function () {
+                  "complete" === b.readyState && c.readyCallback();
+                })),
+            (g = c.source || {}),
+            g.concatemoji
+              ? f(g.concatemoji)
+              : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)));
+      })(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://www.poslovni.hr/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"
+    ></script>
+    <script type="text/javascript">
+      var ajax_object = {
+        ajax_url: "https:\/\/www.poslovni.hr\/wp-admin\/admin-ajax.php",
+      };
+    </script>
+    <script type="text/javascript">
+      var BP_Confirm = { are_you_sure: "Are you sure?" };
+    </script>
+    <script type="text/javascript">
+      var BP_DTheme = {
+        accepted: "Accepted",
+        close: "Close",
+        comments: "comments",
+        leave_group_confirm: "Are you sure you want to leave this group?",
+        mark_as_fav: "Favorite",
+        my_favs: "My Favorites",
+        rejected: "Rejected",
+        remove_fav: "Remove Favorite",
+        show_all: "Show all",
+        show_all_comments: "Show all comments for this thread",
+        show_x_comments: "Show all comments (%d)",
+        unsaved_changes:
+          "Your profile has unsaved changes. If you leave the page, the changes will be lost.",
+        view: "View",
+        store_filter_settings: "",
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//imasdk.googleapis.com/js/sdkloader/ima3.js?ver=5.2.4"
+    ></script>
+    <script type="text/javascript">
+      var settings = {
+        ajaxurl: "https:\/\/www.poslovni.hr\/wp-admin\/admin-ajax.php",
+        error:
+          "Sorry, something went wrong. Please try again or refresh the page.",
+      };
+    </script>
+    <link rel="https://api.w.org/" href="https://www.poslovni.hr/wp-json/" />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="https://www.poslovni.hr/xmlrpc.php?rsd"
+    />
+    <link
+      rel="wlwmanifest"
+      type="application/wlwmanifest+xml"
+      href="https://www.poslovni.hr/wp-includes/wlwmanifest.xml"
+    />
+    <meta name="generator" content="WordPress 5.2.4" />
+    <link rel="shortlink" href="https://www.poslovni.hr/?p=4244685" />
+    <link
+      rel="alternate"
+      type="application/json+oembed"
+      href="https://www.poslovni.hr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.poslovni.hr%2Ftrzista%2Fpovratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+    />
+    <link
+      rel="alternate"
+      type="text/xml+oembed"
+      href="https://www.poslovni.hr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.poslovni.hr%2Ftrzista%2Fpovratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685&#038;format=xml"
+    />
+    <script type="text/javascript">
+      var gdbbPressAttachmentsInit = {
+        max_files: 4,
+      };
+    </script>
+    <script type="text/javascript">
+      var ajaxurl = "https://www.poslovni.hr/wp-admin/admin-ajax.php";
+    </script>
+    <script type="text/javascript">
+      var gdprAppliesGlobally = true;
+      (function () {
+        function n() {
+          if (!window.frames.__cmpLocator) {
+            if (document.body && document.body.firstChild) {
+              var e = document.body;
+              var t = document.createElement("iframe");
+              t.style.display = "none";
+              t.name = "__cmpLocator";
+              e.insertBefore(t, e.firstChild);
+            } else {
+              setTimeout(n, 5);
+            }
+          }
+        }
+        function e(e, t, n) {
+          if (typeof n !== "function") {
+            return;
+          }
+          if (!window.__cmpBuffer) {
+            window.__cmpBuffer = [];
+          }
+          if (e === "ping") {
+            n(
+              { gdprAppliesGlobally: gdprAppliesGlobally, cmpLoaded: false },
+              true
+            );
+          } else {
+            window.__cmpBuffer.push({ command: e, parameter: t, callback: n });
+          }
+        }
+        e.stub = true;
+        function t(a) {
+          if (!window.__cmp || window.__cmp.stub !== true) {
+            return;
+          }
+          if (!a.data) {
+            return;
+          }
+          var r = typeof a.data === "string";
+          var e;
+          try {
+            e = r ? JSON.parse(a.data) : a.data;
+          } catch (t) {
+            return;
+          }
+          if (e.__cmpCall) {
+            var i = e.__cmpCall;
+            window.__cmp(i.command, i.parameter, function (e, t) {
+              var n = {
+                __cmpReturn: { returnValue: e, success: t, callId: i.callId },
+              };
+              a.source.postMessage(r ? JSON.stringify(n) : n, "*");
+            });
+          }
+        }
+        if (typeof window.__cmp !== "function") {
+          window.__cmp = e;
+          if (window.addEventListener) {
+            window.addEventListener("message", t, false);
+          } else {
+            window.attachEvent("onmessage", t);
+          }
+        }
+        n();
+      })();
+    </script>
+    <script type="text/javascript">
+      window.didomiConfig = {
+        languages: {
+          enabled: ["hr"], // List of languages that visitors can use (must be a subset of the languages that we support)
+          default: "hr", // Default language to use if the visitor uses a language that is not enabled
+        },
+        user: {
+          bots: {
+            consentRequired: false,
+            types: ["crawlers", "performance"],
+          },
+        },
+        website: {
+          apiKey: "4a8aacf2-cc74-424e-a067-7ffed79fcb90",
+          name: "poslovni.hr", //config
+          privacyPolicyURL:
+            "https://www.poslovni.hr/politika-privatnosti-i-politika-kolacica", //config
+          logoUrl:
+            "https://www.poslovni.hr/wp-content/themes/poslovni/static/img/logo.svg", //config
+          vendors: {
+            iab: {
+              all: true,
+            },
+            didomi: [
+              "addthis",
+              "amazon",
+              "facebook",
+              "google",
+              "twitter",
+              "whatsapp",
+            ],
+            custom: [
+              {
+                policyUrl: "http://www.upscore.com/de/datenschutz.html",
+                purposeIds: [
+                  "ad_delivery",
+                  "advertising_personalization",
+                  "analytics",
+                  "content_personalization",
+                  "cookies",
+                ],
+                name: "Upscore GmbH",
+                id: "u-1",
+              },
+            ],
+          },
+        },
+        preferences: {
+          defaultChoice: true,
+          content: {
+            text: {
+              hr:
+                'Mi i naši partneri stavljamo kolačiće, pristupamo općim i neosjetljivim podacima s vašeg uređaja te ih upotrebljavamo kako bismo poboljšali naše proizvode i prilagodili oglase i druge sadržaje na ovoj web stranici. Možete prihvatiti sve ili dio tih postupaka. Kako biste saznali više o kolačićima, partnerima i načinu na koji upotrebljavamo vaše podatke te pregledali svoje mogućnosti ili ove postupke za svakog partnera, posjetite našu stranicu <a href="{privacyPolicyURL}" target="_blank" rel="nofollow" style="text-decoration: underline">pravila privatnosti</a>. Nastavkom upotrebe ovih stranica ili klikom na gumb "SPREMI I PRIHVATI" pristajete na pohranu i pristup kolačićima.',
+            },
+            save: {
+              hr: "SPREMI I PRIHVATI",
+            },
+          },
+        },
+        theme: {
+          color: "#ff9312",
+          font: "Roboto, sans-serif",
+        },
+        notice: {
+          closeOnClick: true, // banner get closed and the user consent is registered
+          daysBeforeShowingAgain: 60, //days during which the notice won't be displayed even though there are new vendors
+          position: "popup", //top-left, panel-bottom-right, bottom, top, popup, top-right, panel-top-right, popup
+          content: {
+            popup: {
+              hr:
+                '<h1>Poštujemo Vašu privatnost!</h1><p>Mi i naši partneri upotrebljavamo neosjetljive podatke poput kolačića ili identifikatora uređaja u svrhe kao što su prikazivanje prilagođenih oglasa, mjerenje prometa i odabira naših posjetitelja te prilagođavanje sadržaja vama. Kliknite na akciju "Prihvati i zatvori" kako biste pristali na ove postupke i zadržali korisničko iskustvo koje je prilagođeno Vama. Svoje odabire možete u svakom trenutku promijeniti putem povratka na ovu web stranicu preko kontrola dostupnima na stranici <a href="{privacyPolicyURL}" target="_blank" rel="nofollow" style="text-decoration: underline">pravila privatnosti</a>. Nastavkom upotrebe ovih stranica ili klikom na gumb "Prihvaćam" pristajete na pohranu i pristup kolačićima.</p>',
+            },
+            notice: {
+              hr:
+                '<h1>Poštujemo Vašu privatnost!</h1><p>Mi i naši partneri upotrebljavamo neosjetljive podatke poput kolačića ili identifikatora uređaja u svrhe kao što su prikazivanje prilagođenih oglasa, mjerenje prometa i odabira naših posjetitelja te prilagođavanje sadržaja vama. Kliknite na akciju "Prihvati i zatvori" kako biste pristali na ove postupke i zadržali korisničko iskustvo koje je prilagođeno Vama. Svoje odabire možete u svakom trenutku promijeniti putem povratka na ovu web stranicu preko kontrola dostupnima na stranici <a href="{privacyPolicyURL}" target="_blank" rel="nofollow" style="text-decoration: underline">pravila privatnosti</a>. Nastavkom upotrebe ovih stranica ili klikom na gumb "Prihvaćam" pristajete na pohranu i pristup kolačićima.</p>',
+            },
+            dismiss: {
+              hr: "Prihvati sve kolačiće",
+            },
+            learnMore: {
+              hr: "Saznaj više",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="spcloader"
+      src="https://sdk.privacy-center.org/loader.js"
+      async
+    ></script>
+    <meta
+      property="og:title"
+      content="Povratak u modu kredita u eurima zauzdava pad potražnje"
+    />
+    <meta
+      property="og:url"
+      content="https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-1600x1000.jpg"
+    />
+    <meta
+      property="og:image"
+      content="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-1600x1000.jpg"
+    />
+    <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script type="text/javascript">
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    </script>
+    <script type="text/javascript">
+      googletag.cmd.push(function () {
+        var dfp_slots = [];
+
+        // Targeting:article
+
+        var mapping_billboard = [
+          [970, 500],
+          [970, 250],
+          [728, 90],
+          [1350, 250],
+        ];
+        var mapping_halfpage = [
+          [300, 600],
+          [300, 250],
+        ];
+        var mapping_below = [
+          [728, 90],
+          [300, 250],
+          [320, 100],
+        ];
+
+        //var mapping_billboard = googletag.sizeMapping().addSize([[970, 500], [970, 250], [728, 90]]).build();
+        //var mapping_halfpage = googletag.sizeMapping().addSize([[300, 600], [300, 250]]).build();
+
+        dfp_slots[1] = googletag
+          .defineOutOfPageSlot("/1015704/Poslovni_AIO_1", "divAIO1")
+          .addService(googletag.pubads())
+          .setTargeting("position", "aio1");
+
+        dfp_slots[2] = googletag
+          .defineOutOfPageSlot("/1015704/Poslovni_AIO_2", "divAIO2")
+          .addService(googletag.pubads())
+          .setTargeting("position", "aio2");
+
+        dfp_slots[3] = googletag
+          .defineSlot(
+            "/1015704/Poslovni_Billboard_Top",
+            mapping_billboard,
+            "divBillboard1"
+          )
+          .setCollapseEmptyDiv(true, true)
+          .addService(googletag.pubads())
+          .setTargeting("position", "billboard");
+
+        dfp_slots[4] = googletag
+          .defineSlot(
+            "/1015704/Poslovni_Billboard_Mid",
+            mapping_billboard,
+            "divBillboard2"
+          )
+          .setCollapseEmptyDiv(true, true)
+          .addService(googletag.pubads())
+          .setTargeting("position", "billboard");
+
+        dfp_slots[5] = googletag
+          .defineSlot(
+            "/1015704/Poslovni_Halfpage_1",
+            mapping_halfpage,
+            "divHalfpage1"
+          )
+          .setCollapseEmptyDiv(true, true)
+          .addService(googletag.pubads())
+          .setTargeting("position", "halfpage");
+
+        dfp_slots[6] = googletag
+          .defineSlot(
+            "/1015704/Poslovni_Below_Article",
+            mapping_below,
+            "divBelowArticle"
+          )
+          .setCollapseEmptyDiv(true, true)
+          .addService(googletag.pubads())
+          .setTargeting("position", "below");
+
+        //targeting
+        googletag.pubads().setTargeting("platform", "desktop");
+
+        googletag.pubads().setTargeting("cont_type", "article");
+        googletag.pubads().setTargeting("section", "financije");
+        googletag.pubads().setTargeting("subsection", "trzista");
+        googletag.pubads().setTargeting("articleID", "4244685");
+        googletag
+          .pubads()
+          .setTargeting("tagpd", [
+            "banke",
+            "Euro",
+            "Euro (valuta)",
+            "hnb",
+            "krediti",
+          ]);
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    </script>
+    <script>
+      var dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        siteId: "POS",
+
+        pageType: "article",
+        contentTitle: "Povratak u modu kredita u eurima zauzdava pad potražnje",
+        contentAuthor: "Tomislav Pili",
+        canonicalUrl:
+          "https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685",
+        contentType: "default",
+        contentId: "4244685",
+        pageTags: ["banke", "euro", "euro-valuta", "hnb", "krediti"],
+        wordCount: "998",
+        contentPublishingDate: "06. kolovoz 2020. u 14:53",
+        isPremium: "no",
+
+        fullChannel: "financije / trzista",
+      });
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-941342-1", "auto");
+      ga("send", "pageview");
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T42PZXF");
+    </script>
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/manifest.json"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/fav/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      .mfp-auto-cursor .mfp-content {
+        cursor: inherit;
+      }
+    </style>
+  </head>
+  <body
+    class="bp-legacy post-template-default single single-post postid-4244685 single-format-standard has-child-nav body__wrap desktop_body no-js"
+  >
+    <script type="text/javascript">
+      //-->//><!--
+      var pp_gemius_identifier =
+        "ByLrCWuRCIeCf7ka3e.mrKQOLXTirWcFt0FALsf5I_..m7";
+      // lines below shouldn't be edited
+      function gemius_pending(i) {
+        window[i] =
+          window[i] ||
+          function () {
+            var x = (window[i + "_pdata"] = window[i + "_pdata"] || []);
+            x[x.length] = arguments;
+          };
+      }
+      gemius_pending("gemius_hit");
+      gemius_pending("gemius_event");
+      gemius_pending("pp_gemius_hit");
+      gemius_pending("pp_gemius_event");
+      (function (d, t) {
+        try {
+          var gt = d.createElement(t),
+            s = d.getElementsByTagName(t)[0],
+            l = "http" + (location.protocol == "https:" ? "s" : "");
+          gt.setAttribute("async", "async");
+          gt.setAttribute("defer", "defer");
+          gt.src = l + "://hr.hit.gemius.pl/xgemius.js";
+          s.parentNode.insertBefore(gt, s);
+        } catch (e) {}
+      })(document, "script");
+      //--><!
+    </script>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T42PZXF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <header class="header header--child-nav-open">
+      <div class="header__wrap-top">
+        <div class="ticker">
+          <div class="grid">
+            <div class="grid__column grid__column--6@md hide show@md">
+              <ul class="ticker__list">
+                <li class="ticker__item">
+                  <a href="https://www.poslovni.hr/forum">Forum</a>
+                </li>
+                <li class="ticker__item">
+                  <a href="https://www.poslovni.hr/burza">Burza</a>
+                </li>
+                <li class="ticker__item">
+                  <a href="https://www.poslovni.hr/kolumne">Kolumne</a>
+                </li>
+                <li class="ticker__item">
+                  <a target="_blank" href="https://pretplata.poslovni.hr/"
+                    >Pretplata</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="grid__column grid__column--6@md">
+              <ul class="ticker__list ticker__list--right">
+                <li class="ticker__item">
+                  <a href="https://www.poslovni.hr/projekti">Projekti</a>
+                </li>
+                <li class="ticker__item">
+                  <a href="https://www.poslovni.hr/konferencije"
+                    >Konferencije</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__wrap js_header">
+        <div class="header__logo">
+          <a class="logo" href="https://www.poslovni.hr"
+            ><h1 class="logo__title">Poslovni.hr</h1>
+            <picture>
+              <source
+                media="(max-width: 1599px)"
+                data-srcset="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/logo-small.svg"
+              />
+              <source
+                media="(min-width: 1600px)"
+                data-srcset="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/logo.svg"
+              />
+              <noscript
+                ><img
+                  class="logo__image"
+                  src="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/logo.svg" /></noscript
+              ><img
+                class="lazyload logo__image"
+                src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E"
+                data-src="https://www.poslovni.hr/wp-content/themes/poslovni/static/img/logo.svg"
+              />
+            </picture>
+          </a>
+        </div>
+        <div class="header__navigation">
+          <div class="navigation">
+            <div class="navigation__inner">
+              <nav class="navigation__list navigation__list--prim">
+                <div class="navigation__item navigation__item--has-children">
+                  <a
+                    class="navigation__link"
+                    href="https://www.poslovni.hr/vijesti"
+                    >Vijesti</a
+                  >
+                  <a
+                    href="#"
+                    class="navigation__expand-button js-navChildExpand"
+                    ><span class="navigation__expand-icon"></span
+                  ></a>
+                  <div class="navigation-child">
+                    <ul class="navigation-child__list">
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/vijesti/hrvatska"
+                          >Hrvatska</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/vijesti/regija"
+                          >Regija</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/vijesti/europska-unija"
+                          >Europska unija</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/vijesti/svijet"
+                          >Svijet</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="navigation__item navigation__item--has-children">
+                  <a
+                    class="navigation__link"
+                    href="https://www.poslovni.hr/kompanije"
+                    >Kompanije</a
+                  >
+                  <a
+                    href="#"
+                    class="navigation__expand-button js-navChildExpand"
+                    ><span class="navigation__expand-icon"></span
+                  ></a>
+                  <div class="navigation-child">
+                    <ul class="navigation-child__list">
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/kompanije/domace"
+                          >Domaće</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/kompanije/strane"
+                          >Strane</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/kompanije/karijere"
+                          >Karijere</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a
+                          href="https://www.poslovni.hr/kompanije/ponuda-poslova"
+                          >Ponuda poslova</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="navigation__item navigation__item--active navigation__item--expand"
+                >
+                  <a
+                    class="navigation__link"
+                    href="https://www.poslovni.hr/financije"
+                    >Financije</a
+                  >
+                  <a
+                    href="#"
+                    class="navigation__expand-button js-navChildExpand"
+                    ><span class="navigation__expand-icon"></span
+                  ></a>
+                  <div class="navigation-child">
+                    <ul class="navigation-child__list">
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/financije/burze"
+                          >Burze</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/financije/trzista"
+                          >Tržišta</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/financije/nekretnine"
+                          >Nekretnine</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="navigation__item">
+                  <a
+                    class="navigation__link"
+                    href="https://www.poslovni.hr/poduzetnik"
+                    >Poduzetnik</a
+                  >
+                  <a
+                    href="#"
+                    class="navigation__expand-button js-navChildExpand"
+                    ><span class="navigation__expand-icon"></span
+                  ></a>
+                  <div class="navigation-child">
+                    <ul class="navigation-child__list">
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/poduzetnik/natjecaji"
+                          >Natječaji</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a
+                          href="https://www.poslovni.hr/poduzetnik/kako-su-uspjeli"
+                          >Kako su uspjeli</a
+                        >
+                      </li>
+                      <li class="navigation-child__item">
+                        <a href="https://www.poslovni.hr/poduzetnik/savjeti"
+                          >Savjeti</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="navigation__item">
+                  <a
+                    class="navigation__link"
+                    href="https://www.poslovni.hr/sci-tech"
+                    >Sci-tech</a
+                  >
+                </div>
+                <div class="navigation__item">
+                  <a
+                    class="navigation__link"
+                    href="https://www.poslovni.hr/lifestyle"
+                    >Lifestyle</a
+                  >
+                </div>
+              </nav>
+              <ul
+                class="navigation__list navigation__list--extra navigation__list--columns"
+              >
+                <li><a href="https://www.poslovni.hr/forum">Forum</a></li>
+                <li><a href="https://www.poslovni.hr/kolumne">Kolumne</a></li>
+                <li><a href="https://www.poslovni.hr/burza">Burza</a></li>
+                <li>
+                  <a target="_blank" href="https://pretplata.poslovni.hr/"
+                    >Pretplate</a
+                  >
+                </li>
+              </ul>
+              <ul class="navigation__list navigation__list--extra">
+                <li>
+                  <a href="https://www.poslovni.hr/impressum">Impressum</a>
+                </li>
+                <li><a href="https://www.poslovni.hr/kontakt">Kontakt</a></li>
+                <li>
+                  <a href="https://www.poslovni.hr/oglasavanje">Oglašavanje</a>
+                </li>
+                <li>
+                  <a href="https://www.poslovni.hr/uvjeti-koristenja"
+                    >Opći uvjeti korištenja</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.poslovni.hr/politika-privatnosti-i-politika-kolacica"
+                    >Politika privatnosti</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__extra">
+          <div class="services">
+            <div class="services__item services__item--day">
+              <a href="https://www.poslovni.hr/vremeplov"
+                ><div class="services__title">Pregled dana</div>
+                <div class="services__number">20</div>
+                <div class="services__icon color--blue">
+                  <svg class="icon"><use xlink:href="#clock-half"></use></svg>
+                </div>
+              </a>
+            </div>
+            <div class="services__item">
+              <a href="https://www.poslovni.hr/?s="
+                ><div class="services__icon color--blue">
+                  <svg class="icon"><use xlink:href="#search"></use></svg>
+                </div>
+              </a>
+            </div>
+            <div class="services__item">
+              <a href="#modal-login" class="js-modalOpen"
+                ><div class="avatar__outer">
+                  <div class="avatar">
+                    <svg class="icon"><use xlink:href="#user"></use></svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="services__item services__item--hamburger">
+              <a href="#" class="js-navOpen"
+                ><div class="services__content">
+                  <div class="hamburger">
+                    <span></span> <span></span> <span></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page__wrap page__wrap--single">
+      <section class="section section--no-padding section--banner">
+        <div class="section__inner">
+          <div class="container">
+            <div class="banner banner--billboard">
+              <div id="divBillboard1">
+                <script type="text/javascript">
+                  googletag.cmd.push(function () {
+                    googletag.display("divBillboard1");
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="banner banner--aio">
+        <div id="divAIO1">
+          <script type="text/javascript">
+            googletag.cmd.push(function () {
+              googletag.display("divAIO1");
+            });
+          </script>
+        </div>
+      </div>
+      <script>
+        var admin_ajax = "https://www.poslovni.hr/wp-admin/admin-ajax.php";
+      </script>
+      <section
+        class="section js-single"
+        data-nonce="4bb8328a8e"
+        data-id="4244685"
+      >
+        <div class="section__inner">
+          <div class="container">
+            <div class="block block--sidebar-300@md">
+              <div class="block__main">
+                <div class="single__head">
+                  <div class="single__title">
+                    <h1 class="title title--xlarge">
+                      Povratak u modu kredita u eurima zauzdava pad potražnje
+                    </h1>
+                  </div>
+                  <div class="single__meta">
+                    <div class="single__meta-item">
+                      Autor:
+                      <a
+                        class="single__meta-author"
+                        href="https://www.poslovni.hr/author/tomislav"
+                        >Tomislav Pili</a
+                      >
+                      <span class="text">, 06. kolovoz 2020. u 14:53</span>
+                    </div>
+                    <div class="single__meta-item">
+                      <a href="#comments-wrap" class="js-scrollToDiv"
+                        >0 komentara</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block block--sidebar-300@md">
+              <div class="block__main">
+                <div class="single__wrap">
+                  <div class="single__wrap-inner">
+                    <div class="single__wrap-side hide show@md">
+                      <div class="sticky@md">
+                        <div class="sidebar-mini">
+                          <div class="single__social">
+                            <div class="social">
+                              <a
+                                class="social__item"
+                                href="https://www.facebook.com/sharer/sharer.php?u=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                                target="_blank"
+                              >
+                                <svg class="icon icon--facebook">
+                                  <use xlink:href="#facebook"></use>
+                                </svg>
+                              </a>
+                              <a
+                                class="social__item"
+                                href="https://twitter.com/home?status=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                              >
+                                <svg class="icon icon--twitter">
+                                  <use xlink:href="#twitter"></use>
+                                </svg>
+                              </a>
+                              <a
+                                class="social__item"
+                                href="whatsapp://send?text=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                              >
+                                <svg class="icon icon--whatsapp">
+                                  <use xlink:href="#whatsapp"></use>
+                                </svg>
+                              </a>
+                              <a
+                                class="social__item"
+                                href="viber://forward?text=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                              >
+                                <svg class="icon icon--viber">
+                                  <use xlink:href="#viber"></use>
+                                </svg>
+                              </a>
+                              <a
+                                class="social__item"
+                                href="mailto:@?subject=Povratak u modu kredita u eurima zauzdava pad potražnje&amp;body=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                              >
+                                <svg class="icon icon--mail">
+                                  <use xlink:href="#mail"></use>
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single__wrap-body">
+                      <figure class="single__feature-image">
+                        <div class="image image--16-10">
+                          <noscript
+                            ><img
+                              width="1160"
+                              height="725"
+                              src="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-1600x1000.jpg"
+                              class="post-image wp-post-image"
+                              alt=""
+                              srcset="
+                                https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-1600x1000.jpg 1600w,
+                                https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-400x250.jpg    400w,
+                                https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-800x500.jpg    800w
+                              "
+                              sizes="(max-width: 1160px) 100vw, 1160px" /></noscript
+                          ><img
+                            width="1160"
+                            height="725"
+                            src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%201160%20725%22%3E%3C/svg%3E"
+                            data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-1600x1000.jpg"
+                            class="lazyload post-image wp-post-image"
+                            alt=""
+                            data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-1600x1000.jpg 1600w, https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-400x250.jpg 400w, https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-14-06-08-800x500.jpg 800w"
+                            data-sizes="(max-width: 1160px) 100vw, 1160px"
+                          />
+                        </div>
+                      </figure>
+                      <article class="single__inner">
+                        <div class="single__lead">
+                          <p>
+                            Plasmani koji su jedan od vodećih izvora prihoda
+                            banaka sve se manje traže zbog ekonomske nesigurn
+                            osti, ali i oštrijih uvjeta odobravanja.
+                          </p>
+                        </div>
+                        <div class="single__content article__content">
+                          <p>
+                            Gotovinski krediti, do sada jedan od vodećih
+                            generatora kamatnih prihoda banaka, sve se manje
+                            traže, kako zbog nesigurnosti klijenata oko
+                            ekonomske situacije, tako i oštrijih uvjeta
+                            odobravanja koje su uvele neke banke. Međutim,
+                            „povratak u modu“ kredita u eurima uslijed
+                            približavanja ulaska Hrvatske u eurozonu, a koji su
+                            nešto povoljniji što se tiče kamatnih stopa od
+                            kunskih plasmana, mogli bi utjecati na zauzdavanje
+                            pada potražnje, ocjenjuju financijski stručnjaci.
+                            Prema svibanjskim podacima Hrvatske narodne banke
+                            (HNB), nakon stambenih, usporene su godišnje stope
+                            rasta – koje traju od polovice 2018. godine – i kod
+                            druge najznačajnije vrste kredita stanovništvu, a to
+                            su gotovinski nenamjenski krediti. Ta vrsta kredita
+                            sudjeluje s 30 posto u ukupnom portfelju, a u
+                            svibnju su porasli za 4,6 posto, odnosno 2,3
+                            milijarde kuna.
+                          </p>
+                          <p><strong>Rast kreditiranja države</strong></p>
+                          <p>
+                            Kada je riječ o profitabilnosti banaka u ovoj
+                            godini, procjene HNB-a govore da će do kraja godine
+                            do izražaja doći i učinak promjene strukture
+                            portfelja u smislu rasta udjela kredita državi koji
+                            se odobravaju po nižim stopama, uz istovremeni pad
+                            gotovinskih kredita stanovništvu, koji su u 2019.
+                            bankama donosili trećinu kamatnog prihoda. Na
+                            pitanje hoće li u tom kontekstu potražnja oslabiti
+                            isključivo na strani klijenata ili i zbog
+                            zaoštravanja uvjeta odobravanja, Zdenko Adrović,
+                            predsjednik Hrvatske udruge banaka (HUB) poručuje da
+                            je u uvjetima kontrakcije tržišta i neizvjesne
+                            gospodarske situacije izgledno da će potrošači puno
+                            opreznije ulaziti u nova zaduživanja, a odluke o
+                            kupnji ili investiranju u sve što nije nužno odgodit
+                            će za kasnije.
+                          </p>
+                          <div class="single__widget">
+                            <div class="single__numberblock">
+                              <h2 class="title title--xlarge title--font-prim">
+                                30 posto
+                              </h2>
+                              <div class="text text--xlarge">
+                                udjela u ukupnom kreditnom portfelju imaju
+                                gotovinski nenamjenski krediti stanovništvu
+                              </div>
+                            </div>
+                          </div>
+                          <p>
+                            „Premda banke do sada nisu značajnije mijenjale
+                            uvjete odobravanja kredita i svakom klijentu
+                            pristupaju individualno, za očekivati je da će kod
+                            nekih klijenata doći do pooštravanja uvjeta
+                            kreditiranja. Ipak, to ne treba promatrati samo u
+                            negativnom kontekstu jer osim što banke na izvjestan
+                            način klijente štite od upuštanja u često
+                            neselektivna zaduživanja, štite i sebe. Naime,
+                            mogućnost rasta nenaplativih potraživanja i s tim
+                            povećanih rezervacija bankama nameće dodatne
+                            troškove što kamatne marže u konačnici povećava ili
+                            barem zadržava na sadašnjim razinama“, ocjenjuje
+                            Adrović.
+                          </p>
+                          <p>
+                            Međutim, Vjeko Peretić, vlasnik Pro grupe za
+                            posredovanje u kreditima i osiguranju, smatra da je
+                            pad plasmana kredita uzrokovan zaustavljanjem
+                            ekonomije zbog koronakrize, u kojoj su banke u
+                            proljeće uvele u novijoj povijesti nezabilježen set
+                            restrikcija. Tako i oni koji su htjeli kredite
+                            nerijetko ih nisu mogli dobiti, dok je drugi dio
+                            građana odgodio nova kreditna zaduženja, kaže
+                            Peretić.„Sentiment je ostao sličan i nekoliko
+                            mjeseci nakon početne neizvjesnosti, iako banke
+                            pomalo ‘otpuštaju ručnu’, oprezno se vraćajući na
+                            situaciju sličnu pretkriznoj, ali i dalje uz pojačan
+                            oprez pri procjeni boniteta poduzeća i kreditne
+                            sposobnosti građana. U narednom razdoblju očekujemo
+                            sličnu situaciju, koja će očito do daljnjega biti
+                            ‘novo normalno’, a sve u cilju minimiziranja rizika
+                            sa postojećim i budućim portfeljom jer se očekuje
+                            dodatni pad kamatnih prihoda, troškova i
+                            potencijalnih povećanih rezervacija banaka zbog
+                            očekivanog sve većeg broja moratorija i nenaplativih
+                            kredita“, smatra Peretić.
+                          </p>
+                          <p>
+                            Dodaje kako je paradoks što su kamatne stope
+                            rekordno niske, odlično je vrijeme za refinanciranje
+                            starih, pa čak i podizanje novih kredita, ali će se
+                            novoodobreni krediti ipak smanjivati zbog prethodno
+                            navedenih faktora (ne)sigurnosti. „Cijelu situaciju
+                            kompliciraju i predviđanja za cijenu novca u
+                            srednjem roku, jer iako je politika ECB-a
+                            nepromijenjena, jeftinog novca na europskom tržištu
+                            ima, naše su banke u dobroj poziciji, pune kapitala,
+                            ali opet radije posuđuju državi nego građanima i
+                            privredi“, smatra Peretić.
+                          </p>
+                          <p><strong>Bankari za kombinaciju mjera</strong></p>
+                          <p>
+                            Što se tiče mogućnosti da gotovinski krediti postanu
+                            još jeftiniji, zbog labave politike ECB-a, ali i
+                            HNB-a, Zdenko Adrović vjeruje da usprkos krizi
+                            postoji prostor za daljnje smanjenje kamatnih stopa,
+                            ali ne samo kroz monetarne mjere. „Moguće smanjenje
+                            treba promatrati u širem kontekstu iznalaženja
+                            mogućih rješenja kojima bi regulator bankama, barem
+                            za trajanja krize, omogućio jednostavniji otpis
+                            nenaplativih potraživanja. Kombinacijom mjera,
+                            mogućeg pooštravanja uvjeta zaduživanja za pojedine
+                            segmente potrošača i liberalizacijom otpisa
+                            nenaplativih ili teško naplativih potraživanja, osim
+                            pomoći ugroženim skupinama građana i gospodarstva,
+                            bankama bi se omogućilo i daljnje sniženje kamatnih
+                            stopa“, kaže čelnik HUB-a.
+                          </p>
+                          <p>
+                            Dodaje da je pitanje sniženja kamatnih stopa
+                            kompleksno i vjeruje da će se u idućem razdoblju s
+                            HNB-om i Ministarstvom financija otvoriti i to važno
+                            pitanje kako bi iznašli optimalan model i balans
+                            između potrebe da kreditnim plasmanima banke potiču
+                            potrošnju i razvoj uz prihvatljiv rizik za sve
+                            strane u procesu. „Naposljetku, treba podsjetiti da
+                            Hrvatska ima najviši regulatorni trošak u EU, a
+                            moguće smanjenje kamatnih stopa ovisi o regulatornom
+                            trošku jednako kao i o pravnoj sigurnosti i zaštiti
+                            vjerovnika“, tvrdi Adrović. Kamatno povoljnije
+                            kreditiranje moglo bi donijeti i ponovno okretanje
+                            građana prema kreditima u euru. Posebice nakon
+                            ulaska Hrvatske u europski tečajni mehanizam,
+                            odnosno posljednju fazu u procesu uvođenja eura. Za
+                            sada prevladavaju plasmani u domaćoj valuti, pa se
+                            udio kunskih kredita u ukupnim kreditima
+                            stanovništva u svibnju zadržao na 54,4 posto.
+                          </p>
+                          <p>
+                            „HNB je zadnjih godina poticao kunsko kreditiranje
+                            kako bi se građani koji primaju plaću u kunama
+                            zaštitili od tečajnog rizika, ali iz perspektive
+                            uvođenja eura za tri do četiri godine, za očekivati
+                            je rast udjela gotovinskih kredita u euru zbog nižih
+                            kamata i izostanka rizika tečajnih fluktuacija koji
+                            će nestati uvođenjem eura“, mišljenja je Adrović.
+                            Vjeko Peretić dodaje da se na tržištu se nakon
+                            višegodišnjeg trenda okretanja kunskim kreditima
+                            primjećuje ponovno vraćanje povjerenja u euro.
+                          </p>
+                        </div>
+                        <div class="divider divider--transparent"></div>
+                        <div class="single__widget">
+                          <div class="lists">
+                            <div class="lists__item">
+                              <style>
+                                .post-image-vl {
+                                  height: 64px;
+                                  width: 64px;
+                                  object-fit: cover;
+                                }
+                                @media (min-width: 1280px) {
+                                  .post-image-vl {
+                                    height: 72px;
+                                    width: 72px;
+                                  }
+                                }
+                              </style>
+                              <article class="card-e">
+                                <a
+                                  href="https://www.vecernji.hr/vijesti/zenu-zaustavili-u-zracnoj-luci-nisu-mogli-vjerovati-sto-je-nosila-u-prtljazi-1422074"
+                                  target="_blank"
+                                  rel="external"
+                                  ><div class="card-e__image-wrap">
+                                    <div class="card-e__image">
+                                      <div class="image">
+                                        <noscript
+                                          ><img
+                                            src="https://www.poslovni.hr/scripts/vl-image.jpg?t=1596736802"
+                                            alt="Ženu zaustavili u zračnoj luci, nisu mogli vjerovati što je nosila u prtljazi"
+                                            class="post-image post-image-vl" /></noscript
+                                        ><img
+                                          src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E"
+                                          data-src="https://www.poslovni.hr/scripts/vl-image.jpg?t=1596736802"
+                                          alt="Ženu zaustavili u zračnoj luci, nisu mogli vjerovati što je nosila u prtljazi"
+                                          class="lazyload post-image post-image-vl"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-e__post-info">
+                                    <div class="card-e__headline">
+                                      <div class="headline headline--small">
+                                        Večernji list
+                                      </div>
+                                    </div>
+                                    <div class="card-e__title">
+                                      <h5 class="title title--xsmall">
+                                        Ženu zaustavili u zračnoj luci, nisu
+                                        mogli vjerovati što je nosila u prtljazi
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </a>
+                              </article>
+                            </div>
+                            <div class="lists__item">
+                              <article class="card-e">
+                                <a
+                                  href="https://www.poslovni.hr/poduzetnik/kako-je-sa-2700-kuna-place-sagradila-kucu-vecinom-se-drzala-jedne-formule-4244628"
+                                  title="Kako je sa 2700 kuna plaće sagradila kuću: Većinom se držala jedne formule"
+                                  ><div class="card-e__image-wrap">
+                                    <div class="card-e__image">
+                                      <div class="image image--1-1">
+                                        <noscript
+                                          ><img
+                                            width="150"
+                                            height="150"
+                                            src="https://www.poslovni.hr/wp-content/uploads/2020/08/key-2323278_1280-150x150.jpg"
+                                            class="post-image wp-post-image"
+                                            alt=""
+                                            srcset="
+                                              https://www.poslovni.hr/wp-content/uploads/2020/08/key-2323278_1280-150x150.jpg 150w,
+                                              https://www.poslovni.hr/wp-content/uploads/2020/08/key-2323278_1280-800x800.jpg 800w
+                                            "
+                                            sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                        ><img
+                                          width="150"
+                                          height="150"
+                                          src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                          data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/key-2323278_1280-150x150.jpg"
+                                          class="lazyload post-image wp-post-image"
+                                          alt=""
+                                          data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/key-2323278_1280-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/08/key-2323278_1280-800x800.jpg 800w"
+                                          data-sizes="(max-width: 150px) 100vw, 150px"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-e__post-info">
+                                    <div class="card-e__headline">
+                                      <div class="headline headline--small">
+                                        PUT DO USPJEHA
+                                      </div>
+                                    </div>
+                                    <div class="card-e__title">
+                                      <h5 class="title title--xsmall">
+                                        Kako je sa 2700 kuna plaće sagradila
+                                        kuću: Većinom se držala jedne formule
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </a>
+                              </article>
+                            </div>
+                            <div class="lists__item">
+                              <article class="card-e">
+                                <a
+                                  href="https://www.poslovni.hr/hrvatska/i-forbes-pise-o-trenutno-najskupljoj-hotelskoj-investiciji-na-ovom-hrvatskom-otoku-4244345"
+                                  title="I Forbes piše o trenutno najskupljoj hotelskoj investiciji na ovom hrvatskom otoku"
+                                  ><div class="card-e__image-wrap">
+                                    <div class="card-e__image">
+                                      <div class="image image--1-1">
+                                        <noscript
+                                          ><img
+                                            width="150"
+                                            height="150"
+                                            src="https://www.poslovni.hr/wp-content/uploads/2020/08/maslina-resort-150x150.jpg"
+                                            class="post-image wp-post-image"
+                                            alt="Maslina reort"
+                                            srcset="
+                                              https://www.poslovni.hr/wp-content/uploads/2020/08/maslina-resort-150x150.jpg 150w,
+                                              https://www.poslovni.hr/wp-content/uploads/2020/08/maslina-resort-800x800.jpg 800w
+                                            "
+                                            sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                        ><img
+                                          width="150"
+                                          height="150"
+                                          src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                          data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/maslina-resort-150x150.jpg"
+                                          class="lazyload post-image wp-post-image"
+                                          alt="Maslina reort"
+                                          data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/maslina-resort-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/08/maslina-resort-800x800.jpg 800w"
+                                          data-sizes="(max-width: 150px) 100vw, 150px"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-e__post-info">
+                                    <div class="card-e__headline">
+                                      <div class="headline headline--small">
+                                        otvaraju za desetak dana
+                                      </div>
+                                    </div>
+                                    <div class="card-e__title">
+                                      <h5 class="title title--xsmall">
+                                        I Forbes piše o trenutno najskupljoj
+                                        hotelskoj investiciji na ovom hrvatskom
+                                        otoku
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </a>
+                              </article>
+                            </div>
+                            <div class="lists__item">
+                              <article class="card-e">
+                                <a
+                                  href="https://www.poslovni.hr/svijet/u-ocajnickim-naporima-da-zauzdaju-sirenje-virusa-zatvaraju-gotovo-sve-trgovine-i-gase-dio-industrije-do-sredine-rujna-4244317"
+                                  title="U očajničkim naporima da zauzdaju širenje virusa zatvaraju gotovo sve trgovine i gase dio industrije do sredine rujna"
+                                  ><div class="card-e__image-wrap">
+                                    <div class="card-e__image">
+                                      <div class="image image--1-1">
+                                        <noscript
+                                          ><img
+                                            width="150"
+                                            height="150"
+                                            src="https://www.poslovni.hr/wp-content/uploads/2020/08/2020-07-28T060216Z_1470428955_RC262I98I1HN_RTRMADP_3_HEALTH-CORONAVIRUS-AUSTRALIA-150x150.jpg"
+                                            class="post-image wp-post-image"
+                                            alt=""
+                                            srcset="
+                                              https://www.poslovni.hr/wp-content/uploads/2020/08/2020-07-28T060216Z_1470428955_RC262I98I1HN_RTRMADP_3_HEALTH-CORONAVIRUS-AUSTRALIA-150x150.jpg 150w,
+                                              https://www.poslovni.hr/wp-content/uploads/2020/08/2020-07-28T060216Z_1470428955_RC262I98I1HN_RTRMADP_3_HEALTH-CORONAVIRUS-AUSTRALIA-800x800.jpg 800w
+                                            "
+                                            sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                        ><img
+                                          width="150"
+                                          height="150"
+                                          src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                          data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/2020-07-28T060216Z_1470428955_RC262I98I1HN_RTRMADP_3_HEALTH-CORONAVIRUS-AUSTRALIA-150x150.jpg"
+                                          class="lazyload post-image wp-post-image"
+                                          alt=""
+                                          data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/2020-07-28T060216Z_1470428955_RC262I98I1HN_RTRMADP_3_HEALTH-CORONAVIRUS-AUSTRALIA-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/08/2020-07-28T060216Z_1470428955_RC262I98I1HN_RTRMADP_3_HEALTH-CORONAVIRUS-AUSTRALIA-800x800.jpg 800w"
+                                          data-sizes="(max-width: 150px) 100vw, 150px"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-e__post-info">
+                                    <div class="card-e__headline">
+                                      <div class="headline headline--small">
+                                        Pogođenoi 250.000 radnih mjesta
+                                      </div>
+                                    </div>
+                                    <div class="card-e__title">
+                                      <h5 class="title title--xsmall">
+                                        U očajničkim naporima da zauzdaju
+                                        širenje virusa zatvaraju gotovo sve
+                                        trgovine i gase dio industrije do
+                                        sredine rujna
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </a>
+                              </article>
+                            </div>
+                            <div class="lists__item">
+                              <article class="card-e">
+                                <a
+                                  href="https://www.poslovni.hr/kompanije/preduvjet-za-ostvarivanje-koncepta-pametnog-grada-4243006"
+                                  title="Preduvjet za ostvarivanje koncepta pametnog grada"
+                                  ><div class="card-e__image-wrap">
+                                    <div class="card-e__image">
+                                      <div class="image image--1-1">
+                                        <noscript
+                                          ><img
+                                            width="150"
+                                            height="150"
+                                            src="https://www.poslovni.hr/wp-content/uploads/2020/07/Plinomjer-s-IoT-senzorom-150x150.jpg"
+                                            class="post-image wp-post-image"
+                                            alt=""
+                                            srcset="
+                                              https://www.poslovni.hr/wp-content/uploads/2020/07/Plinomjer-s-IoT-senzorom-150x150.jpg 150w,
+                                              https://www.poslovni.hr/wp-content/uploads/2020/07/Plinomjer-s-IoT-senzorom-800x800.jpg 800w
+                                            "
+                                            sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                        ><img
+                                          width="150"
+                                          height="150"
+                                          src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                          data-src="https://www.poslovni.hr/wp-content/uploads/2020/07/Plinomjer-s-IoT-senzorom-150x150.jpg"
+                                          class="lazyload post-image wp-post-image"
+                                          alt=""
+                                          data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/07/Plinomjer-s-IoT-senzorom-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/07/Plinomjer-s-IoT-senzorom-800x800.jpg 800w"
+                                          data-sizes="(max-width: 150px) 100vw, 150px"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-e__post-info">
+                                    <div class="card-e__headline">
+                                      <div class="headline headline--small">
+                                        pametno i ekološki osvješteno
+                                      </div>
+                                    </div>
+                                    <div class="card-e__title">
+                                      <h5 class="title title--xsmall">
+                                        Preduvjet za ostvarivanje koncepta
+                                        pametnog grada
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </a>
+                              </article>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="single__tags">
+                          <div class="tags">
+                            <div class="tags__item">
+                              <a href="https://www.poslovni.hr/tag/banke"
+                                >banke</a
+                              >
+                            </div>
+                            <div class="tags__item">
+                              <a href="https://www.poslovni.hr/tag/euro"
+                                >Euro</a
+                              >
+                            </div>
+                            <div class="tags__item">
+                              <a href="https://www.poslovni.hr/tag/euro-valuta"
+                                >Euro (valuta)</a
+                              >
+                            </div>
+                            <div class="tags__item">
+                              <a href="https://www.poslovni.hr/tag/hnb">hnb</a>
+                            </div>
+                            <div class="tags__item">
+                              <a href="https://www.poslovni.hr/tag/krediti"
+                                >krediti</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="single__social-mobile sticky sticky--bottom show hide@md"
+                        >
+                          <div class="social">
+                            <a
+                              class="social__item"
+                              href="https://www.facebook.com/sharer/sharer.php?u=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                              target="_blank"
+                            >
+                              <svg class="icon icon--facebook">
+                                <use xlink:href="#facebook"></use>
+                              </svg>
+                            </a>
+                            <a
+                              class="social__item"
+                              href="https://twitter.com/home?status=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                            >
+                              <svg class="icon icon--twitter">
+                                <use xlink:href="#twitter"></use>
+                              </svg>
+                            </a>
+                            <a
+                              class="social__item"
+                              href="whatsapp://send?text=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                            >
+                              <svg class="icon icon--whatsapp">
+                                <use xlink:href="#whatsapp"></use>
+                              </svg>
+                            </a>
+                            <a
+                              class="social__item"
+                              href="viber://forward?text=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                            >
+                              <svg class="icon icon--viber">
+                                <use xlink:href="#viber"></use>
+                              </svg>
+                            </a>
+                            <a
+                              class="social__item"
+                              href="mailto:@?subject=Povratak u modu kredita u eurima zauzdava pad potražnje&amp;body=https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+                            >
+                              <svg class="icon icon--mail">
+                                <use xlink:href="#mail"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="banner banner--below">
+                          <div id="divBelowArticle">
+                            <script type="text/javascript">
+                              googletag.cmd.push(function () {
+                                googletag.display("divBelowArticle");
+                              });
+                            </script>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                  <div id="comments-wrap" class="single__wrap-comments">
+                    <div class="headline-table">
+                      <div class="headline-table__text">Komentirajte prvi</div>
+                    </div>
+                    <div class="comment-login">
+                      <div class="comment-login__icon">
+                        <svg class="icon icon--mega">
+                          <use xlink:href="#comments"></use>
+                        </svg>
+                      </div>
+                      <div class="comment-login__content">
+                        <h2 class="title title--large">
+                          Uključite se u raspravu
+                        </h2>
+                        <div class="comment-login__text">
+                          <div class="text text--normal">
+                            Pridružite se najvećoj poslovnoj zajednici u
+                            Hrvatskoj!
+                          </div>
+                        </div>
+                        <div class="comment-login__buttons">
+                          <a
+                            href="#modal-login"
+                            class="button button--full button--auto@sm button--blue js-modalOpen"
+                            >Prijavite se</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block__sidebar">
+                <aside class="sidebar">
+                  <div class="sidebar__item">
+                    <div class="lists lists--with-border">
+                      <div class="headline headline--divider-bottom">
+                        Najčitanije
+                      </div>
+                      <div class="lists__item">
+                        <article class="card-e card-e--right">
+                          <a
+                            href="https://www.poslovni.hr/hrvatska/nevjerojatno-iz-ove-zemlje-stiglo-nam-je-vise-turista-nego-lani-4244767"
+                            title="Nevjerojatno! Iz ove zemlje stiglo nam je više turista nego lani"
+                            ><div class="card-e__image-wrap">
+                              <div class="card-e__image">
+                                <div class="image image--1-1">
+                                  <noscript
+                                    ><img
+                                      width="150"
+                                      height="150"
+                                      src="https://www.poslovni.hr/wp-content/uploads/2020/06/PXL_240719_25481932-150x150.jpg"
+                                      class="post-image wp-post-image"
+                                      alt=""
+                                      srcset="
+                                        https://www.poslovni.hr/wp-content/uploads/2020/06/PXL_240719_25481932-150x150.jpg 150w,
+                                        https://www.poslovni.hr/wp-content/uploads/2020/06/PXL_240719_25481932-800x800.jpg 800w
+                                      "
+                                      sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                  ><img
+                                    width="150"
+                                    height="150"
+                                    src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                    data-src="https://www.poslovni.hr/wp-content/uploads/2020/06/PXL_240719_25481932-150x150.jpg"
+                                    class="lazyload post-image wp-post-image"
+                                    alt=""
+                                    data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/06/PXL_240719_25481932-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/06/PXL_240719_25481932-800x800.jpg 800w"
+                                    data-sizes="(max-width: 150px) 100vw, 150px"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-e__post-info">
+                              <div class="card-e__headline">
+                                <div class="headline headline--small">
+                                  optimizam
+                                </div>
+                              </div>
+                              <div class="card-e__title">
+                                <h5 class="title title--xsmall">
+                                  Nevjerojatno! Iz ove zemlje stiglo nam je više
+                                  turista nego lani
+                                </h5>
+                              </div>
+                            </div>
+                          </a>
+                        </article>
+                      </div>
+                      <div class="lists__item">
+                        <article class="card-e card-e--right">
+                          <a
+                            href="https://www.poslovni.hr/nekretnine/eu-platio-85-posto-zgrade-koja-niti-nakon-sest-godina-nema-stanara-4244709"
+                            title="&#8216;Ukleta nekretnina&#8217; vrijedna stotine milijuna kuna: EU platio 85 posto zgrade koja niti nakon šest godina nema stanara"
+                            ><div class="card-e__image-wrap">
+                              <div class="card-e__image">
+                                <div class="image image--1-1">
+                                  <noscript
+                                    ><img
+                                      width="150"
+                                      height="150"
+                                      src="https://www.poslovni.hr/wp-content/uploads/2020/08/PXL_191217_19082833-150x150.jpg"
+                                      class="post-image wp-post-image"
+                                      alt=""
+                                      srcset="
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/PXL_191217_19082833-150x150.jpg 150w,
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/PXL_191217_19082833-800x800.jpg 800w
+                                      "
+                                      sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                  ><img
+                                    width="150"
+                                    height="150"
+                                    src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                    data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/PXL_191217_19082833-150x150.jpg"
+                                    class="lazyload post-image wp-post-image"
+                                    alt=""
+                                    data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/PXL_191217_19082833-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/08/PXL_191217_19082833-800x800.jpg 800w"
+                                    data-sizes="(max-width: 150px) 100vw, 150px"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-e__post-info">
+                              <div class="card-e__headline">
+                                <div class="headline headline--small">
+                                  fascinantno zdanje
+                                </div>
+                              </div>
+                              <div class="card-e__title">
+                                <h5 class="title title--xsmall">
+                                  &#8216;Ukleta nekretnina&#8217; vrijedna
+                                  stotine milijuna kuna: EU platio 85 posto
+                                  zgrade koja niti nakon šest godina nema
+                                  stanara
+                                </h5>
+                              </div>
+                            </div>
+                          </a>
+                        </article>
+                      </div>
+                      <div class="lists__item">
+                        <article class="card-e card-e--right">
+                          <a
+                            href="https://www.poslovni.hr/svijet/gates-upozorava-na-veliku-opasnost-koja-bi-mogla-postati-opasnija-od-koronavirusa-4244761"
+                            title="Gates upozorava na veliku opasnost koja bi mogla postati smrtonosnija od koronavirusa"
+                            ><div class="card-e__image-wrap">
+                              <div class="card-e__image">
+                                <div class="image image--1-1">
+                                  <noscript
+                                    ><img
+                                      width="150"
+                                      height="150"
+                                      src="https://www.poslovni.hr/wp-content/uploads/2020/08/earth-11047_1280-150x150.jpg"
+                                      class="post-image wp-post-image"
+                                      alt=""
+                                      srcset="
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/earth-11047_1280-150x150.jpg 150w,
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/earth-11047_1280-800x800.jpg 800w
+                                      "
+                                      sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                  ><img
+                                    width="150"
+                                    height="150"
+                                    src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                    data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/earth-11047_1280-150x150.jpg"
+                                    class="lazyload post-image wp-post-image"
+                                    alt=""
+                                    data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/earth-11047_1280-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/08/earth-11047_1280-800x800.jpg 800w"
+                                    data-sizes="(max-width: 150px) 100vw, 150px"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-e__post-info">
+                              <div class="card-e__headline">
+                                <div class="headline headline--small">
+                                  NEIZVJESNA BUDUĆNOST
+                                </div>
+                              </div>
+                              <div class="card-e__title">
+                                <h5 class="title title--xsmall">
+                                  Gates upozorava na veliku opasnost koja bi
+                                  mogla postati smrtonosnija od koronavirusa
+                                </h5>
+                              </div>
+                            </div>
+                          </a>
+                        </article>
+                      </div>
+                      <div class="lists__item">
+                        <article class="card-e card-e--right">
+                          <a
+                            href="https://www.poslovni.hr/kako-su-uspjeli/u-zensko-poduzetnistvo-nako-rodenja-sina-usle-proizvodnjom-djecje-posteljine-4244689"
+                            title="Majka i kći prije 5 godina krenule u vlastiti biznis, a danas imaju tražene i prepoznatljive proizvode"
+                            ><div class="card-e__image-wrap">
+                              <div class="card-e__image">
+                                <div class="image image--1-1">
+                                  <noscript
+                                    ><img
+                                      width="150"
+                                      height="150"
+                                      src="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-04-06-08-150x150.jpg"
+                                      class="post-image wp-post-image"
+                                      alt=""
+                                      srcset="
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-04-06-08-150x150.jpg 150w,
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-04-06-08-800x800.jpg 800w
+                                      "
+                                      sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                  ><img
+                                    width="150"
+                                    height="150"
+                                    src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                    data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-04-06-08-150x150.jpg"
+                                    class="lazyload post-image wp-post-image"
+                                    alt=""
+                                    data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-04-06-08-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/08/POSL-04-06-08-800x800.jpg 800w"
+                                    data-sizes="(max-width: 150px) 100vw, 150px"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-e__post-info">
+                              <div class="card-e__headline">
+                                <div class="headline headline--small">
+                                  Brend Dada&Rocco
+                                </div>
+                              </div>
+                              <div class="card-e__title">
+                                <h5 class="title title--xsmall">
+                                  Majka i kći prije 5 godina krenule u vlastiti
+                                  biznis, a danas imaju tražene i prepoznatljive
+                                  proizvode
+                                </h5>
+                              </div>
+                            </div>
+                          </a>
+                        </article>
+                      </div>
+                      <div class="lists__item">
+                        <article class="card-e card-e--right">
+                          <a
+                            href="https://www.poslovni.hr/hrvatska/svi-nasi-djelatnici-imaju-godisnje-bonuse-%e2%80%a8a-placa-im-raste-u-skladu-s-kretanjem-trzista-4244701"
+                            title="&#8216;Svi naši djelatnici imaju godišnje bonuse, a plaća im raste u skladu s kretanjem tržišta&#8217;"
+                            ><div class="card-e__image-wrap">
+                              <div class="card-e__image">
+                                <div class="image image--1-1">
+                                  <noscript
+                                    ><img
+                                      width="150"
+                                      height="150"
+                                      src="https://www.poslovni.hr/wp-content/uploads/2020/08/ss1-4-of-12-e1596646716954-150x150.jpg"
+                                      class="post-image wp-post-image"
+                                      alt=""
+                                      srcset="
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/ss1-4-of-12-e1596646716954-150x150.jpg 150w,
+                                        https://www.poslovni.hr/wp-content/uploads/2020/08/ss1-4-of-12-e1596646716954-800x800.jpg 800w
+                                      "
+                                      sizes="(max-width: 150px) 100vw, 150px" /></noscript
+                                  ><img
+                                    width="150"
+                                    height="150"
+                                    src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E"
+                                    data-src="https://www.poslovni.hr/wp-content/uploads/2020/08/ss1-4-of-12-e1596646716954-150x150.jpg"
+                                    class="lazyload post-image wp-post-image"
+                                    alt=""
+                                    data-srcset="https://www.poslovni.hr/wp-content/uploads/2020/08/ss1-4-of-12-e1596646716954-150x150.jpg 150w, https://www.poslovni.hr/wp-content/uploads/2020/08/ss1-4-of-12-e1596646716954-800x800.jpg 800w"
+                                    data-sizes="(max-width: 150px) 100vw, 150px"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-e__post-info">
+                              <div class="card-e__headline">
+                                <div class="headline headline--small">
+                                  Sanja Šijanec
+                                </div>
+                              </div>
+                              <div class="card-e__title">
+                                <h5 class="title title--xsmall">
+                                  &#8216;Svi naši djelatnici imaju godišnje
+                                  bonuse, a plaća im raste u skladu s kretanjem
+                                  tržišta&#8217;
+                                </h5>
+                              </div>
+                            </div>
+                          </a>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sidebar__item">
+                    <div class="banner banner--halfpage">
+                      <div id="divHalfpage1">
+                        <script type="text/javascript">
+                          googletag.cmd.push(function () {
+                            googletag.display("divHalfpage1");
+                          });
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sidebar__item"></div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__inner">
+          <div class="container">
+            <div id="_tes_poslovni_article" style="margin: 0 -10px;"></div>
+            <script>
+              function loadTESScript(src, callback) {
+                var ready = false,
+                  st = document.createElement("script");
+                st.type = "text/javascript";
+                st.async = true;
+                st.src = src;
+                st.onload = st.onreadystatechange = function () {
+                  if (
+                    !ready &&
+                    (!this.readyState || this.readyState == "complete")
+                  ) {
+                    ready = true;
+                    callback();
+                  }
+                };
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(st, s);
+              }
+              loadTESScript(
+                "//traffic.styria.hr/scripts/widget_async.js",
+                function () {
+                  _tes.display({
+                    code: "poslovni_article",
+                    widgetWidth: "100%",
+                    widgetHeight: 385,
+                    elementId: "_tes_poslovni_article",
+                  });
+                }
+              );
+            </script>
+          </div>
+        </div>
+      </section>
+      <div class="banner banner--halfpage"></div>
+      <div
+        class="js-latestFromCategory"
+        data-url="https://www.poslovni.hr/related/4244685"
+      ></div>
+      <section class="section section--no-padding section--banner">
+        <div class="section__inner">
+          <div class="container">
+            <div class="banner banner--billboard">
+              <div id="divBillboard2">
+                <script type="text/javascript">
+                  googletag.cmd.push(function () {
+                    googletag.display("divBillboard2");
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="grid">
+          <div class="grid__column grid__column--12 grid__column--3@md">
+            <div class="footer__widget footer__widget--nav">
+              <div class="footer__nav">
+                <ul>
+                  <li>
+                    <a href="https://www.poslovni.hr/impressum">Impressum</a>
+                  </li>
+                  <li><a href="https://www.poslovni.hr/forum">Forum</a></li>
+                  <li><a href="https://www.poslovni.hr/kontakt">Kontakt</a></li>
+                  <li>
+                    <a href="https://www.poslovni.hr/oglasavanje"
+                      >Oglašavanje</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.poslovni.hr/opci-uvjeti-koristenja"
+                      >Opći uvjeti korištenja</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.poslovni.hr/politika-privatnosti-i-politika-kolacica"
+                      >Politika privatnosti</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="grid__column grid__column--12 grid__column--5@md">
+            <div class="footer__widget footer__widget--border">
+              <div class="footer__partners">
+                <h5 class="footer__title uppercase">Partnerski portali:</h5>
+                <div class="textwidget custom-html-widget">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.vecernji.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Vecernji.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ordinacija.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ordinacija.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://diva.vecernji.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Diva.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://lokalni.vecernji.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Lokalni.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://njuskalo.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Njuškalo.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://24sata.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >24sata.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.pixsell.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Pixsell.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://express.24sata.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Express.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://miss7mama.24sata.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Miss7mama.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://gastro.24sata.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Miss7gastro.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://miss7.24sata.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Miss7.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://miss7zdrava.24sata.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Miss7zdrava.hr</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://joomboos.24sata.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Joomboos.hr</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid__column grid__column--12 grid__column--4@md">
+            <div
+              class="footer__widget footer__widget--last footer__widget--border"
+            >
+              <h5 class="footer__title uppercase">Pratite nas</h5>
+              <div class="footer__social">
+                <div class="social social--subscribe social--hover">
+                  <a
+                    class="social__item bg-hover--facebook color--facebook"
+                    href="https://www.facebook.com/poslovni.hr"
+                    target="_blank"
+                  >
+                    <svg class="icon icon--facebook">
+                      <use xlink:href="#facebook"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="social__item bg-hover--twitter color--twitter"
+                    href="https://twitter.com/poslovni"
+                    target="_blank"
+                  >
+                    <svg class="icon icon--twitter">
+                      <use xlink:href="#twitter"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="social__item bg-hover--rss color--rss"
+                    href="https://www.poslovni.hr/feed"
+                    target="_blank"
+                  >
+                    <svg class="icon icon--rss">
+                      <use xlink:href="#rss"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="social__item bg-hover--youtube color--youtube"
+                    href="https://www.youtube.com/channel/UCFNnUWfv2OL728Iy2PdEyDQ"
+                    target="_blank"
+                  >
+                    <svg class="icon icon--youtube">
+                      <use xlink:href="#youtube"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="social__item bg-hover--linkedin color--linkedin"
+                    href="https://www.linkedin.com/company/poslovni-dnevnik/"
+                    target="_blank"
+                  >
+                    <svg class="icon icon--linkedin">
+                      <use xlink:href="#linkedin"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="grid">
+            <div class="grid__column grid__column--12 grid__column--8@md">
+              <div class="footer-bottom__copyright">
+                © 2020. Poslovni dnevnik. Sva prava pridržana.
+                <div class="footer-bottom__separator"></div>
+                <a target="_blank" href="https://www.styria.com/hr/">
+                  Styria Media Group AG
+                </a>
+              </div>
+            </div>
+            <div class="grid__column grid__column--12 grid__column--4@md">
+              <div
+                class="footer-bottom__copyright footer-bottom__copyright--right"
+              >
+                <a
+                  class="u-text-underline"
+                  target="_blank"
+                  href="https://porilook.com"
+                  >Developed by Porilook Solution</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="svgIcons">
+      <?xml version="1.0" encoding="utf-8"?><svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="alert"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+            fill="#FF5959"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="arrow-left"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 20l1.41-1.41L7.83 13H20v-2H7.83l5.58-5.59L12 4l-8 8 8 8z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="arrow-right"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="attachment"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 18.5V7c0-2.21 1.79-4 4-4s4 1.79 4 4v12.5a2.5 2.5 0 01-5 0V9c0-.55.45-1 1-1s1 .45 1 1v9.5h1.5V9a2.5 2.5 0 00-5 0v10.5c0 2.21 1.79 4 4 4s4-1.79 4-4V7c0-3.04-2.46-5.5-5.5-5.5S6.5 3.96 6.5 7v11.5H8z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="checked"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10 17l-5-4.808 1.4-1.346 3.6 3.462L17.6 7 19 8.346 10 17z"
+            fill="#000"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="clock"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="clock-half"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13 3a9 9 0 00-9 9H1l4 3.99L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0013 21a9 9 0 000-18zm-1 5v5l4.25 2.52.77-1.28-3.52-2.09V8H12z"
+            fill="#2D8DE9"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="close"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="comments"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"
+            fill="#BCDEEF"
+          />
+          <path
+            d="M15 4.001v7H5.17L4 12.171v-8.17h11zm1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z"
+            fill="#117CC4"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 32 32"
+          id="date"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M25.333 5.333H24V2.667h-2.667v2.666H10.667V2.667H8v2.666H6.667C5.187 5.333 4 6.533 4 8v18.667a2.666 2.666 0 002.667 2.666h18.666c1.467 0 2.667-1.2 2.667-2.666V8c0-1.467-1.2-2.667-2.667-2.667zm0 21.334H6.667V13.333h18.666v13.334zm0-16H6.667V8h18.666v2.667zM9.333 16H16v6.667H9.333V16z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="down"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M7 10l5 5 5-5H7z" fill="#1E1E1E" />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="download"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2v9.67z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="facebook"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 2v4h-2c-.69 0-1 .81-1 1.5V10h3v4h-3v8h-4v-8H7v-4h3V6a4 4 0 014-4h3z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="favorite"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="fax"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 12v2H8v-4h8v2zm2-2v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"
+            fill="#2D8DE9"
+          />
+          <path d="M18 12.5a1 1 0 100-2 1 1 0 000 2z" fill="#2D8DE9" />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="gmail"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#apclip0)">
+            <path
+              d="M21 12.207c0-.612-.05-1.227-.158-1.829h-8.66v3.466h4.959a4.161 4.161 0 01-1.835 2.735v2.248h2.958C20.002 17.26 21 14.945 21 12.207z"
+              fill="#4285F4"
+            />
+            <path
+              d="M12.181 21c2.477 0 4.565-.797 6.086-2.173L15.31 16.58c-.824.549-1.886.86-3.124.86-2.396 0-4.427-1.585-5.155-3.714H3.977v2.318C5.535 19.083 8.71 21 12.18 21z"
+              fill="#34A853"
+            />
+            <path
+              d="M7.026 13.725a5.29 5.29 0 010-3.446V7.961h-3.05a8.848 8.848 0 000 8.082l3.05-2.318z"
+              fill="#FBBC04"
+            />
+            <path
+              d="M12.181 6.562a5.045 5.045 0 013.522 1.35l2.622-2.57A8.923 8.923 0 0012.18 3C8.71 3 5.535 4.919 3.977 7.96l3.05 2.318c.725-2.133 2.759-3.717 5.154-3.717z"
+              fill="#EA4335"
+            />
+          </g>
+          <defs>
+            <clipPath id="apclip0">
+              <path fill="#fff" transform="translate(3 3)" d="M0 0h18v18H0z" />
+            </clipPath>
+          </defs>
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="graph-down"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 18l2.29-2.29-4.88-4.88-4 4L2 7.41 3.41 6l6 6 4-4 6.3 6.29L22 12v6h-6z"
+            fill="#FF5959"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="graph-flat"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M22 12l-4-4v3H3v2h15v3l4-4z"
+            fill="#1E1E1E"
+            opacity=".2"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="graph-up"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"
+            fill="#21D112"
+          />
+        </symbol>
+        <symbol
+          viewBox="0 0 512.001 512.001"
+          id="instagram"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M373.406 0H138.594C62.172 0 0 62.172 0 138.594V373.41C0 449.828 62.172 512 138.594 512H373.41C449.828 512 512 449.828 512 373.41V138.594C512 62.172 449.828 0 373.406 0zm108.578 373.41c0 59.867-48.707 108.574-108.578 108.574H138.594c-59.871 0-108.578-48.707-108.578-108.574V138.594c0-59.871 48.707-108.578 108.578-108.578H373.41c59.867 0 108.574 48.707 108.574 108.578zm0 0"
+          />
+          <path
+            d="M256 116.004c-77.195 0-139.996 62.8-139.996 139.996S178.804 395.996 256 395.996 395.996 333.196 395.996 256 333.196 116.004 256 116.004zm0 249.976c-60.64 0-109.98-49.335-109.98-109.98 0-60.64 49.34-109.98 109.98-109.98 60.645 0 109.98 49.34 109.98 109.98 0 60.645-49.335 109.98-109.98 109.98zm0 0M399.344 66.285c-22.813 0-41.367 18.559-41.367 41.367 0 22.813 18.554 41.371 41.367 41.371s41.37-18.558 41.37-41.37-18.558-41.368-41.37-41.368zm0 52.719c-6.258 0-11.352-5.094-11.352-11.352 0-6.261 5.094-11.351 11.352-11.351 6.261 0 11.355 5.09 11.355 11.351 0 6.258-5.094 11.352-11.355 11.352zm0 0"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="key"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 19h-6v-4h-2.68c-1.14 2.42-3.6 4-6.32 4-3.86 0-7-3.14-7-7s3.14-7 7-7c2.72 0 5.17 1.58 6.32 4H24v6h-2v4zm-4-2h2v-4h2v-2H11.94l-.23-.67C11.01 8.34 9.11 7 7 7c-2.76 0-5 2.24-5 5s2.24 5 5 5c2.11 0 4.01-1.34 4.71-3.33l.23-.67H18v4zM7 15c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="left"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.41 7.41L10.83 12l4.58 4.59L14 18l-6-6 6-6 1.41 1.41z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="linkedin"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.6 6.2A1.6 1.6 0 105.598 3a1.6 1.6 0 000 3.2zm5.526 2.323c.773-.47 1.648-.723 2.476-.723h1.6C17.43 7.8 20 9.635 20 12.6V19h-3.2v-6.4c0-.921-.95-1.6-1.599-1.6h-1.6c-.649 0-1.599.679-1.599 1.6V19H8.803V7.8h1.6l.723.723zM4 7.8V19h3.199V7.8H4z"
+            fill="#0077B5"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="mail"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="map"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 5a5 5 0 110 10 5 5 0 010-10zm-3 5a3 3 0 116 0 3 3 0 01-6 0z"
+            fill="#1E1E1E"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 23.328l.658-.575C18.188 17.923 21 13.707 21 10c0-5.25-4.097-9-9-9s-9 3.75-9 9c0 3.707 2.811 7.924 8.342 12.753l.658.575zm0-2.665C7.307 16.433 5 12.85 5 10c0-4.103 3.164-7 7-7s7 2.897 7 7c0 2.85-2.307 6.433-7 10.663z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          viewBox="0 0 24 24"
+          id="messenger"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="#FFF"
+            fill-rule="nonzero"
+            d="M3 16.74l4.5-9.276 8.1 6.029L21 7l-5.4 10.667-8.1-6.03z"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="more"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="pencil"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="phone"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+            fill="#2D8DE9"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="pin"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.767 2.67l-7.533-.001c-.416-.001-.81.174-1.07.475-.26.302-.358.697-.267 1.073l1.53 6.397c-1.502.859-2.594 2.22-3.05 3.803a1.2 1.2 0 00.241 1.098c.259.311.659.494 1.083.494h10.591a1.426 1.426 0 001.083-.494c.263-.312.355-.72.247-1.104-.451-1.584-1.544-2.946-3.05-3.802l1.532-6.396c.09-.376-.008-.77-.268-1.07a1.41 1.41 0 00-1.066-.476l-.003.002z"
+            fill="#2D8DE9"
+          />
+          <path
+            d="M10.616 12.839v7.207c0 .341.145.669.405.91.26.242.613.378.98.377.763-.008 1.378-.58 1.386-1.286v-7.208c.01-.465-.253-.898-.685-1.133a1.479 1.479 0 00-1.4 0c-.433.235-.695.668-.686 1.133z"
+            fill="#2D8DE9"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="reply"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 4h16v12H5.17L4 17.17V4zm0-2c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="report"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.36 6l.4 2H18v6h-3.36l-.4-2H7V6h5.36zM14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6L14 4z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="right"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="rss"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.18 19.56a2.18 2.18 0 100-4.36 2.18 2.18 0 000 4.36z"
+            fill="#1E1E1E"
+          />
+          <path
+            d="M4 4v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83C19.56 10.97 12.59 4 4 4zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="search"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            fill="#2D8DE9"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="settings"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#bjclip0)">
+            <path
+              d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"
+              fill="#1E1E1E"
+            />
+          </g>
+          <defs>
+            <clipPath id="bjclip0">
+              <path fill="#fff" d="M0 0h24v24H0z" />
+            </clipPath>
+          </defs>
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="star"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="thumbs-down"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm0 12l-4.34 4.34L12 14H3v-2l3-7h9v10zm4-12h4v12h-4V3z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="thumbs-up"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1V9z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="topic"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 4v7H5.17L4 12.17V4h11zm1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="twitter"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 5.816c-.7.318-1.453.527-2.234.627a3.904 3.904 0 001.707-2.161 7.848 7.848 0 01-2.47.953C18.285 4.455 17.277 4 16.133 4c-2.134 0-3.878 1.744-3.878 3.896 0 .31.036.609.1.89a11.075 11.075 0 01-8.029-4.068 3.855 3.855 0 00-.527 1.952c0 1.353.681 2.552 1.735 3.233a3.853 3.853 0 01-1.771-.454v.028A3.9 3.9 0 006.887 13.3a3.834 3.834 0 01-1.753.064 3.887 3.887 0 003.633 2.706 7.74 7.74 0 01-4.84 1.671c-.31 0-.618-.018-.927-.054a11.03 11.03 0 005.976 1.753c7.157 0 11.09-5.94 11.09-11.09 0-.172 0-.336-.01-.508A7.786 7.786 0 0022 5.816z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="unfavorite"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.81 8.62L12 2 9.87 7.02l1.23 1.23.9-2.15 1.71 4.04 4.38.38-2.53 2.19 1.13 1.13L22 9.24l-7.19-.62zm2.51 8.67l-2.14-2.14.01.03 2.14 2.14-.01-.03zM8.7 8.67h-.02l1.47 1.47h.02L8.7 8.67zM17.33 17.32l-2.14-2.14-5.04-5.04-1.47-1.47-5.22-5.22-1.42 1.41 4.03 4.03L2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l1.59 1.59 1.42-1.41-3.86-3.86zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 1.63-.14 5.92 5.92L12 15.4z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="user"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01zm0-11C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+            fill="#2D8DE9"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="user-add"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 8c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H9zm-3-3v-3h3v-2H6V7H4v3H1v2h3v3h2z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="user-added"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM5 18c.2-.63 2.57-1.68 4.96-1.94l2.04-2a9.34 9.34 0 00-1-.06c-2.67 0-8 1.34-8 4v2h9l-2-2H5zm15.6-5.5l-5.13 5.17-2.07-2.08L12 17l3.47 3.5L22 13.91l-1.4-1.41z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="users"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87zM15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 010 7.52c.42.14.86.24 1.33.24zM9 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM9 13c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4zm6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2v1z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="viber"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M23.2 5.77l-.006-.028c-.56-2.264-3.086-4.694-5.405-5.2l-.027-.005a30.035 30.035 0 00-11.305 0L6.43.542c-2.318.506-4.843 2.936-5.404 5.2l-.007.028a22.128 22.128 0 000 9.532l.007.028c.537 2.168 2.874 4.486 5.107 5.124v2.528c0 .915 1.115 1.364 1.749.704l2.56-2.663c.556.031 1.112.049 1.668.049 1.888 0 3.777-.179 5.652-.537l.027-.005c2.319-.505 4.844-2.936 5.404-5.2l.007-.028c.693-3.163.693-6.37 0-9.532zm-2.026 9.074c-.374 1.477-2.292 3.314-3.816 3.653-1.994.38-4.005.542-6.013.486a.144.144 0 00-.106.043l-1.87 1.92-1.99 2.041a.233.233 0 01-.4-.16v-4.188c0-.07-.05-.128-.117-.142-1.524-.34-3.441-2.176-3.816-3.653a20.08 20.08 0 010-8.615c.375-1.478 2.292-3.315 3.815-3.654a27.973 27.973 0 0110.498 0c1.525.34 3.441 2.176 3.815 3.654a20.067 20.067 0 010 8.615z"
+            fill="#1E1E1E"
+          />
+          <path
+            d="M15.424 16.777c-.234-.071-.458-.12-.665-.205-2.148-.891-4.125-2.04-5.69-3.804-.891-1.002-1.588-2.133-2.178-3.33-.279-.569-.514-1.159-.755-1.745-.218-.535.104-1.087.444-1.49a3.498 3.498 0 011.172-.88c.346-.166.687-.07.94.223.548.635 1.05 1.302 1.457 2.038.25.453.181 1.006-.272 1.314-.11.075-.211.163-.313.247-.09.074-.175.15-.237.25a.68.68 0 00-.045.599c.56 1.536 1.501 2.73 3.048 3.375.248.103.496.223.781.189.478-.056.632-.58.966-.854.328-.267.745-.27 1.098-.047.352.223.694.462 1.033.704.333.238.665.47.973.74.295.26.397.602.23.955-.304.647-.747 1.185-1.387 1.529-.18.097-.396.128-.6.192-.234-.072.204-.064 0 0zM12.116 4.582c2.81.078 5.118 1.944 5.612 4.721.084.474.114.958.151 1.438.016.202-.098.394-.317.396-.225.003-.326-.185-.34-.388-.03-.4-.05-.8-.104-1.198-.291-2.093-1.96-3.825-4.043-4.196-.313-.056-.634-.07-.952-.104-.2-.02-.464-.033-.508-.283-.038-.21.14-.375.339-.386.053-.002.107 0 .162 0-.01.01-.055 0 0 0z"
+            fill="#1E1E1E"
+          />
+          <path
+            d="M16.386 10.117c-.005.036-.007.118-.028.196-.074.282-.502.318-.6.033a.845.845 0 01-.035-.272c0-.594-.13-1.19-.43-1.707a3.174 3.174 0 00-1.332-1.25 3.826 3.826 0 00-1.062-.327c-.16-.026-.322-.042-.483-.064-.194-.027-.3-.152-.29-.344.008-.18.14-.309.336-.298.645.037 1.268.176 1.84.48 1.167.616 1.832 1.591 2.027 2.893.008.059.023.116.028.176.01.146.017.292.029.485-.005.035-.012-.193 0 0z"
+            fill="#1E1E1E"
+          />
+          <path
+            d="M14.638 10.05c-.234.004-.36-.126-.385-.342-.017-.15-.03-.302-.066-.448a1.265 1.265 0 00-.466-.731 1.228 1.228 0 00-.38-.184c-.171-.05-.35-.036-.522-.078-.187-.046-.29-.197-.261-.373a.338.338 0 01.356-.271c1.09.078 1.867.642 1.98 1.924.007.091.016.187-.004.273-.035.148-.145.222-.252.23-.235.004.107-.008 0 0z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 22 25"
+          id="weather"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M21.185 10.592h-1.63a.815.815 0 010-1.63h1.63a.815.815 0 010 1.63zm-3.201-5.424a.815.815 0 11-1.152-1.152l1.152-1.152a.815.815 0 111.152 1.152l-1.152 1.152zm-1.201 6.36a4.872 4.872 0 011.073 2.324h-.004c.045.265.074.537.074.815a4.89 4.89 0 01-4.89 4.89h-.432l1.46-1.798a3.26 3.26 0 002.233-3.092c0-.282-.04-.554-.108-.815a3.257 3.257 0 00-3.152-2.444c-.652 0-1.256.195-1.766.526A4.884 4.884 0 006.52 8.148a4.89 4.89 0 00-4.89 4.89c0 .277.029.549.074.814h-.005a4.895 4.895 0 003.438 3.873l-.55 1.54a6.521 6.521 0 01-4.53-5.413A6.557 6.557 0 010 13.037a6.519 6.519 0 018.362-6.252 4.876 4.876 0 013.86-1.896c2.7 0 4.89 2.188 4.89 4.889 0 .617-.12 1.205-.33 1.75zm-4.561-5.01c-.901 0-1.717.367-2.307.959a6.558 6.558 0 012.294 2.385c.27-.047.544-.084.828-.084a4.87 4.87 0 012.384.622 3.26 3.26 0 00-3.199-3.882zm0-3.259a.815.815 0 01-.815-.815V.814a.815.815 0 011.63 0v1.63c0 .45-.365.815-.815.815zM6.46 5.17L5.308 4.015A.815.815 0 016.46 2.864l1.152 1.152A.815.815 0 116.46 5.168zm1.688 8.683h4.074l-2.444 4.075h2.851l-5.296 6.518L8.8 19.556H6.11l2.038-5.704z"
+            fill="#2D8DE9"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="whatsapp"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24 11.69c0 6.457-5.275 11.691-11.781 11.691-2.067 0-4.006-.528-5.696-1.456L0 24l2.125-6.272a11.576 11.576 0 01-1.69-6.037C.435 5.235 5.712 0 12.219 0 18.725 0 24 5.235 24 11.69zM12.219 1.862c-5.462 0-9.907 4.408-9.907 9.83 0 2.149.701 4.141 1.888 5.762l-1.237 3.651 3.805-1.21a9.898 9.898 0 005.45 1.626c5.462 0 9.907-4.408 9.907-9.83 0-5.42-4.445-9.829-9.906-9.829zm5.949 12.523c-.072-.12-.264-.192-.555-.333-.288-.144-1.709-.838-1.973-.931-.264-.096-.459-.144-.65.144-.193.288-.747.93-.915 1.123-.168.192-.336.216-.627.072-.288-.144-1.219-.446-2.323-1.422-.858-.76-1.437-1.696-1.608-1.984-.168-.288-.018-.442.126-.584.13-.128.288-.336.434-.501.144-.168.192-.288.288-.477.096-.192.048-.358-.024-.502-.072-.144-.65-1.554-.89-2.128-.24-.573-.48-.477-.651-.477-.168 0-.36-.024-.555-.024-.194 0-.506.072-.77.357-.264.288-1.011.982-1.011 2.39 0 1.41 1.035 2.773 1.179 2.962.144.192 1.997 3.179 4.933 4.326 2.936 1.146 2.936.765 3.467.717.528-.048 1.709-.693 1.949-1.363.248-.672.248-1.245.176-1.365z"
+            fill="#1E1E1E"
+          />
+        </symbol>
+        <symbol
+          fill="none"
+          viewBox="0 0 24 24"
+          id="youtube"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21.986 9.768c-.009-.231-.022-.462-.039-.695-.077-.98-.189-2.103-.851-2.888-.567-.672-1.446-.823-2.279-.915a43.407 43.407 0 00-3.177-.227c-2.149-.08-4.3-.033-6.45.013-1.105.025-2.21.048-3.31.134-1.353.105-2.743.298-3.374 1.62-.564 1.188-.494 2.695-.502 3.971a73.31 73.31 0 00.036 3.434c.063 1.484.153 3.419 1.79 4.07.875.346 1.93.423 2.863.484.991.063 1.982.055 2.975.07 2.079.029 4.158-.04 6.236-.08 1.444-.028 2.924-.044 4.305-.506 1.193-.397 1.504-1.662 1.665-2.758.161-1.091.12-2.195.118-3.293 0-.812.022-1.622-.006-2.434zm-12.013 5.11V8.926c1.725.99 3.432 1.97 5.178 2.974l-5.178 2.978z"
+            fill="#000"
+          />
+        </symbol>
+      </svg>
+    </div>
+    <div id="modal-login" class="mfp-hide">
+      <div class="modal">
+        <div class="modal__title">
+          <h2 class="title title--small">Prijavite se</h2>
+          <a class="modal__close js-modalClose" href="#">
+            <svg class="icon icon--small"><use xlink:href="#close"></use></svg>
+          </a>
+        </div>
+        <div class="modal__content">
+          <form
+            method="post"
+            action="https://www.poslovni.hr/wp-login.php"
+            class="form bbp-login-form js-ajaxCheck"
+          >
+            <div class="form__row js-validateMe">
+              <div class="input">
+                <input
+                  class="input__field"
+                  placeholder="Korisničko ime"
+                  type="text"
+                  name="log"
+                  value=""
+                  size="20"
+                  id="user_login"
+                />
+              </div>
+            </div>
+            <div class="form__row js-validateMe">
+              <div class="input">
+                <input
+                  class="input__field"
+                  placeholder="Upišite Vašu lozinku"
+                  type="password"
+                  name="pwd"
+                  value=""
+                  size="20"
+                  id="user_pass"
+                />
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="checkbox">
+                <label>
+                  <input
+                    class="checkbox__input"
+                    type="checkbox"
+                    name="rememberme"
+                    value="forever"
+                  />
+                  <span class="checkbox__text">Zapamti me</span>
+                </label>
+              </div>
+            </div>
+            <div class="form__row js-validateMe">
+              <div class="input__message input__message--error">
+                <div class="text text--xsmall">
+                  Provjerite podatke i pokušajte ponovo.
+                </div>
+              </div>
+              <div class="input__message input__message--success">
+                <div class="text text--xsmall">Uspješno ste se prijavili.</div>
+              </div>
+            </div>
+            <div class="form__row form__row--margin-top form__row--flex">
+              <button
+                type="submit"
+                name="user-submit"
+                id="user-submit"
+                class="button button--blue"
+              >
+                Prijavite se
+              </button>
+              <input type="hidden" name="user-cookie" value="1" />
+              <input
+                type="hidden"
+                id="bbp_redirect_to"
+                name="redirect_to"
+                value="https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+              /><input
+                type="hidden"
+                id="_wpnonce"
+                name="_wpnonce"
+                value="9647e924e4"
+              /><input
+                type="hidden"
+                name="_wp_http_referer"
+                value="/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+              />
+              <div class="div div--grow">
+                <div
+                  class="text text--bold text--grey text--light text--center text--padding"
+                >
+                  <a href="#modal-forgot-password" class="js-modalOpen"
+                    >Zaboravili ste lozinku?</a
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="divider"></div>
+          <div class="modal__text">
+            Ako nemate korisnički profil na našem portalu, molimo Vas
+            <a href="https://www.poslovni.hr/register"
+              >registrirajte se ovdje.</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-forgot-password" class="mfp-hide">
+      <div class="modal">
+        <div class="modal__title">
+          <h2 class="title title--small">Zaboravljena lozinka</h2>
+          <a class="modal__close js-modalClose" href="#">
+            <svg class="icon icon--small"><use xlink:href="#close"></use></svg>
+          </a>
+        </div>
+        <div class="modal__content">
+          <form
+            method="post"
+            action="https://www.poslovni.hr/wp-login.php?action=lostpassword"
+            class="form bbp-login-form js-ajaxCheck"
+          >
+            <div class="form__row js-validateMe">
+              <div class="input">
+                <input
+                  class="input__field"
+                  placeholder="Upišite vašu e-mail adresu"
+                  type="text"
+                  name="user_login"
+                  value=""
+                  size="20"
+                  id="user_login"
+                />
+              </div>
+            </div>
+            <div class="form__row js-validateMe">
+              <div class="input__message input__message--error">
+                <div class="text text--xsmall">
+                  Provjerite podatke i pokušajte ponovo.
+                </div>
+              </div>
+              <div class="input__message input__message--success">
+                <div class="text text--xsmall">
+                  Uspješno ste zatražili novu lozinku, provjerite svoj e-mail.
+                </div>
+              </div>
+            </div>
+            <div class="form__row form__row--margin-top">
+              <button
+                type="submit"
+                class="button button--blue"
+                name="user-submit"
+              >
+                Zatražite novu lozinku
+              </button>
+              <input type="hidden" name="user-cookie" value="1" />
+              <input
+                type="hidden"
+                id="bbp_redirect_to"
+                name="redirect_to"
+                value="https://www.poslovni.hr/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685?checkemail=confirm"
+              /><input
+                type="hidden"
+                id="_wpnonce"
+                name="_wpnonce"
+                value="243e5c7465"
+              /><input
+                type="hidden"
+                name="_wp_http_referer"
+                value="/trzista/povratak-u-modu-kredita-u-eurima-zauzdava-pad-potraznje-4244685"
+              />
+            </div>
+          </form>
+          <div class="divider"></div>
+          <div class="modal__text">
+            Ako nemate korisnički profil na našem portalu, molimo Vas
+            <a href="https://www.poslovni.hr/registracija"
+              >registrirajte se ovdje</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner banner--aio">
+      <div id="divAIO2">
+        <script type="text/javascript">
+          googletag.cmd.push(function () {
+            googletag.display("divAIO2");
+          });
+        </script>
+      </div>
+    </div>
+    <div class="bptk-report-modal bptk-report-closed" id="bptk-report-modal">
+      <div class="bptk-report-modal-inner" id="bptk-report-modal-inner">
+        <div class="bptk-report-modal-inner-header">
+          <h4>New Report</h4>
+          <h4 class="bptk-report-close-button" id="bptk-report-close-button">
+            Close
+          </h4>
+        </div>
+        <input type="hidden" id="bptk-reported-id" value="" />
+        <input type="hidden" id="bptk-reporter-id" value="0" />
+        <input type="hidden" id="bptk-activity-type" />
+        <input type="hidden" id="bptk-link" />
+        <input type="hidden" id="bptk-meta" />
+        <select name="bptk-report-type" id="bptk-report-type" class="postform"
+          ><option value="-1">What type of report is this?</option
+          ><option class="level-0" value="100114">Misleading or scam</option
+          ><option class="level-0" value="100113">Offensive</option
+          ><option class="level-0" value="100112">Spam</option
+          ><option class="level-0" value="100115"
+            >Violent or abusive</option
+          > </select
+        ><textarea
+          rows="5"
+          placeholder="Please give as much detail as possible"
+          name="bptk-desc"
+          id="bptk-desc"
+        ></textarea
+        ><button
+          class="button"
+          id="bptk-report-submit"
+          name="submit"
+          data-nonce="397c60f758"
+        >
+          Send
+        </button>
+        <p id="bptk-report-modal-response"></p>
+      </div>
+    </div>
+    <div
+      class="bptk-report-modal-overlay bptk-report-closed"
+      id="bptk-report-modal-overlay"
+    ></div>
+    <style>
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+      }
+      .lazyloaded {
+        opacity: 1;
+        transition: opacity 300ms;
+      }</style
+    ><noscript
+      ><style>
+        .lazyload {
+          display: none;
+        }
+      </style></noscript
+    >
+    <script data-noptimize="1">
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.loadMode = 1;
+    </script>
+    <script
+      async
+      data-noptimize="1"
+      src="https://www.poslovni.hr/wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js?ao_version=2.6.1"
+    ></script>
+    <script type="text/javascript">
+      var wpcf7 = {
+        apiSettings: {
+          root: "https:\/\/www.poslovni.hr\/wp-json\/contact-form-7\/v1",
+          namespace: "contact-form-7\/v1",
+        },
+      };
+    </script>
+    <style>
+      div[class^="dfp_"] {
+        font-size: 0;
+      }
+
+      div[class^="dfp_"] img {
+        width: auto;
+        height: auto;
+      }
+    </style>
+    <script>
+      if (jQuery(".js-toggleNewsletter").length) {
+        var nl_input = jQuery("#newsletter_input");
+
+        jQuery(".js-toggleNewsletter").on("change", function (e) {
+          console.log(nl_input.val());
+
+          if (nl_input.val() == 1) {
+            nl_input.val(0);
+          } else {
+            nl_input.val(1);
+          }
+        });
+      }
+
+      if (jQuery(".js-mc-subscribe").length) {
+        jQuery(".js-mc-subscribe").on("submit", function (e) {
+          e.preventDefault();
+          var form = jQuery(".js-mc-subscribe");
+
+          form
+            .find(".newsletter-widget__form")
+            .css({ opacity: "0.1", "pointer-events": "none" });
+
+          jQuery.post(
+            ajaxurl,
+            {
+              action: "mc_subscribe",
+              email: jQuery(".js-email-address").val(),
+            },
+            function (response) {
+              if (response == "OK") {
+                alert("Prijava je uspješna");
+              } else {
+                alert("Došlo je do greške");
+                form
+                  .find(".newsletter-widget__form")
+                  .css({ opacity: "1.0", "pointer-events": "auto" });
+              }
+            }
+          );
+        });
+      }
+    </script>
+    <script
+      defer
+      src="https://www.poslovni.hr/wp-content/cache/autoptimize/js/autoptimize_d25dd01e8ebccaf3a8a0243cfd591757.js"
+    ></script>
+    <script type="text/javascript">
+      window.NREUM || (NREUM = {});
+      NREUM.info = {
+        beacon: "bam.nr-data.net",
+        licenseKey: "a4a4aebca1",
+        applicationID: "385265805",
+        transactionName: "ZwdQYERXWEVVAEQKXl5Nc1dCX1lYGxBZDVZcBw==",
+        queueTime: 0,
+        applicationTime: 480,
+        atts: "S0BTFgxNS0s=",
+        errorBeacon: "bam.nr-data.net",
+        agent: "",
+      };
+    </script>
+  </body>
+</html>
