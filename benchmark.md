@@ -1,6 +1,6 @@
-# Benchmarks
-|Algorithm|Word IOU(H)|DiffWords(L)|
-|---------|-----------|------------|
-|Newspaper|     0.5831|      0.4372|
-|JusText  |**0.6269** |**0.3709**  |
-|DoNothing|     0.2903|      0.8044|
+# Benchmarks (en)
+|Algorithm|Word IOU(H)|Line IOU(H)|DiffLines(L)|
+|---------|-----------|-----------|------------|
+|Newspaper|     0.5078|**0.4402** |**0.5977**  |
+|JusText  |**0.5486** |   0.318676|      0.6876|
+|DoNothing|     0.2892|   0.003652|      0.9855|

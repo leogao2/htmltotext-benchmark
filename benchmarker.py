@@ -2,7 +2,7 @@ from algorithms import algorithms
 from metrics import metrics
 	
 from pytablewriter import MarkdownTableWriter
-
+import chardet
 import os
 
 
@@ -16,8 +16,23 @@ def list_languages():
 
 def get_documents_for(lang):
     for doc in os.listdir('benchmarkdata/' + lang + '/html'):
-        with open('benchmarkdata/' + lang + '/html/' + doc) as fh, open('benchmarkdata/' + lang + '/text/' + doc[:-4] + 'txt') as fh2:
-            yield fh.read(), fh2.read()
+        with open('benchmarkdata/' + lang + '/html/' + doc, 'rb') as fh, open('benchmarkdata/' + lang + '/text/' + doc[:-4] + 'txt') as fh2:
+            try:
+                html = fh.read()
+                html = html.decode('utf-8')
+            except UnicodeDecodeError: 
+                # try to figure out encoding if not urf-8
+
+                guess = chardet.detect(html)['encoding']
+
+                if not guess or guess == 'UTF-8': return
+
+                try:
+                    html = html.decode(guess)
+                except (UnicodeDecodeError, LookupError):
+                    # still cant figure out encoding, give up
+                    return
+            yield html, fh2.read()
 
 values = []
 
