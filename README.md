@@ -21,6 +21,19 @@ There is no canonical workflow for downloading/labelling right now (the `labelli
 
 Ideally, we would have a wide variety of different types of websites. Some extractors focus heavily on, say, news articles, which makes them worse at blogs or forums or so on. 
 
+## Guidelines
+
+
+Keep:
+ - Comments (if applicable&possible)
+ - Date posted, username for forums
+ - Transcribe bullet points and numbered lists if possible
+ - In general, anything that owuld be useful for GPT-x trraining
+
+Don't keep:
+ - UI components: "Click to Reply", "Login / register", etc
+ - Boilerplate stuff like cookie notices that pop up at the tops/bottoms of pages
+
 ## Using the `labelling_helper.py` script
 
 First edit the script and change `lang = 'de'` to whichever language you're doing so the script saves stuff in the right place. Also, you can change `os.system('vim tmp')` to any other editor (like `code tmp` for VS Code, or `emacs tmp` or `gedit tmp`)
