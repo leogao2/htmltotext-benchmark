@@ -15,9 +15,26 @@ To contribute, please download the html file to `benchmarkdata/<iso language cod
 
 ## Using the `labelling_helper.py` script
 
-First edit the script and change `lang = 'de'` to whichever language you're doing so the script saves stuff in the right place. Also, you can change `os.system('vim tmp')` to any other editor (like `code tmp` for VS Code, or `emacs tmp` or `gedit tmp`)
+labelling_helper.py is a helper script to make transcribing benchmark data from webpages faster.
 
-To use the script, enter a url, press enter and then enter the name, and press enter again (see below section for info on naming). Then it should pop up vim so you can edit an automatically extracted text. Delete any extraneous text, add in stuff that should be there (i.e that show up in the browser but not in the extraction), etc. Then save and close, and you'll be able to enter another url and name. 
+Example Usage:
+
+python labelling_helper.py language --editor texteditor
+
+positional arguments:
+  lang             target language
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --editor EDITOR  text editor to use, default is vim
+
+e.g:
+
+python labelling_helper.py en --editor nano
+python labelling_helper.py fr
+python labelling_helper.py zh --editor emacs
+
+Once the script is running, you'll be prompted to enter a url. Enter the url for your chosen webpage, press enter, and then enter a filename. Press enter again (see below section for info on naming). Then an automatically extracted text from your url should pop up in your selected text editor so you can correct it. Delete any extraneous text, (we want to be removing any boilerplate/UI elements.) and add in text that should be there (i.e text that shows up in the browser but not in the extraction). Finally, save and close, and you'll be able to enter another url and name. 
 
 ## Naming
 
