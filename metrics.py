@@ -1,5 +1,6 @@
 import textdistance
 from abc import ABC, abstractmethod
+import re
 
 class Metric(ABC):
     @abstractmethod
@@ -20,8 +21,8 @@ class WordIOU(Metric):
         return "Word IOU"
 
     def distance(self, true, predicted):
-        a = set(true.split(' '))
-        b = set(predicted.split(' '))
+        a = set(re.split(r'\s+', true))
+        b = set(re.split(r'\s+', predicted))
         return len(a.intersection(b)) / len(a.union(b))
 
     def lower_is_better(self):
@@ -42,12 +43,29 @@ class DiffLines(Metric):
         return True
 
 
+import difflib
+class DiffWords(Metric):
+    def name(self):
+        return "DiffWords"
+
+    def distance(self, true, predicted):
+        # % of word-level diff entries that are either + or -
+        diff = list(difflib.ndiff(re.split(r'\s+', true), re.split(r'\s+', predicted)))
+        return len([x for x in diff if x[0] != ' ']) / len(diff)
+
+    def lower_is_better(self):
+        return True
+
+
 
 class LineIOU(Metric):
     def name(self):
         return "Line IOU"
 
     def distance(self, true, predicted):
+        # empty line agnostic
+        true = '\n'.join([x.strip() for x in true.split('\n') if x.strip()])
+        predicted = '\n'.join([x.strip() for x in predicted.split('\n') if x.strip()])
         a = set(true.split('\n'))
         b = set(predicted.split('\n'))
         return len(a.intersection(b)) / len(a.union(b))
@@ -58,6 +76,7 @@ class LineIOU(Metric):
 
 metrics = [
     WordIOU(),
-    LineIOU(),
-    DiffLines()
+    #LineIOU(),
+    #DiffLines(),
+    DiffWords(),
 ]
