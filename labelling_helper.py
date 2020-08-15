@@ -26,6 +26,11 @@ while True:
         fh.write(html)
 
     os.system(f'{editor} tmp')
+    
+    if not os.path.isdir(f'benchmarkdata/{lang}'):
+        os.mkdir(f'benchmarkdata/{lang}')
+        os.mkdir(f'benchmarkdata/{lang}/text/')
+        os.mkdir(f'benchmarkdata/{lang}/html/')
 
     shutil.move('tmp', f'benchmarkdata/{lang}/text/{slug}.txt')
     shutil.move('html', f'benchmarkdata/{lang}/html/{slug}.html')
